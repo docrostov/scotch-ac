@@ -1,4 +1,6 @@
 export declare function setClan(target: string): boolean;
+export declare function ensureEffect(ef: Effect, turns?: number): void;
+export declare function tryEnsureEffect(ef: Effect, turns?: number): boolean;
 export declare function getPropertyInt(name: string): number;
 export declare function getPropertyBoolean(name: string, default_?: boolean | null): boolean;
 export declare function setProps(): void;

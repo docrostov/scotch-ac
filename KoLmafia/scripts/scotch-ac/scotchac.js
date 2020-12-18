@@ -6863,6 +6863,8 @@ function valid(data) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "setClan": () => /* binding */ setClan,
+/* harmony export */   "ensureEffect": () => /* binding */ ensureEffect,
+/* harmony export */   "tryEnsureEffect": () => /* binding */ tryEnsureEffect,
 /* harmony export */   "getPropertyInt": () => /* binding */ getPropertyInt,
 /* harmony export */   "getPropertyBoolean": () => /* binding */ getPropertyBoolean,
 /* harmony export */   "setProps": () => /* binding */ setProps,
@@ -6879,8 +6881,118 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! kolmafia */ "kolmafia");
 /* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(kolmafia__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var libram_src__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! libram/src */ "./node_modules/libram/src/index.ts");
-function _templateObject21() {
+function _templateObject32() {
+  var data = _taggedTemplateLiteral(["Having a Ball!"]);
+
+  _templateObject32 = function _templateObject32() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject31() {
+  var data = _taggedTemplateLiteral(["Preternatural Greed"]);
+
+  _templateObject31 = function _templateObject31() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject30() {
+  var data = _taggedTemplateLiteral(["Meet the Meat"]);
+
+  _templateObject30 = function _templateObject30() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject29() {
+  var data = _taggedTemplateLiteral(["defective Game Grid token"]);
+
+  _templateObject29 = function _templateObject29() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject28() {
+  var data = _taggedTemplateLiteral(["meat.enh"]);
+
+  _templateObject28 = function _templateObject28() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject27() {
+  var data = _taggedTemplateLiteral(["Billiards Belligerence"]);
+
+  _templateObject27 = function _templateObject27() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject26() {
+  var data = _taggedTemplateLiteral(["Puzzle Champ"]);
+
+  _templateObject26 = function _templateObject26() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject25() {
+  var data = _taggedTemplateLiteral(["Do I Know You From Somewhere?"]);
+
+  _templateObject25 = function _templateObject25() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject24() {
   var data = _taggedTemplateLiteral(["Dirt Julep"]);
+
+  _templateObject24 = function _templateObject24() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject23() {
+  var data = _taggedTemplateLiteral(["", ""]);
+
+  _templateObject23 = function _templateObject23() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject22() {
+  var data = _taggedTemplateLiteral(["one-day ticket to Dinseylandfill"]);
+
+  _templateObject22 = function _templateObject22() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject21() {
+  var data = _taggedTemplateLiteral(["one-day ticket to Dinseylandfill"]);
 
   _templateObject21 = function _templateObject21() {
     return data;
@@ -7116,6 +7228,22 @@ function setClan(target) {
 
   return true;
 }
+function ensureEffect(ef) {
+  var turns = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+
+  if (!tryEnsureEffect(ef, turns)) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.abort)('Failed to get effect ' + ef.name + '.');
+  }
+}
+function tryEnsureEffect(ef) {
+  var turns = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)(ef) < turns) {
+    return (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)(ef["default"]) && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)(ef) > 0;
+  }
+
+  return true;
+}
 function getPropertyInt(name) {
   var str = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)(name);
 
@@ -7166,7 +7294,7 @@ function dailies() {
 
 
   setClan('Bonus Adventures from Hell'); // STEP 1: GAIN PASSIVE RESOURCES ======================
-  // Harvest your daily sea jelly
+  // Harvest your daily sea jelly; check your old man, if needed
 
   if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myLevel)() > 10 && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)("questS01OldGuy") == "unstarted") {
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)("place.php?whichplace=sea_oldman&action=oldman_oldman", false);
@@ -7214,8 +7342,10 @@ function dailies() {
   } // STEP 3: SUMMONS =====================================
   // Tome summons
   // Deck summons; mana, mana. Reserve one for Robort.
-  // Visiting Looking Glass in clan VIP lounge
 
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('cheat island');
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('cheat ancestral recall'); // Visiting Looking Glass in clan VIP lounge
 
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('clan_viplounge.php?action=lookingglass&whichfloor=2');
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('swim item');
@@ -7248,11 +7378,17 @@ function dailies() {
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('_scotchIntro', '1');
   return "Intro completed.";
 }
-function farmPrep() {// This function does purchases to set up for farming
+function farmPrep() {
+  // This function does purchases to set up for farming
   // Purchase a dinseylandfill ticket, use it / get free FunFunds
-  // Purchase robort drinks & feed them to robort
-  // Set up mumming trunk nonsense
-  // 
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject21()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject22())); // Purchase robort drinks & feed them to robort; need to compare ingredient to the drink like old ash script
+
+  var roboDrinks = ['newark', 'single entendre', 'drive-by shooting', 'bloody nora'];
+  roboDrinks.forEach(function (value) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject23(), value));
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("robo ".concat(value));
+  }); // Set up mumming trunk nonsense
 }
 function calculateFarmingTurns() {
   // Assess farming turns given available resources.
@@ -7267,22 +7403,41 @@ function runDiet() {
   // Check barrelprayer buff and utilize if it's good.
   // Use dirt julep on mime shotglass booze
   if (getPropertyBoolean("_mimeArmyShotglassUsed") != true) {
-    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject21()))) {
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject24()))) {
       (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)("_mimeArmyShotglassUsed", "true");
     }
   }
 }
-function buffUp() {// This function buffs you up for meatfarming
+function buffUp() {
+  // This function buffs you up for meatfarming
   // Get "free" beach-head familiar buff
-  // Get witchess buff
-  // Get clan "aggressive" buffs
-  // Get mad tea party buff
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject25())); // Get witchess buff
+
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject26())); // Get clan "aggressive" buffs
+
+  while (getPropertyInt('_poolGames') < 3) {
+    ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject27()));
+  } // Get mad tea party buff
   // Get meat.enh buffs
-  // Get KGB buffs
-  // Get defective game grid buff
-  // Get zatara meatsmith buff
-  // Summon otep'vekxen
-  // Get ballpit buff
+
+
+  while (getPropertyInt('_sourceTerminalEnhanceUses') < 3) {
+    ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject28()));
+  } // Get KGB buffs
+
+
+  while (getPropertyInt('_kgbClicksUsed') > 3) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('briefcase buff meat');
+  } // Get defective game grid buff
+
+
+  if (!getPropertyBoolean('_defectiveTokenUsed')) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject29())); // Get zatara meatsmith buff
+
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject30())); // Summon otep'vekxen
+
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject31())); // Get ballpit buff
+
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject32()));
 }
 function freeFights() {}
 function barfMountain() {}
@@ -7319,26 +7474,33 @@ function printHelp() {
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("   > Pull from hagnks and get aftercore prep flags done.");
 }
 function main(target) {
-  var t = target.toLowerCase(); // This is just a control flow similar to Ezandora's, because I like it.
-
-  if (['king freed', 'kingfreed'].indexOf(t) >= 0) {
-    (0,_lib__WEBPACK_IMPORTED_MODULE_1__.kingFreed)();
-    return "You're ready for aftercore!";
-  } else if (['help', 'faq', 'assist',, ""].indexOf(t) >= 0) {
-    printHelp();
-  } else if (['farm'].indexOf(t) >= 0) {
-    throw "Farming not installed yet.";
-  } else if (['buff'].indexOf(t) >= 0) {
-    throw "Buffing not installed yet.";
-  } else if (['freeFights'].indexOf(t) >= 0) {
-    throw "Free Fights not installed yet.";
-  } else if (['level'].indexOf(t) >= 0) {
-    throw "Leveling not installed yet.";
-  } else {
-    throw "That command didn't work. Try 'help'.";
-  }
-
-  return "The code should not get here, what the hell?";
+  var t = target.toLowerCase();
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("t");
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.dailies)();
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.calculateFarmingTurns)();
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.farmPrep)();
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.runDiet)();
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.buffUp)();
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.freeFights)();
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.barfMountain)();
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.nightCap)(); // I want to make a control flow at some point but for now I just want something functional.
+  // Using a control flow to call scripts
+  // if (['king freed', 'kingfreed'].indexOf(t) >= 0) {
+  //   kingFreed();
+  //   return "You're ready for aftercore!";
+  // } else if (['help', 'faq', 'assist', , ""].indexOf(t) >= 0){
+  //   printHelp();
+  // } else if (['farm'].indexOf(t) >= 0){
+  //   throw "Farming not installed yet.";
+  // } else if (['buff'].indexOf(t) >= 0){
+  //   throw "Buffing not installed yet.";
+  // } else if (['freeFights'].indexOf(t) >= 0){
+  //   throw "Free Fights not installed yet.";
+  // } else if (['level'].indexOf(t) >= 0){
+  //   throw "Leveling not installed yet.";
+  // } else {
+  //   throw "That command didn't work. Try 'help'."
+  // }
 }
 
 /***/ }),

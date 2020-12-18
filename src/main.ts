@@ -2,7 +2,8 @@ import {
   print,
 } from 'kolmafia';
 
-import { setProps, kingFreed} from './lib';
+import { dailies, farmPrep, calculateFarmingTurns, runDiet, buffUp, 
+         freeFights, barfMountain, nightCap} from './lib';
 
 export function printHelp() {
   
@@ -21,23 +22,38 @@ export function printHelp() {
 export function main(target: string) {
 
   let t = target.toLowerCase();
-  // This is just a control flow similar to Ezandora's, because I like it.
-  if (['king freed', 'kingfreed'].indexOf(t) >= 0) {
-    kingFreed();
-    return "You're ready for aftercore!";
-  } else if (['help', 'faq', 'assist', , ""].indexOf(t) >= 0){
-    printHelp();
-  } else if (['farm'].indexOf(t) >= 0){
-    throw "Farming not installed yet.";
-  } else if (['buff'].indexOf(t) >= 0){
-    throw "Buffing not installed yet.";
-  } else if (['freeFights'].indexOf(t) >= 0){
-    throw "Free Fights not installed yet.";
-  } else if (['level'].indexOf(t) >= 0){
-    throw "Leveling not installed yet.";
-  } else {
-    throw "That command didn't work. Try 'help'."
-  }
 
-  return "The code should not get here, what the hell?";
+  print("t");
+
+  dailies();
+  calculateFarmingTurns();
+  farmPrep();
+  runDiet();
+  buffUp();
+  freeFights();
+  barfMountain();
+  nightCap();
+  
+
+  // I want to make a control flow at some point but for now I just want something functional.
+
+
+  // Using a control flow to call scripts
+  // if (['king freed', 'kingfreed'].indexOf(t) >= 0) {
+  //   kingFreed();
+  //   return "You're ready for aftercore!";
+  // } else if (['help', 'faq', 'assist', , ""].indexOf(t) >= 0){
+  //   printHelp();
+  // } else if (['farm'].indexOf(t) >= 0){
+  //   throw "Farming not installed yet.";
+  // } else if (['buff'].indexOf(t) >= 0){
+  //   throw "Buffing not installed yet.";
+  // } else if (['freeFights'].indexOf(t) >= 0){
+  //   throw "Free Fights not installed yet.";
+  // } else if (['level'].indexOf(t) >= 0){
+  //   throw "Leveling not installed yet.";
+  // } else {
+  //   throw "That command didn't work. Try 'help'."
+  // }
+
 }

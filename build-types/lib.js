@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.nightCap = exports.barfMountain = exports.freeFights = exports.buffUp = exports.runDiet = exports.calculateFarmingTurns = exports.farmPrep = exports.dailies = exports.kingFreed = exports.setProps = exports.getPropertyBoolean = exports.getPropertyInt = exports.setClan = void 0;
+exports.nightCap = exports.barfMountain = exports.freeFights = exports.buffUp = exports.runDiet = exports.calculateFarmingTurns = exports.farmPrep = exports.dailies = exports.kingFreed = exports.setProps = exports.getPropertyBoolean = exports.getPropertyInt = exports.tryEnsureEffect = exports.ensureEffect = exports.setClan = void 0;
 const kolmafia_1 = require("kolmafia");
 const src_1 = require("libram/src");
 const clanCache = {};
@@ -23,6 +23,19 @@ function setClan(target) {
     return true;
 }
 exports.setClan = setClan;
+function ensureEffect(ef, turns = 1) {
+    if (!tryEnsureEffect(ef, turns)) {
+        kolmafia_1.abort('Failed to get effect ' + ef.name + '.');
+    }
+}
+exports.ensureEffect = ensureEffect;
+function tryEnsureEffect(ef, turns = 1) {
+    if (kolmafia_1.haveEffect(ef) < turns) {
+        return kolmafia_1.cliExecute(ef.default) && kolmafia_1.haveEffect(ef) > 0;
+    }
+    return true;
+}
+exports.tryEnsureEffect = tryEnsureEffect;
 function getPropertyInt(name) {
     const str = kolmafia_1.getProperty(name);
     if (str === '') {
@@ -74,7 +87,7 @@ function dailies() {
     // Ensure I'm in the right clan
     setClan('Bonus Adventures from Hell');
     // STEP 1: GAIN PASSIVE RESOURCES ======================
-    // Harvest your daily sea jelly
+    // Harvest your daily sea jelly; check your old man, if needed
     if (kolmafia_1.myLevel() > 10 && kolmafia_1.getProperty("questS01OldGuy") == "unstarted") {
         kolmafia_1.visitUrl("place.php?whichplace=sea_oldman&action=oldman_oldman", false);
     }
@@ -117,6 +130,8 @@ function dailies() {
     // STEP 3: SUMMONS =====================================
     // Tome summons
     // Deck summons; mana, mana. Reserve one for Robort.
+    kolmafia_1.cliExecute('cheat island');
+    kolmafia_1.cliExecute('cheat ancestral recall');
     // Visiting Looking Glass in clan VIP lounge
     kolmafia_1.visitUrl('clan_viplounge.php?action=lookingglass&whichfloor=2');
     kolmafia_1.cliExecute('swim item');
@@ -149,9 +164,15 @@ exports.dailies = dailies;
 function farmPrep() {
     // This function does purchases to set up for farming
     // Purchase a dinseylandfill ticket, use it / get free FunFunds
-    // Purchase robort drinks & feed them to robort
+    kolmafia_1.buy(1, src_1.$item `one-day ticket to Dinseylandfill`);
+    kolmafia_1.use(1, src_1.$item `one-day ticket to Dinseylandfill`);
+    // Purchase robort drinks & feed them to robort; need to compare ingredient to the drink like old ash script
+    let roboDrinks = ['newark', 'single entendre', 'drive-by shooting', 'bloody nora'];
+    roboDrinks.forEach(function (value) {
+        kolmafia_1.buy(1, src_1.$item `${value}`);
+        kolmafia_1.cliExecute(`robo ${value}`);
+    });
     // Set up mumming trunk nonsense
-    // 
 }
 exports.farmPrep = farmPrep;
 function calculateFarmingTurns() {
@@ -177,15 +198,31 @@ exports.runDiet = runDiet;
 function buffUp() {
     // This function buffs you up for meatfarming
     // Get "free" beach-head familiar buff
+    ensureEffect(src_1.$effect `Do I Know You From Somewhere?`);
     // Get witchess buff
+    ensureEffect(src_1.$effect `Puzzle Champ`);
     // Get clan "aggressive" buffs
+    while (getPropertyInt('_poolGames') < 3) {
+        ensureEffect(src_1.$effect `Billiards Belligerence`);
+    }
     // Get mad tea party buff
     // Get meat.enh buffs
+    while (getPropertyInt('_sourceTerminalEnhanceUses') < 3) {
+        ensureEffect(src_1.$effect `meat.enh`);
+    }
     // Get KGB buffs
+    while (getPropertyInt('_kgbClicksUsed') > 3) {
+        kolmafia_1.cliExecute('briefcase buff meat');
+    }
     // Get defective game grid buff
+    if (!getPropertyBoolean('_defectiveTokenUsed'))
+        kolmafia_1.use(1, src_1.$item `defective Game Grid token`);
     // Get zatara meatsmith buff
+    ensureEffect(src_1.$effect `Meet the Meat`);
     // Summon otep'vekxen
+    ensureEffect(src_1.$effect `Preternatural Greed`);
     // Get ballpit buff
+    ensureEffect(src_1.$effect `Having a Ball!`);
 }
 exports.buffUp = buffUp;
 function freeFights() {

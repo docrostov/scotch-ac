@@ -26,6 +26,21 @@ export function setClan(target: string) {
     return true;
 }
 
+
+export function ensureEffect(ef: Effect, turns = 1) {
+  if (!tryEnsureEffect(ef, turns)) {
+    abort('Failed to get effect ' + ef.name + '.');
+  }
+}
+
+export function tryEnsureEffect(ef: Effect, turns = 1) {
+  if (haveEffect(ef) < turns) {
+    return cliExecute(ef.default) && haveEffect(ef) > 0;
+  }
+  return true;
+}
+
+
 export function getPropertyInt(name: string) {
   const str = getProperty(name);
   if (str === '') {
@@ -85,13 +100,11 @@ export function dailies() {
 
     // STEP 1: GAIN PASSIVE RESOURCES ======================
 
-    // Harvest your daily sea jelly
-    
+    // Harvest your daily sea jelly; check your old man, if needed
 	  if ( myLevel() > 10 && getProperty("questS01OldGuy") == "unstarted" ){
       visitUrl("place.php?whichplace=sea_oldman&action=oldman_oldman",false);
     }
-
-    if( getProperty("questS01OldGuy") !== "unstarted") {
+    if ( getProperty("questS01OldGuy") !== "unstarted"){
       useFamiliar($familiar`space jellyfish`);
       visitUrl('place.php?whichplace=thesea&action=thesea_left2');
     }
@@ -144,6 +157,8 @@ export function dailies() {
     // Tome summons
 
     // Deck summons; mana, mana. Reserve one for Robort.
+    cliExecute('cheat island');
+    cliExecute('cheat ancestral recall');
 
     // Visiting Looking Glass in clan VIP lounge
     visitUrl('clan_viplounge.php?action=lookingglass&whichfloor=2');
@@ -182,12 +197,20 @@ export function farmPrep() {
     // This function does purchases to set up for farming
 
     // Purchase a dinseylandfill ticket, use it / get free FunFunds
+    buy(1, $item`one-day ticket to Dinseylandfill`);
+    use(1, $item`one-day ticket to Dinseylandfill`);
 
-    // Purchase robort drinks & feed them to robort
+    // Purchase robort drinks & feed them to robort; need to compare ingredient to the drink like old ash script
+    let roboDrinks = ['newark','single entendre', 'drive-by shooting', 'bloody nora'];
+    
+    roboDrinks.forEach(function (value) {
+      buy(1, $item`${value}`);
+      cliExecute(`robo ${value}`); 
+    });
 
     // Set up mumming trunk nonsense
 
-    // 
+
 }
 
 export function calculateFarmingTurns() {
@@ -218,24 +241,40 @@ export function buffUp() {
     // This function buffs you up for meatfarming
     
     // Get "free" beach-head familiar buff
+    ensureEffect($effect`Do I Know You From Somewhere?`);
 
     // Get witchess buff
+    ensureEffect($effect`Puzzle Champ`);
 
     // Get clan "aggressive" buffs
-
+    while (getPropertyInt('_poolGames') < 3) {
+      ensureEffect($effect`Billiards Belligerence`);
+    }
+    
     // Get mad tea party buff
 
     // Get meat.enh buffs
+    while (getPropertyInt('_sourceTerminalEnhanceUses') < 3) {
+      ensureEffect($effect`meat.enh`);
+    }
 
     // Get KGB buffs
+    while (getPropertyInt('_kgbClicksUsed') > 3) {
+      cliExecute('briefcase buff meat');
+    }
 
     // Get defective game grid buff
+    if (!getPropertyBoolean('_defectiveTokenUsed')) use(1, $item`defective Game Grid token`);
 
     // Get zatara meatsmith buff
+    ensureEffect($effect`Meet the Meat`);
 
     // Summon otep'vekxen
-
+    ensureEffect($effect`Preternatural Greed`);
+    
     // Get ballpit buff
+    ensureEffect($effect`Having a Ball!`);
+
 
 }
 
