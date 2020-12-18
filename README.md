@@ -4,4 +4,4 @@ This script is intended to be an aftercore module for the KOL; it includes a bun
 
 To install (though I don't know why you'd want to), use:
 
-```svn checkout https://github.com/docrostov/scotch-ac/branches/master/KoLmafia```
+```svn checkout https://github.com/docrostov/scotch-ac/branches/main/KoLmafia```

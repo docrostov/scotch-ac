@@ -7065,14 +7065,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(kolmafia__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib */ "./src/lib.ts");
 
+ // Import package info
+
+var packageData = __webpack_require__(/*! ../package.json */ "./package.json");
 
 function main(target) {
-  // This is just a control flow similar to Ezandora's
+  // This is just a control flow similar to Ezandora's.
   if (['king freed', 'kingfreed'].indexOf(target) >= 0) {
     (0,_lib__WEBPACK_IMPORTED_MODULE_1__.kingFreed)();
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("You're ready for aftercore!");
   }
+
+  if (['help', 'faq', 'assist'].indexOf(target) >= 0) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("=========================================");
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)(" >>>>>>>> ".concat(packageData.name, " v").concat(packageData.version, " "));
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("=========================================");
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("");
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("scotchac king freed");
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("   > Pull from hagnks and get aftercore prep flags done.");
+  }
 }
+
+/***/ }),
+
+/***/ "./package.json":
+/*!**********************!*\
+  !*** ./package.json ***!
+  \**********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse("{\"name\":\"scotch-ac\",\"version\":\"0.0.1\",\"description\":\"Aftercore action module for KOL.\",\"main\":\"KoLmafia/scripts/scotch-ac/scotch-ac.js\",\"scripts\":{\"test\":\"echo \\\"Error: no test specified\\\" && exit 1\",\"postinstall\":\"patch-package\",\"build\":\"npm run build:types && npm run build:js\",\"build:types\":\"tsc\",\"build:js\":\"webpack\",\"watch\":\"webpack --watch --progress\"},\"devDependencies\":{\"@babel/cli\":\"^7.12.8\",\"@babel/core\":\"^7.12.9\",\"@babel/plugin-proposal-class-properties\":\"^7.12.1\",\"@babel/plugin-proposal-object-rest-spread\":\"^7.12.1\",\"@babel/preset-env\":\"^7.12.7\",\"@babel/preset-typescript\":\"^7.12.7\",\"@types/node\":\"^14.11.2\",\"babel-loader\":\"^8.2.2\",\"gts\":\"^3.0.2\",\"libram\":\"github:Loathing-Associates-Scripting-Society/libram\",\"patch-package\":\"^6.2.2\",\"typescript\":\"^4.0.3\",\"webpack\":\"^5.8.0\",\"webpack-cli\":\"^4.2.0\"},\"dependencies\":{\"kolmafia\":\"^1.0.2\"},\"author\":\"Captain Scotch\",\"license\":\"ISC\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/docrostov/kol-js-starter.git\"},\"keywords\":[\"KoLMafia\",\"JS\",\"TS\"],\"bugs\":{\"url\":\"https://github.com/docrostov/kol-js-starter/issues\"},\"homepage\":\"https://github.com/docrostov/kol-js-starter#readme\"}");
 
 /***/ }),
 
