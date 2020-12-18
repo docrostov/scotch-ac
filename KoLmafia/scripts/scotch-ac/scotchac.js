@@ -7059,31 +7059,40 @@ function buffUp() {// This function buffs you up for meatfarming
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "printHelp": () => /* binding */ printHelp,
 /* harmony export */   "main": () => /* binding */ main
 /* harmony export */ });
 /* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! kolmafia */ "kolmafia");
 /* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(kolmafia__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib */ "./src/lib.ts");
 
- // Import package info
 
-var packageData = __webpack_require__(/*! ../package.json */ "./package.json");
+function printHelp() {
+  // Import package info
+  var packageData = __webpack_require__(/*! ../package.json */ "./package.json");
 
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("=========================================");
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)(" >>>>>>>> ".concat(packageData.name, " v").concat(packageData.version, " "));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("=========================================");
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("");
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("scotchac king freed");
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("   > Pull from hagnks and get aftercore prep flags done.");
+}
 function main(target) {
-  // This is just a control flow similar to Ezandora's.
+  target = target.toLowerCase(); // This is just a control flow similar to Ezandora's.
+
   if (['king freed', 'kingfreed'].indexOf(target) >= 0) {
     (0,_lib__WEBPACK_IMPORTED_MODULE_1__.kingFreed)();
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("You're ready for aftercore!");
   }
 
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("testing");
+
   if (['help', 'faq', 'assist'].indexOf(target) >= 0) {
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("=========================================");
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)(" >>>>>>>> ".concat(packageData.name, " v").concat(packageData.version, " "));
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("=========================================");
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("");
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("scotchac king freed");
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("   > Pull from hagnks and get aftercore prep flags done.");
+    printHelp();
   }
+
+  return "hello?";
 }
 
 /***/ }),
