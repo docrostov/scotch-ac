@@ -1,9 +1,13 @@
 export declare function setClan(target: string): boolean;
+export declare function getPropertyInt(name: string): number;
+export declare function getPropertyBoolean(name: string, default_?: boolean | null): boolean;
 export declare function setProps(): void;
 export declare function kingFreed(): void;
-export declare function intro(): "Intro already complete!" | "Intro completed.";
+export declare function dailies(): "Intro already complete!" | "Intro completed.";
 export declare function farmPrep(): void;
-export declare function calculateFarmingTurns(): void;
-export declare function getPropertyBoolean(name: string, default_?: boolean | null): boolean;
+export declare function calculateFarmingTurns(): number;
 export declare function runDiet(): void;
 export declare function buffUp(): void;
+export declare function freeFights(): void;
+export declare function barfMountain(): void;
+export declare function nightCap(): void;

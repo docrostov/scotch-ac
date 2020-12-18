@@ -6863,20 +6863,204 @@ function valid(data) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "setClan": () => /* binding */ setClan,
+/* harmony export */   "getPropertyInt": () => /* binding */ getPropertyInt,
+/* harmony export */   "getPropertyBoolean": () => /* binding */ getPropertyBoolean,
 /* harmony export */   "setProps": () => /* binding */ setProps,
 /* harmony export */   "kingFreed": () => /* binding */ kingFreed,
-/* harmony export */   "intro": () => /* binding */ intro,
+/* harmony export */   "dailies": () => /* binding */ dailies,
 /* harmony export */   "farmPrep": () => /* binding */ farmPrep,
 /* harmony export */   "calculateFarmingTurns": () => /* binding */ calculateFarmingTurns,
-/* harmony export */   "getPropertyBoolean": () => /* binding */ getPropertyBoolean,
 /* harmony export */   "runDiet": () => /* binding */ runDiet,
-/* harmony export */   "buffUp": () => /* binding */ buffUp
+/* harmony export */   "buffUp": () => /* binding */ buffUp,
+/* harmony export */   "freeFights": () => /* binding */ freeFights,
+/* harmony export */   "barfMountain": () => /* binding */ barfMountain,
+/* harmony export */   "nightCap": () => /* binding */ nightCap
 /* harmony export */ });
 /* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! kolmafia */ "kolmafia");
 /* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(kolmafia__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var libram_src__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! libram/src */ "./node_modules/libram/src/index.ts");
-function _templateObject3() {
+function _templateObject21() {
   var data = _taggedTemplateLiteral(["Dirt Julep"]);
+
+  _templateObject21 = function _templateObject21() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject20() {
+  var data = _taggedTemplateLiteral(["bird-a-day calendar"]);
+
+  _templateObject20 = function _templateObject20() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject19() {
+  var data = _taggedTemplateLiteral(["blessing of the bird"]);
+
+  _templateObject19 = function _templateObject19() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject18() {
+  var data = _taggedTemplateLiteral(["bird-a-day calendar"]);
+
+  _templateObject18 = function _templateObject18() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject17() {
+  var data = _taggedTemplateLiteral(["Perfect Freeze"]);
+
+  _templateObject17 = function _templateObject17() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject16() {
+  var data = _taggedTemplateLiteral(["Prevent Scurvy and Sobriety"]);
+
+  _templateObject16 = function _templateObject16() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject15() {
+  var data = _taggedTemplateLiteral(["Acquire Rhinestones"]);
+
+  _templateObject15 = function _templateObject15() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject14() {
+  var data = _taggedTemplateLiteral(["Grab a Cold One"]);
+
+  _templateObject14 = function _templateObject14() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject13() {
+  var data = _taggedTemplateLiteral(["Spaghetti Breakfast"]);
+
+  _templateObject13 = function _templateObject13() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject12() {
+  var data = _taggedTemplateLiteral(["Pastamastery"]);
+
+  _templateObject12 = function _templateObject12() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject11() {
+  var data = _taggedTemplateLiteral(["Advanced Saucecrafting"]);
+
+  _templateObject11 = function _templateObject11() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["Advanced Cocktailcrafting"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["Summon Rhinestones"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["Summon Crimbo Candy"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["Fourth of May Cosplay Saber"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["etched hourglass"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["print screen button"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["internet meme shop"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["infinite bacon machine"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -6886,7 +7070,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["Fourth of May Cosplay Saber"]);
+  var data = _taggedTemplateLiteral(["Chateau Mantegna room key"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -6932,6 +7116,27 @@ function setClan(target) {
 
   return true;
 }
+function getPropertyInt(name) {
+  var str = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)(name);
+
+  if (str === '') {
+    throw "Unknown property ".concat(name, ".");
+  }
+
+  return (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.toInt)(str);
+}
+function getPropertyBoolean(name) {
+  var default_ = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+  // Helper functions from Bean re: 
+  var str = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)(name);
+
+  if (str === '') {
+    if (default_ === null) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.abort)("Unknown property ".concat(name, "."));else return default_;
+  }
+
+  return str === 'true';
+} // ====================================================================
+
 function setProps() {
   // Function to set up relevant scotch-ac properties.
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('_scotchIntro', '0');
@@ -6951,7 +7156,7 @@ function kingFreed() {
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('hpAutoRecovery', '0.8');
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('manaBurningThreshold', '-0.05');
 }
-function intro() {
+function dailies() {
   // This section begins your day; it's effectively a more
   //   compressed version of mafia's "breakfast" script. 
   if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)('_scotchIntro') == '1') {
@@ -6963,19 +7168,42 @@ function intro() {
   setClan('Bonus Adventures from Hell'); // STEP 1: GAIN PASSIVE RESOURCES ======================
   // Harvest your daily sea jelly
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject()));
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=thesea&action=thesea_left2'); // Visit the chateau potion bar; does this throw errors w/o chateau?
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myLevel)() > 10 && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)("questS01OldGuy") == "unstarted") {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)("place.php?whichplace=sea_oldman&action=oldman_oldman", false);
+  }
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=chateau&action=chateauDesk2'); // Get your clan VIP swimming item
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)("questS01OldGuy") !== "unstarted") {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject()));
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=thesea&action=thesea_left2');
+  } // Visit the chateau potion bar; does this throw errors w/o chateau?
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('swim item'); // Check for a defective game grid token
-  // Snag mainstat +XP% from the clan shower
-  // Use infinite bacon machine & buy a print-screen button
-  // Use etched hourglass for +5 adventures
-  // STEP 2: MAKE CHOICES ================================
+
+  if (getPropertyBoolean('chateauAvailable') && !getPropertyBoolean('_chateauDeskHarvested') && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.isUnrestricted)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject2()))) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=chateau&action=chateauDesk2');
+  } // Get your clan VIP swimming item
+
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('swim item'); // Get your free crazy horse
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('horsery crazy'); // Request cheesefax fortune stuff 
+
+  while (getPropertyInt("_clanFortuneConsultUses") < 3 && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.isOnline)('3038166')) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("fortune cheesefax portza bortman thick");
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("waitq 5");
+  } // Check for a defective game grid token
+
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=arcade&action=arcade_plumber'); // Snag mainstat +XP% from the clan shower
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("shower ".concat((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myPrimestat)())); // Use infinite bacon machine & buy a print-screen button
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject3()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$coinmaster)(_templateObject4()), 1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject5())); // Use etched hourglass for +5 adventures
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject6())); // STEP 2: MAKE CHOICES ================================
   // Add familiar weight to your cosplay saber
 
-  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject2())) > 0) {
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject7())) > 0) {
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('main.php?action=may4');
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runChoice)(4);
   } // Set boombox to meat.
@@ -6986,17 +7214,35 @@ function intro() {
   } // STEP 3: SUMMONS =====================================
   // Tome summons
   // Deck summons; mana, mana. Reserve one for Robort.
-  // Pocket wishes
-  // Summon rhinestones
-  // Prevent scurvy/sobriety
-  // Summon crimbo candy
-  // Grab a cold one
-  // Perfect freeze
-  // Advanced cocktailcrafting
-  // Pastamastery
-  // Saucecrafting
-  // Holiday Fun
-  // Set the property to bypass intro on next run.
+  // Visiting Looking Glass in clan VIP lounge
+
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('clan_viplounge.php?action=lookingglass&whichfloor=2');
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('swim item');
+
+  while (getPropertyInt('_genieWishesUsed') < 3) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('genie wish for more wishes');
+  }
+
+  if (getPropertyInt('_candySummons') === 0) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject8()));
+  }
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject9()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject10()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject11()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject12()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject13()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject14()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject15()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject16()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject17())); // Get daily bird
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject18())) > 0 && !(0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject19()))) {
+    if (!getPropertyBoolean("_canSeekBirds")) {
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject20()));
+    }
+  } // Set the property to bypass intro on next run.
 
 
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('_scotchIntro', '1');
@@ -7008,18 +7254,9 @@ function farmPrep() {// This function does purchases to set up for farming
   // Set up mumming trunk nonsense
   // 
 }
-function calculateFarmingTurns() {// Assess farming turns given available resources.
-}
-function getPropertyBoolean(name) {
-  var default_ = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-  // Helper functions from Bean re: 
-  var str = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)(name);
-
-  if (str === '') {
-    if (default_ === null) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.abort)("Unknown property ".concat(name, "."));else return default_;
-  }
-
-  return str === 'true';
+function calculateFarmingTurns() {
+  // Assess farming turns given available resources.
+  return 610;
 }
 function runDiet() {
   // Diet is relatively manual right now. Go full hobo for 
@@ -7030,7 +7267,7 @@ function runDiet() {
   // Check barrelprayer buff and utilize if it's good.
   // Use dirt julep on mime shotglass booze
   if (getPropertyBoolean("_mimeArmyShotglassUsed") != true) {
-    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject3()))) {
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject21()))) {
       (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)("_mimeArmyShotglassUsed", "true");
     }
   }
@@ -7047,6 +7284,9 @@ function buffUp() {// This function buffs you up for meatfarming
   // Summon otep'vekxen
   // Get ballpit buff
 }
+function freeFights() {}
+function barfMountain() {}
+function nightCap() {}
 
 /***/ }),
 

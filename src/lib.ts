@@ -1,9 +1,9 @@
 import {
-    useFamiliar, getClanName, myTurncount, drink,
-    cliExecute, availableAmount, visitUrl, runChoice, getProperty, setProperty, print, abort
+    useFamiliar, getClanName, myTurncount, drink, buy, useSkill, toInt, myLevel, haveEffect,
+    cliExecute, availableAmount, visitUrl, runChoice, getProperty, setProperty, print, abort, isUnrestricted, isOnline, myPrimestat, use
   } from 'kolmafia';
   
-import { $familiar, $item, $effect, $effects, $skill, $slot, $location, $stat, $monster, $class } from 'libram/src';
+import { $familiar, $item, $coinmaster, $effect, $effects, $skill, $slot, $location, $stat, $monster, $class } from 'libram/src';
 
 const clanCache: { [index: string]: number } = {};
 export function setClan(target: string) {
@@ -25,6 +25,27 @@ export function setClan(target: string) {
     }
     return true;
 }
+
+export function getPropertyInt(name: string) {
+  const str = getProperty(name);
+  if (str === '') {
+    throw `Unknown property ${name}.`;
+  }
+  return toInt(str);
+}
+
+
+export function getPropertyBoolean(name: string, default_: boolean | null = null) {
+  // Helper functions from Bean re: 
+  const str = getProperty(name);
+  if (str === '') {
+    if (default_ === null) abort(`Unknown property ${name}.`);
+    else return default_;
+  }
+  return str === 'true';
+}
+
+// ====================================================================
 
 export function setProps() {
     // Function to set up relevant scotch-ac properties.
@@ -50,7 +71,7 @@ export function kingFreed() {
   
 }
   
-export function intro() {
+export function dailies() {
     // This section begins your day; it's effectively a more
     //   compressed version of mafia's "breakfast" script. 
   
@@ -65,24 +86,45 @@ export function intro() {
     // STEP 1: GAIN PASSIVE RESOURCES ======================
 
     // Harvest your daily sea jelly
-    useFamiliar($familiar`space jellyfish`);
-    visitUrl('place.php?whichplace=thesea&action=thesea_left2');
+    
+	  if ( myLevel() > 10 && getProperty("questS01OldGuy") == "unstarted" ){
+      visitUrl("place.php?whichplace=sea_oldman&action=oldman_oldman",false);
+    }
+
+    if( getProperty("questS01OldGuy") !== "unstarted") {
+      useFamiliar($familiar`space jellyfish`);
+      visitUrl('place.php?whichplace=thesea&action=thesea_left2');
+    }
     
     // Visit the chateau potion bar; does this throw errors w/o chateau?
-    visitUrl('place.php?whichplace=chateau&action=chateauDesk2');
+    if (getPropertyBoolean('chateauAvailable') && !getPropertyBoolean('_chateauDeskHarvested') && isUnrestricted($item`Chateau Mantegna room key`)) {      
+      visitUrl('place.php?whichplace=chateau&action=chateauDesk2');
+    }
 
     // Get your clan VIP swimming item
     cliExecute('swim item');
 
+    // Get your free crazy horse
+    cliExecute('horsery crazy');
+
+    // Request cheesefax fortune stuff 
+    while(getPropertyInt("_clanFortuneConsultUses") < 3 && isOnline('3038166')) {
+      cliExecute("fortune cheesefax portza bortman thick");
+      cliExecute("waitq 5");
+    }
+
     // Check for a defective game grid token
+    visitUrl('place.php?whichplace=arcade&action=arcade_plumber');
 
     // Snag mainstat +XP% from the clan shower
+    cliExecute(`shower ${myPrimestat()}`);
 
     // Use infinite bacon machine & buy a print-screen button
+    use(1, $item`infinite bacon machine`);
+    buy($coinmaster`internet meme shop`, 1, $item`print screen button`);
 
     // Use etched hourglass for +5 adventures
-
-
+    use(1, $item`etched hourglass`);
   
     // STEP 2: MAKE CHOICES ================================
   
@@ -103,19 +145,33 @@ export function intro() {
 
     // Deck summons; mana, mana. Reserve one for Robort.
 
-    // Pocket wishes
-    
-    // Summon rhinestones
-    // Prevent scurvy/sobriety
-    // Summon crimbo candy
-    // Grab a cold one
-    // Perfect freeze
-    // Advanced cocktailcrafting
-    // Pastamastery
-    // Saucecrafting
-    // Holiday Fun
+    // Visiting Looking Glass in clan VIP lounge
+    visitUrl('clan_viplounge.php?action=lookingglass&whichfloor=2');
+    cliExecute('swim item');
+    while (getPropertyInt('_genieWishesUsed') < 3) {
+      cliExecute('genie wish for more wishes');
+    }
 
-  
+    if (getPropertyInt('_candySummons') === 0) {
+      useSkill(1, $skill`Summon Crimbo Candy`);
+    }
+    
+    useSkill(1, $skill`Summon Rhinestones`);
+    useSkill(1, $skill`Advanced Cocktailcrafting`);
+    useSkill(1, $skill`Advanced Saucecrafting`);
+    useSkill(1, $skill`Pastamastery`);
+    useSkill(1, $skill`Spaghetti Breakfast`);
+    useSkill(1, $skill`Grab a Cold One`);
+    useSkill(1, $skill`Acquire Rhinestones`);
+    useSkill(1, $skill`Prevent Scurvy and Sobriety`);
+    useSkill(1, $skill`Perfect Freeze`);
+    
+    // Get daily bird
+  	if ( availableAmount($item`bird-a-day calendar`) > 0 && !haveEffect($effect`blessing of the bird`) ) {
+	    if ( !getPropertyBoolean("_canSeekBirds") ) {
+        use($item`bird-a-day calendar`);
+      }
+    }
     // Set the property to bypass intro on next run.
     setProperty('_scotchIntro', '1');
     return "Intro completed."
@@ -137,17 +193,9 @@ export function farmPrep() {
 export function calculateFarmingTurns() {
     // Assess farming turns given available resources.
 
-}
+    return 610;
 
-export function getPropertyBoolean(name: string, default_: boolean | null = null) {
-    // Helper functions from Bean re: 
-    const str = getProperty(name);
-    if (str === '') {
-      if (default_ === null) abort(`Unknown property ${name}.`);
-      else return default_;
-    }
-    return str === 'true';
-  }
+}
 
 export function runDiet() {
     // Diet is relatively manual right now. Go full hobo for 
@@ -188,5 +236,17 @@ export function buffUp() {
     // Summon otep'vekxen
 
     // Get ballpit buff
+
+}
+
+export function freeFights() {
+
+}
+
+export function barfMountain() {
+
+}
+
+export function nightCap() {
 
 }
