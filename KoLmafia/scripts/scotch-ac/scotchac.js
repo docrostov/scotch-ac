@@ -7463,10 +7463,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "main": () => /* binding */ main
 /* harmony export */ });
-/* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib */ "./src/lib.ts");
+/* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! kolmafia */ "kolmafia");
+/* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(kolmafia__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib */ "./src/lib.ts");
 // import {
 //   print,
 // } from 'kolmafia';
+
  // export function printHelp() {
 //   // Import package info like version # & name
 //   var packageData = require('../package.json');
@@ -7480,14 +7483,15 @@ __webpack_require__.r(__webpack_exports__);
 // export function main(target = '') {
 
 function main() {
-  (0,_lib__WEBPACK_IMPORTED_MODULE_0__.dailies)();
-  (0,_lib__WEBPACK_IMPORTED_MODULE_0__.calculateFarmingTurns)();
-  (0,_lib__WEBPACK_IMPORTED_MODULE_0__.farmPrep)();
-  (0,_lib__WEBPACK_IMPORTED_MODULE_0__.runDiet)();
-  (0,_lib__WEBPACK_IMPORTED_MODULE_0__.buffUp)();
-  (0,_lib__WEBPACK_IMPORTED_MODULE_0__.freeFights)();
-  (0,_lib__WEBPACK_IMPORTED_MODULE_0__.barfMountain)();
-  (0,_lib__WEBPACK_IMPORTED_MODULE_0__.nightCap)(); // I want to make a control flow at some point but for now I just want something functional.
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("this is a print statement for my friend bean");
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.dailies)();
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.calculateFarmingTurns)();
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.farmPrep)();
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.runDiet)();
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.buffUp)();
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.freeFights)();
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.barfMountain)();
+  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.nightCap)(); // I want to make a control flow at some point but for now I just want something functional.
   // Using a control flow to call scripts
   // if (['king freed', 'kingfreed'].indexOf(t) >= 0) {
   //   kingFreed();

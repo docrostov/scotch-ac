@@ -2,6 +2,7 @@
 //   print,
 // } from 'kolmafia';
 
+import { print } from 'kolmafia';
 import { dailies, farmPrep, calculateFarmingTurns, runDiet, buffUp, 
          freeFights, barfMountain, nightCap} from './lib';
 
@@ -20,6 +21,8 @@ import { dailies, farmPrep, calculateFarmingTurns, runDiet, buffUp,
 
 // export function main(target = '') {
 export function main() {
+
+  print("this is a print statement for my friend bean");
 
   dailies();
   calculateFarmingTurns();

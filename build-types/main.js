@@ -4,6 +4,7 @@
 // } from 'kolmafia';
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.main = void 0;
+const kolmafia_1 = require("kolmafia");
 const lib_1 = require("./lib");
 // export function printHelp() {
 //   // Import package info like version # & name
@@ -17,6 +18,7 @@ const lib_1 = require("./lib");
 // }
 // export function main(target = '') {
 function main() {
+    kolmafia_1.print("this is a print statement for my friend bean");
     lib_1.dailies();
     lib_1.calculateFarmingTurns();
     lib_1.farmPrep();
