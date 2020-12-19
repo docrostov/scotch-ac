@@ -1,22 +1,22 @@
-import {
-  print,
-} from 'kolmafia';
+// import {
+//   print,
+// } from 'kolmafia';
 
 import { dailies, farmPrep, calculateFarmingTurns, runDiet, buffUp, 
          freeFights, barfMountain, nightCap} from './lib';
 
-export function printHelp() {
+// export function printHelp() {
   
-  // Import package info like version # & name
-  var packageData = require('../package.json');
+//   // Import package info like version # & name
+//   var packageData = require('../package.json');
   
-  print("=========================================");
-  print(` >>>>>>>> ${packageData.name} v${packageData.version} `);
-  print("=========================================");
-  print("");
-  print("scotchac king freed");
-  print("   > Pull from hagnks and get aftercore prep flags done.");
-}
+//   print("=========================================");
+//   print(` >>>>>>>> ${packageData.name} v${packageData.version} `);
+//   print("=========================================");
+//   print("");
+//   print("scotchac king freed");
+//   print("   > Pull from hagnks and get aftercore prep flags done.");
+// }
 
 // export function main(target = '') {
 export function main() {
