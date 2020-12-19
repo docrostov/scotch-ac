@@ -275,7 +275,6 @@ export function buffUp() {
     // Get ballpit buff
     ensureEffect($effect`Having a Ball!`);
 
-
 }
 
 export function freeFights() {

@@ -7479,9 +7479,10 @@ function printHelp() {
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("scotchac king freed");
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("   > Pull from hagnks and get aftercore prep flags done.");
 }
-function main(target) {
+function main() {
+  var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "default";
   var t = target.toLowerCase();
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("t");
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)(t);
   (0,_lib__WEBPACK_IMPORTED_MODULE_1__.dailies)();
   (0,_lib__WEBPACK_IMPORTED_MODULE_1__.calculateFarmingTurns)();
   (0,_lib__WEBPACK_IMPORTED_MODULE_1__.farmPrep)();
