@@ -6867,6 +6867,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "tryEnsureEffect": () => /* binding */ tryEnsureEffect,
 /* harmony export */   "getPropertyInt": () => /* binding */ getPropertyInt,
 /* harmony export */   "getPropertyBoolean": () => /* binding */ getPropertyBoolean,
+/* harmony export */   "setPropertyInt": () => /* binding */ setPropertyInt,
 /* harmony export */   "setProps": () => /* binding */ setProps,
 /* harmony export */   "kingFreed": () => /* binding */ kingFreed,
 /* harmony export */   "dailies": () => /* binding */ dailies,
@@ -7112,7 +7113,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["Summon Rhinestones"]);
+  var data = _taggedTemplateLiteral(["Acquire Rhinestones"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -7263,6 +7264,9 @@ function getPropertyBoolean(name) {
   }
 
   return str === 'true';
+}
+function setPropertyInt(name, value) {
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)(name, value.toString());
 } // ====================================================================
 
 function setProps() {

@@ -60,6 +60,11 @@ export function getPropertyBoolean(name: string, default_: boolean | null = null
   return str === 'true';
 }
 
+
+export function setPropertyInt(name: string, value: number) {
+  setProperty(name, value.toString());
+}
+
 // ====================================================================
 
 export function setProps() {
@@ -172,7 +177,7 @@ export function dailies() {
       useSkill(1, $skill`Summon Crimbo Candy`);
     }
     
-    useSkill(1, $skill`Summon Rhinestones`);
+    useSkill(1, $skill`Acquire Rhinestones`);
     useSkill(1, $skill`Advanced Cocktailcrafting`);
     useSkill(1, $skill`Advanced Saucecrafting`);
     useSkill(1, $skill`Pastamastery`);

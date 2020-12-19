@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.nightCap = exports.barfMountain = exports.freeFights = exports.buffUp = exports.runDiet = exports.calculateFarmingTurns = exports.farmPrep = exports.dailies = exports.kingFreed = exports.setProps = exports.getPropertyBoolean = exports.getPropertyInt = exports.tryEnsureEffect = exports.ensureEffect = exports.setClan = void 0;
+exports.nightCap = exports.barfMountain = exports.freeFights = exports.buffUp = exports.runDiet = exports.calculateFarmingTurns = exports.farmPrep = exports.dailies = exports.kingFreed = exports.setProps = exports.setPropertyInt = exports.getPropertyBoolean = exports.getPropertyInt = exports.tryEnsureEffect = exports.ensureEffect = exports.setClan = void 0;
 const kolmafia_1 = require("kolmafia");
 const src_1 = require("libram/src");
 const clanCache = {};
@@ -56,6 +56,10 @@ function getPropertyBoolean(name, default_ = null) {
     return str === 'true';
 }
 exports.getPropertyBoolean = getPropertyBoolean;
+function setPropertyInt(name, value) {
+    kolmafia_1.setProperty(name, value.toString());
+}
+exports.setPropertyInt = setPropertyInt;
 // ====================================================================
 function setProps() {
     // Function to set up relevant scotch-ac properties.
@@ -142,7 +146,7 @@ function dailies() {
     if (getPropertyInt('_candySummons') === 0) {
         kolmafia_1.useSkill(1, src_1.$skill `Summon Crimbo Candy`);
     }
-    kolmafia_1.useSkill(1, src_1.$skill `Summon Rhinestones`);
+    kolmafia_1.useSkill(1, src_1.$skill `Acquire Rhinestones`);
     kolmafia_1.useSkill(1, src_1.$skill `Advanced Cocktailcrafting`);
     kolmafia_1.useSkill(1, src_1.$skill `Advanced Saucecrafting`);
     kolmafia_1.useSkill(1, src_1.$skill `Pastamastery`);

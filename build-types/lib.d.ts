@@ -3,6 +3,7 @@ export declare function ensureEffect(ef: Effect, turns?: number): void;
 export declare function tryEnsureEffect(ef: Effect, turns?: number): boolean;
 export declare function getPropertyInt(name: string): number;
 export declare function getPropertyBoolean(name: string, default_?: boolean | null): boolean;
+export declare function setPropertyInt(name: string, value: number): void;
 export declare function setProps(): void;
 export declare function kingFreed(): void;
 export declare function dailies(): "Intro already complete!" | "Intro completed.";
