@@ -11,8 +11,12 @@ import {
     choiceFollowsFight,
     print,
     equippedAmount,
+    getProperty,
+    useSkill,
+    throwItem,
 } from 'kolmafia';
 import { $skill, $familiar, $effect, $location, $monster, $item } from 'libram/src';
+import { getPropertyInt, getPropertyBoolean } from './lib'
 
 
 function multiFight() {
@@ -22,7 +26,7 @@ function multiFight() {
     if (choiceFollowsFight()) visitUrl('choice.php');
 }
 
-export class combatMacro {
+export class GenerateMacro {
     // Basing this off of Bean's implementation of Aen's macro building
     //   functionality from aen-cocoabo-farming on GitHub. I have never
     //   built a class before, so I'm going to comment as I try to
@@ -77,20 +81,23 @@ export class combatMacro {
         } else return this;
     }
 
-    // Generic kill statement to end a fight; adding optional option
-    //   that enables crit-killing when desirable to do so.
-    kill(mode?: string) {
-        if (mode === 'crit') {
-            // Only try to crit-kill if you're wearing the ring...
-            if (equippedAmount($item`mafia pointer finger ring`) > 1) {
-                return this.skill($skill`Furious Wallop`)
-                    .skill($skill`Precision Shot`)
-                    .skill($skill`Saucegeyser`).repeat();
-            }
-        }
-        // If you don't have the ring/crit equipped, just kill it.
-        return this.skill($skill`Stuffed Mortar Shell`)
+    // Adds an optional if statement into the macro
+    externalIf(condition: boolean, ...next: string[]) {
+        return condition ? this.step(...next) : this;
+    }
+
+    // Add crit-seeking behavior when a ring is equipped
+    addCrit(condition: boolean) {
+        return condition ? this.skill($skill`Furious Wallop`).skill($skill`Precision Shot`) : this;
+    }
+
+    // Generic kill statement to end a fight; adding in extra hits to guarantee crit
+    kill() {
+        return this.externalIf(getProperty('boomBoxSong') === 'Total Eclipse of Your Meat',"skill Sing Along")
+            .addCrit(equippedAmount($item`mafia pointer finger ring`) > 0)
+            .skill($skill`Stuffed Mortar Shell`)
             .skill($skill`Saucestorm`)
+            .skill($skill`Lunging Thrust Smack`)
             .skill($skill`Saucegeyser`).repeat();
     }
     
@@ -100,25 +107,26 @@ export class combatMacro {
         print(`Submitting macro: ${final}`);
         return visitUrl('fight.php?action=macro&macrotext=' + urlEncode(final), true, true);
     }
-
+    
 }
 
 export function main(initround: number, foe: Monster) {
     // Alright trying to set this stupid thing up now.
     const loc = myLocation();
 
-    // Bean's is pretty elegant; mine is going to be much more manual. 
+    // Kill time-spinner pranks right off.
+    if (foe === $monster`time-spinner prank`) new GenerateMacro().kill().submit();
+    
     //   Will start by handling prof copies.
-
     if (myFamiliar() === $familiar`Pocket Professor`) {
         if (loc === $location`The Neverending Party`) {
-            new combatMacro()
+            new GenerateMacro()
                 .skill($skill`deliver your thesis!`) // Feynmantron, deliver your thesis!
                 .kill()
                 .submit();
         } else {
             if (foe === $monster`Witchess Bishop` || foe === $monster`Witchess Knight`) {
-                new combatMacro()
+                new GenerateMacro()
                     .skill($skill`Sing Along`)
                     .skill($skill`Lecture on Relativity`)
                     .kill()
@@ -129,14 +137,33 @@ export function main(initround: number, foe: Monster) {
 
     // I use my NEP turns to become a bat.
     if (loc === $location`The Neverending Party`) {
-        new combatMacro()
+        new GenerateMacro()
             .skill($skill`Become a Bat`)
             .kill().submit();
     }
 
-    // If it's a free fight I encounter, I want to off it.
-    if (foe.attributes.includes('FREE')) new combatMacro().kill().submit();
+    // Embezzler handling; lots to do here.
+    if (foe === $monster`Knob Goblin Embezzler`) {
+        // Run first combat w/ Reanimator; do some unique stuff there.
+        if (myFamiliar() === $familiar`Reanimated Reanimator`) {
+            new GenerateMacro()
+                .skill($skill`7168`) // Reanimator Wink
+                .skill($skill`Digitize`) // Ensure you digitize on first combat
+                .kill().submit();
+        }
+        new GenerateMacro()
+            .externalIf(getPropertyInt('spookyPuttyCopiesMade') < 5,'use Spooky Putty Sheet')
+            .externalIf(getPropertyInt('_enamorangs') < 1,'use LOV Enamorang')
+            .externalIf(!getPropertyBoolean('_cameraUsed'), 'use 4-d camera')
+            .externalIf(getPropertyInt('_sourceTerminalDigitizeMonsterCount') === 5, 'skill Digitize')
+            .externalIf(loc === $location`The Briny Deeps`, 'use pulled green taffy')
+            .externalIf(getPropertyInt('_meteorShowerUses') < 5, 'skill Meteor Shower')
+            .kill().submit();
+    }
 
+    // If it's a free fight I encounter, I want to off it.
+    if (foe.attributes.includes('FREE')) new GenerateMacro().kill().submit();
+    
     // Handle free runs I guess.
     if (myFamiliar() === $familiar`Frumious Bandersnatch` && haveEffect($effect`Ode to Booze`) > 0) {
         runaway();
