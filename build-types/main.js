@@ -1,19 +1,20 @@
 "use strict";
+// import {
+//   print,
+// } from 'kolmafia';
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.main = exports.printHelp = void 0;
-const kolmafia_1 = require("kolmafia");
+exports.main = void 0;
 const lib_1 = require("./lib");
-function printHelp() {
-    // Import package info like version # & name
-    var packageData = require('../package.json');
-    kolmafia_1.print("=========================================");
-    kolmafia_1.print(` >>>>>>>> ${packageData.name} v${packageData.version} `);
-    kolmafia_1.print("=========================================");
-    kolmafia_1.print("");
-    kolmafia_1.print("scotchac king freed");
-    kolmafia_1.print("   > Pull from hagnks and get aftercore prep flags done.");
-}
-exports.printHelp = printHelp;
+// export function printHelp() {
+//   // Import package info like version # & name
+//   var packageData = require('../package.json');
+//   print("=========================================");
+//   print(` >>>>>>>> ${packageData.name} v${packageData.version} `);
+//   print("=========================================");
+//   print("");
+//   print("scotchac king freed");
+//   print("   > Pull from hagnks and get aftercore prep flags done.");
+// }
 // export function main(target = '') {
 function main() {
     lib_1.dailies();
