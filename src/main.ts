@@ -19,6 +19,15 @@ export function printHelp() {
 }
 
 
+dailies();
+calculateFarmingTurns();
+farmPrep();
+runDiet();
+buffUp();
+freeFights();
+barfMountain();
+nightCap();
+
 export function main(target: string) {
 
   let t = target.toLowerCase();

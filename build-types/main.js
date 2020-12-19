@@ -14,6 +14,14 @@ function printHelp() {
     kolmafia_1.print("   > Pull from hagnks and get aftercore prep flags done.");
 }
 exports.printHelp = printHelp;
+lib_1.dailies();
+lib_1.calculateFarmingTurns();
+lib_1.farmPrep();
+lib_1.runDiet();
+lib_1.buffUp();
+lib_1.freeFights();
+lib_1.barfMountain();
+lib_1.nightCap();
 function main(target) {
     let t = target.toLowerCase();
     kolmafia_1.print("t");

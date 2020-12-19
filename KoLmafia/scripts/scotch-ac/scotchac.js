@@ -7473,6 +7473,14 @@ function printHelp() {
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("scotchac king freed");
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("   > Pull from hagnks and get aftercore prep flags done.");
 }
+(0,_lib__WEBPACK_IMPORTED_MODULE_1__.dailies)();
+(0,_lib__WEBPACK_IMPORTED_MODULE_1__.calculateFarmingTurns)();
+(0,_lib__WEBPACK_IMPORTED_MODULE_1__.farmPrep)();
+(0,_lib__WEBPACK_IMPORTED_MODULE_1__.runDiet)();
+(0,_lib__WEBPACK_IMPORTED_MODULE_1__.buffUp)();
+(0,_lib__WEBPACK_IMPORTED_MODULE_1__.freeFights)();
+(0,_lib__WEBPACK_IMPORTED_MODULE_1__.barfMountain)();
+(0,_lib__WEBPACK_IMPORTED_MODULE_1__.nightCap)();
 function main(target) {
   var t = target.toLowerCase();
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("t");
