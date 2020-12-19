@@ -226,12 +226,15 @@ function buffUp() {
 }
 exports.buffUp = buffUp;
 function freeFights() {
+    kolmafia_1.print("Free fights are not yet implemented.");
 }
 exports.freeFights = freeFights;
 function barfMountain() {
+    kolmafia_1.print("Barf mountain is not yet implemented.");
 }
 exports.barfMountain = barfMountain;
 function nightCap() {
+    kolmafia_1.print("Nightcap is not yet implemented.");
 }
 exports.nightCap = nightCap;
 //# sourceMappingURL=lib.js.map

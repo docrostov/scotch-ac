@@ -78,7 +78,7 @@ export function kingFreed() {
     }
   
     // Pull everything from hagnks
-    cliExecute('pull all')
+    cliExecute('pull all');
   
     // Enable auto-recovery
     setProperty('hpAutoRecovery', '0.8');
@@ -189,7 +189,7 @@ export function dailies() {
     }
     // Set the property to bypass intro on next run.
     setProperty('_scotchIntro', '1');
-    return "Intro completed."
+    return "Intro completed.";
   
 }
 
@@ -279,13 +279,13 @@ export function buffUp() {
 }
 
 export function freeFights() {
-
+  print("Free fights are not yet implemented.");
 }
 
 export function barfMountain() {
-
+  print("Barf mountain is not yet implemented.");
 }
 
 export function nightCap() {
-
+  print("Nightcap is not yet implemented.");
 }

@@ -18,16 +18,6 @@ export function printHelp() {
   print("   > Pull from hagnks and get aftercore prep flags done.");
 }
 
-
-dailies();
-calculateFarmingTurns();
-farmPrep();
-runDiet();
-buffUp();
-freeFights();
-barfMountain();
-nightCap();
-
 export function main(target: string) {
 
   let t = target.toLowerCase();
