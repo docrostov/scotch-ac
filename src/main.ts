@@ -18,11 +18,8 @@ export function printHelp() {
   print("   > Pull from hagnks and get aftercore prep flags done.");
 }
 
-export function main (target = "default") {
-  
-  let t = target.toLowerCase();
-
-  print(t);
+// export function main(target = '') {
+export function main() {
 
   dailies();
   calculateFarmingTurns();

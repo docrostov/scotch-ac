@@ -107,6 +107,7 @@ export function dailies() {
     if ( getProperty("questS01OldGuy") !== "unstarted"){
       useFamiliar($familiar`space jellyfish`);
       visitUrl('place.php?whichplace=thesea&action=thesea_left2');
+      runChoice(1);
     }
     
     // Visit the chateau potion bar; does this throw errors w/o chateau?

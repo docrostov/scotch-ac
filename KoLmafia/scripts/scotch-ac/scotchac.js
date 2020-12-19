@@ -7303,6 +7303,7 @@ function dailies() {
   if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)("questS01OldGuy") !== "unstarted") {
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject()));
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=thesea&action=thesea_left2');
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runChoice)(1);
   } // Visit the chateau potion bar; does this throw errors w/o chateau?
 
 
@@ -7478,11 +7479,9 @@ function printHelp() {
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("");
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("scotchac king freed");
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("   > Pull from hagnks and get aftercore prep flags done.");
-}
+} // export function main(target = '') {
+
 function main() {
-  var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "default";
-  var t = target.toLowerCase();
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)(t);
   (0,_lib__WEBPACK_IMPORTED_MODULE_1__.dailies)();
   (0,_lib__WEBPACK_IMPORTED_MODULE_1__.calculateFarmingTurns)();
   (0,_lib__WEBPACK_IMPORTED_MODULE_1__.farmPrep)();

@@ -94,6 +94,7 @@ function dailies() {
     if (kolmafia_1.getProperty("questS01OldGuy") !== "unstarted") {
         kolmafia_1.useFamiliar(src_1.$familiar `space jellyfish`);
         kolmafia_1.visitUrl('place.php?whichplace=thesea&action=thesea_left2');
+        kolmafia_1.runChoice(1);
     }
     // Visit the chateau potion bar; does this throw errors w/o chateau?
     if (getPropertyBoolean('chateauAvailable') && !getPropertyBoolean('_chateauDeskHarvested') && kolmafia_1.isUnrestricted(src_1.$item `Chateau Mantegna room key`)) {
