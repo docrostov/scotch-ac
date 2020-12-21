@@ -6868,13 +6868,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "getPropertyInt": () => /* binding */ getPropertyInt,
 /* harmony export */   "getPropertyBoolean": () => /* binding */ getPropertyBoolean,
 /* harmony export */   "setPropertyInt": () => /* binding */ setPropertyInt,
+/* harmony export */   "useLimitedSkill": () => /* binding */ useLimitedSkill,
+/* harmony export */   "useLimitedItem": () => /* binding */ useLimitedItem,
+/* harmony export */   "farmCastSkill": () => /* binding */ farmCastSkill,
 /* harmony export */   "setProps": () => /* binding */ setProps,
 /* harmony export */   "kingFreed": () => /* binding */ kingFreed,
 /* harmony export */   "dailies": () => /* binding */ dailies,
 /* harmony export */   "farmPrep": () => /* binding */ farmPrep,
 /* harmony export */   "calculateFarmingTurns": () => /* binding */ calculateFarmingTurns,
+/* harmony export */   "fillSpleen": () => /* binding */ fillSpleen,
 /* harmony export */   "runDiet": () => /* binding */ runDiet,
 /* harmony export */   "buffUp": () => /* binding */ buffUp,
+/* harmony export */   "farmEquipBuilder": () => /* binding */ farmEquipBuilder,
 /* harmony export */   "freeFights": () => /* binding */ freeFights,
 /* harmony export */   "barfMountain": () => /* binding */ barfMountain,
 /* harmony export */   "nightCap": () => /* binding */ nightCap
@@ -6882,8 +6887,658 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! kolmafia */ "kolmafia");
 /* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(kolmafia__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var libram_src__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! libram/src */ "./node_modules/libram/src/index.ts");
-function _templateObject32() {
+function _templateObject97() {
+  var data = _taggedTemplateLiteral(["acc1, acc2, acc3"]);
+
+  _templateObject97 = function _templateObject97() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject96() {
+  var data = _taggedTemplateLiteral(["acc1"]);
+
+  _templateObject96 = function _templateObject96() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject95() {
+  var data = _taggedTemplateLiteral(["", ""]);
+
+  _templateObject95 = function _templateObject95() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject94() {
+  var data = _taggedTemplateLiteral(["Seal Clubber"]);
+
+  _templateObject94 = function _templateObject94() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject93() {
+  var data = _taggedTemplateLiteral(["latte lovers member's mug"]);
+
+  _templateObject93 = function _templateObject93() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject92() {
+  var data = _taggedTemplateLiteral(["latte lovers member's mug"]);
+
+  _templateObject92 = function _templateObject92() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject91() {
+  var data = _taggedTemplateLiteral(["cornbeefadon, leprechaun"]);
+
+  _templateObject91 = function _templateObject91() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject90() {
+  var data = _taggedTemplateLiteral(["hobo monkey"]);
+
+  _templateObject90 = function _templateObject90() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject89() {
+  var data = _taggedTemplateLiteral(["robortender"]);
+
+  _templateObject89 = function _templateObject89() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject88() {
+  var data = _taggedTemplateLiteral(["How to Avoid Scams"]);
+
+  _templateObject88 = function _templateObject88() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject87() {
+  var data = _taggedTemplateLiteral(["How to Scam Tourists"]);
+
+  _templateObject87 = function _templateObject87() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject86() {
+  var data = _taggedTemplateLiteral(["Driving Observantly"]);
+
+  _templateObject86 = function _templateObject86() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject85() {
+  var data = _taggedTemplateLiteral(["Blood Bubble"]);
+
+  _templateObject85 = function _templateObject85() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject84() {
+  var data = _taggedTemplateLiteral(["Blood Bubble"]);
+
+  _templateObject84 = function _templateObject84() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject83() {
+  var data = _taggedTemplateLiteral(["Blood Bond"]);
+
+  _templateObject83 = function _templateObject83() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject82() {
+  var data = _taggedTemplateLiteral(["Blood Bond"]);
+
+  _templateObject82 = function _templateObject82() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject81() {
+  var data = _taggedTemplateLiteral(["Get Big"]);
+
+  _templateObject81 = function _templateObject81() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject80() {
+  var data = _taggedTemplateLiteral(["Fat Leon's Phat Loot Lyric"]);
+
+  _templateObject80 = function _templateObject80() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject79() {
+  var data = _taggedTemplateLiteral(["The Polka of Plenty"]);
+
+  _templateObject79 = function _templateObject79() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject78() {
+  var data = _taggedTemplateLiteral(["Singer's Faithful Ocelot"]);
+
+  _templateObject78 = function _templateObject78() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject77() {
+  var data = _taggedTemplateLiteral(["Empathy of the Newt"]);
+
+  _templateObject77 = function _templateObject77() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject76() {
+  var data = _taggedTemplateLiteral(["Leash of Linguini"]);
+
+  _templateObject76 = function _templateObject76() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject75() {
+  var data = _taggedTemplateLiteral(["The Spirit of Taking"]);
+
+  _templateObject75 = function _templateObject75() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject74() {
+  var data = _taggedTemplateLiteral(["Disco Leer"]);
+
+  _templateObject74 = function _templateObject74() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject73() {
+  var data = _taggedTemplateLiteral(["seek out a bird"]);
+
+  _templateObject73 = function _templateObject73() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject72() {
+  var data = _taggedTemplateLiteral(["bird-a-day calendar"]);
+
+  _templateObject72 = function _templateObject72() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject71() {
+  var data = _taggedTemplateLiteral(["CHEAT CODE: Triple Size"]);
+
+  _templateObject71 = function _templateObject71() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject70() {
   var data = _taggedTemplateLiteral(["Having a Ball!"]);
+
+  _templateObject70 = function _templateObject70() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject69() {
+  var data = _taggedTemplateLiteral(["Preternatural Greed"]);
+
+  _templateObject69 = function _templateObject69() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject68() {
+  var data = _taggedTemplateLiteral(["Meet the Meat"]);
+
+  _templateObject68 = function _templateObject68() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject67() {
+  var data = _taggedTemplateLiteral(["defective Game Grid token"]);
+
+  _templateObject67 = function _templateObject67() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject66() {
+  var data = _taggedTemplateLiteral(["Dances with Tweedles"]);
+
+  _templateObject66 = function _templateObject66() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject65() {
+  var data = _taggedTemplateLiteral(["Puzzle Champ"]);
+
+  _templateObject65 = function _templateObject65() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject64() {
+  var data = _taggedTemplateLiteral(["Do I Know You From Somewhere?"]);
+
+  _templateObject64 = function _templateObject64() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject63() {
+  var data = _taggedTemplateLiteral(["Accordion Thief"]);
+
+  _templateObject63 = function _templateObject63() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject62() {
+  var data = _taggedTemplateLiteral(["Chorale of Companionship"]);
+
+  _templateObject62 = function _templateObject62() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject61() {
+  var data = _taggedTemplateLiteral(["The Ballad of Richie Thingfinder"]);
+
+  _templateObject61 = function _templateObject61() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject60() {
+  var data = _taggedTemplateLiteral(["Polka of Plenty"]);
+
+  _templateObject60 = function _templateObject60() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject59() {
+  var data = _taggedTemplateLiteral(["Fat Leon's Phat Loot Lyric"]);
+
+  _templateObject59 = function _templateObject59() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject58() {
+  var data = _taggedTemplateLiteral(["splendid martini"]);
+
+  _templateObject58 = function _templateObject58() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject57() {
+  var data = _taggedTemplateLiteral(["splendid martini"]);
+
+  _templateObject57 = function _templateObject57() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject56() {
+  var data = _taggedTemplateLiteral(["Ode to Booze"]);
+
+  _templateObject56 = function _templateObject56() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject55() {
+  var data = _taggedTemplateLiteral(["tuxedo shirt"]);
+
+  _templateObject55 = function _templateObject55() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject54() {
+  var data = _taggedTemplateLiteral(["extra-greasy slider"]);
+
+  _templateObject54 = function _templateObject54() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject53() {
+  var data = _taggedTemplateLiteral(["Ol' Scratch's Salad Fork"]);
+
+  _templateObject53 = function _templateObject53() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject52() {
+  var data = _taggedTemplateLiteral(["extra-greasy slider"]);
+
+  _templateObject52 = function _templateObject52() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject51() {
+  var data = _taggedTemplateLiteral(["Ol' Scratch's Salad Fork"]);
+
+  _templateObject51 = function _templateObject51() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject50() {
+  var data = _taggedTemplateLiteral(["Special Seasoning"]);
+
+  _templateObject50 = function _templateObject50() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject49() {
+  var data = _taggedTemplateLiteral(["jar of fermented pickle juice"]);
+
+  _templateObject49 = function _templateObject49() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject48() {
+  var data = _taggedTemplateLiteral(["Frosty's Frosty Mug"]);
+
+  _templateObject48 = function _templateObject48() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject47() {
+  var data = _taggedTemplateLiteral(["jar of fermented pickle juice"]);
+
+  _templateObject47 = function _templateObject47() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject46() {
+  var data = _taggedTemplateLiteral(["Frosty's Frosty Mug"]);
+
+  _templateObject46 = function _templateObject46() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject45() {
+  var data = _taggedTemplateLiteral(["Ode to Booze"]);
+
+  _templateObject45 = function _templateObject45() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject44() {
+  var data = _taggedTemplateLiteral(["Dirt Julep"]);
+
+  _templateObject44 = function _templateObject44() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject43() {
+  var data = _taggedTemplateLiteral(["transdermal smoke patch"]);
+
+  _templateObject43 = function _templateObject43() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject42() {
+  var data = _taggedTemplateLiteral(["transdermal smoke patch"]);
+
+  _templateObject42 = function _templateObject42() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject41() {
+  var data = _taggedTemplateLiteral(["beggin' cologne"]);
+
+  _templateObject41 = function _templateObject41() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject40() {
+  var data = _taggedTemplateLiteral(["beggin' cologne"]);
+
+  _templateObject40 = function _templateObject40() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject39() {
+  var data = _taggedTemplateLiteral(["Eau d' Clochard"]);
+
+  _templateObject39 = function _templateObject39() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject38() {
+  var data = _taggedTemplateLiteral(["sugar shillelagh"]);
+
+  _templateObject38 = function _templateObject38() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject37() {
+  var data = _taggedTemplateLiteral(["sugar chapeau"]);
+
+  _templateObject37 = function _templateObject37() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject36() {
+  var data = _taggedTemplateLiteral(["sugar sheet"]);
+
+  _templateObject36 = function _templateObject36() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject35() {
+  var data = _taggedTemplateLiteral(["Synthesis: Greed"]);
+
+  _templateObject35 = function _templateObject35() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject34() {
+  var data = _taggedTemplateLiteral(["", ""]);
+
+  _templateObject34 = function _templateObject34() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject33() {
+  var data = _taggedTemplateLiteral(["Robortender"]);
+
+  _templateObject33 = function _templateObject33() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject32() {
+  var data = _taggedTemplateLiteral(["one-day ticket to Dinseylandfill"]);
 
   _templateObject32 = function _templateObject32() {
     return data;
@@ -6893,7 +7548,7 @@ function _templateObject32() {
 }
 
 function _templateObject31() {
-  var data = _taggedTemplateLiteral(["Preternatural Greed"]);
+  var data = _taggedTemplateLiteral(["one-day ticket to Dinseylandfill"]);
 
   _templateObject31 = function _templateObject31() {
     return data;
@@ -6903,7 +7558,7 @@ function _templateObject31() {
 }
 
 function _templateObject30() {
-  var data = _taggedTemplateLiteral(["Meet the Meat"]);
+  var data = _taggedTemplateLiteral(["bird-a-day calendar"]);
 
   _templateObject30 = function _templateObject30() {
     return data;
@@ -6913,7 +7568,7 @@ function _templateObject30() {
 }
 
 function _templateObject29() {
-  var data = _taggedTemplateLiteral(["defective Game Grid token"]);
+  var data = _taggedTemplateLiteral(["blessing of the bird"]);
 
   _templateObject29 = function _templateObject29() {
     return data;
@@ -6923,7 +7578,7 @@ function _templateObject29() {
 }
 
 function _templateObject28() {
-  var data = _taggedTemplateLiteral(["meat.enh"]);
+  var data = _taggedTemplateLiteral(["bird-a-day calendar"]);
 
   _templateObject28 = function _templateObject28() {
     return data;
@@ -6933,7 +7588,7 @@ function _templateObject28() {
 }
 
 function _templateObject27() {
-  var data = _taggedTemplateLiteral(["Billiards Belligerence"]);
+  var data = _taggedTemplateLiteral(["Universal Seasoning"]);
 
   _templateObject27 = function _templateObject27() {
     return data;
@@ -6943,7 +7598,7 @@ function _templateObject27() {
 }
 
 function _templateObject26() {
-  var data = _taggedTemplateLiteral(["Puzzle Champ"]);
+  var data = _taggedTemplateLiteral(["fishy pipe"]);
 
   _templateObject26 = function _templateObject26() {
     return data;
@@ -6953,7 +7608,7 @@ function _templateObject26() {
 }
 
 function _templateObject25() {
-  var data = _taggedTemplateLiteral(["Do I Know You From Somewhere?"]);
+  var data = _taggedTemplateLiteral(["Glenn's Golden Dice"]);
 
   _templateObject25 = function _templateObject25() {
     return data;
@@ -6963,7 +7618,7 @@ function _templateObject25() {
 }
 
 function _templateObject24() {
-  var data = _taggedTemplateLiteral(["Dirt Julep"]);
+  var data = _taggedTemplateLiteral(["milk of magnesium"]);
 
   _templateObject24 = function _templateObject24() {
     return data;
@@ -6973,7 +7628,7 @@ function _templateObject24() {
 }
 
 function _templateObject23() {
-  var data = _taggedTemplateLiteral(["", ""]);
+  var data = _taggedTemplateLiteral(["Chester's bag of candy"]);
 
   _templateObject23 = function _templateObject23() {
     return data;
@@ -6983,7 +7638,7 @@ function _templateObject23() {
 }
 
 function _templateObject22() {
-  var data = _taggedTemplateLiteral(["one-day ticket to Dinseylandfill"]);
+  var data = _taggedTemplateLiteral(["warbear soda machine"]);
 
   _templateObject22 = function _templateObject22() {
     return data;
@@ -6993,7 +7648,7 @@ function _templateObject22() {
 }
 
 function _templateObject21() {
-  var data = _taggedTemplateLiteral(["one-day ticket to Dinseylandfill"]);
+  var data = _taggedTemplateLiteral(["warbear breakfast machine"]);
 
   _templateObject21 = function _templateObject21() {
     return data;
@@ -7003,7 +7658,7 @@ function _templateObject21() {
 }
 
 function _templateObject20() {
-  var data = _taggedTemplateLiteral(["bird-a-day calendar"]);
+  var data = _taggedTemplateLiteral(["Prevent Scurvy and Sobriety"]);
 
   _templateObject20 = function _templateObject20() {
     return data;
@@ -7013,7 +7668,7 @@ function _templateObject20() {
 }
 
 function _templateObject19() {
-  var data = _taggedTemplateLiteral(["blessing of the bird"]);
+  var data = _taggedTemplateLiteral(["Acquire Rhinestones"]);
 
   _templateObject19 = function _templateObject19() {
     return data;
@@ -7023,7 +7678,7 @@ function _templateObject19() {
 }
 
 function _templateObject18() {
-  var data = _taggedTemplateLiteral(["bird-a-day calendar"]);
+  var data = _taggedTemplateLiteral(["Incredible Self-Esteem"]);
 
   _templateObject18 = function _templateObject18() {
     return data;
@@ -7033,7 +7688,7 @@ function _templateObject18() {
 }
 
 function _templateObject17() {
-  var data = _taggedTemplateLiteral(["Perfect Freeze"]);
+  var data = _taggedTemplateLiteral(["Grab a Cold One"]);
 
   _templateObject17 = function _templateObject17() {
     return data;
@@ -7043,7 +7698,7 @@ function _templateObject17() {
 }
 
 function _templateObject16() {
-  var data = _taggedTemplateLiteral(["Prevent Scurvy and Sobriety"]);
+  var data = _taggedTemplateLiteral(["Spaghetti Breakfast"]);
 
   _templateObject16 = function _templateObject16() {
     return data;
@@ -7053,7 +7708,7 @@ function _templateObject16() {
 }
 
 function _templateObject15() {
-  var data = _taggedTemplateLiteral(["Acquire Rhinestones"]);
+  var data = _taggedTemplateLiteral(["Perfect Freeze"]);
 
   _templateObject15 = function _templateObject15() {
     return data;
@@ -7063,7 +7718,7 @@ function _templateObject15() {
 }
 
 function _templateObject14() {
-  var data = _taggedTemplateLiteral(["Grab a Cold One"]);
+  var data = _taggedTemplateLiteral(["Summon Crimbo Candy"]);
 
   _templateObject14 = function _templateObject14() {
     return data;
@@ -7073,7 +7728,7 @@ function _templateObject14() {
 }
 
 function _templateObject13() {
-  var data = _taggedTemplateLiteral(["Spaghetti Breakfast"]);
+  var data = _taggedTemplateLiteral(["Pastamastery"]);
 
   _templateObject13 = function _templateObject13() {
     return data;
@@ -7083,7 +7738,7 @@ function _templateObject13() {
 }
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["Pastamastery"]);
+  var data = _taggedTemplateLiteral(["Advanced Saucecrafting"]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -7093,7 +7748,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral(["Advanced Saucecrafting"]);
+  var data = _taggedTemplateLiteral(["Advanced Cocktailcrafting"]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -7103,7 +7758,7 @@ function _templateObject11() {
 }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["Advanced Cocktailcrafting"]);
+  var data = _taggedTemplateLiteral(["Box of Familiar Jacks"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -7113,7 +7768,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["Acquire Rhinestones"]);
+  var data = _taggedTemplateLiteral(["Cornbeefadon"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -7123,7 +7778,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["Summon Crimbo Candy"]);
+  var data = _taggedTemplateLiteral(["Box of Familiar Jacks"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -7183,7 +7838,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["Chateau Mantegna room key"]);
+  var data = _taggedTemplateLiteral(["space jellyfish"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -7193,7 +7848,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["space jellyfish"]);
+  var data = _taggedTemplateLiteral(["magical sausage"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -7267,11 +7922,49 @@ function getPropertyBoolean(name) {
 }
 function setPropertyInt(name, value) {
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)(name, value.toString());
+}
+function useLimitedSkill(prop, currSkill) {
+  var casts = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+
+  // Function for using limited use skills if you hit a condition. I am
+  //   using this to check properties before casting the skill. 
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)(prop) === '0' || (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)(prop) === "false") {
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveSkill)(currSkill)) return (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(currSkill, casts); // useSkill throws a boolean
+  }
+
+  return false; // False if it didn't hit it.
+}
+function useLimitedItem(prop, currItem) {
+  var number = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+
+  // Function for using limited use items if you hit a condition. I am
+  //   using this to check properties before using the items. 
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)(prop) === '0' || (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)(prop) === "false") {
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)(currItem) > 0) return (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(number, currItem); // use throws a boolean
+  }
+
+  return false; // False if it didn't hit it.
+}
+function farmCastSkill(sk) {
+  // Function that ensures you have enough of X skill to cover the whole farmday.
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.toEffect)(sk)) < calculateFarmingTurns()) {
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myMp)() < (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.mpCost)(sk)) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.eat)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject())); // sausage for regen!
+
+    var currTurns = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.toEffect)(sk));
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(sk, 1);
+
+    if (currTurns === (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.toEffect)(sk))) {
+      // This checks if your "useSkill" didn't work, and throws an error.
+      throw "ERROR: Your farmCastSkill module has failed on skill = ".concat(sk);
+    }
+  }
 } // ====================================================================
 
 function setProps() {
   // Function to set up relevant scotch-ac properties.
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('_scotchIntro', '0');
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('_scotchPrepped', '0');
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('_scotchBuffed', '0');
 }
 function kingFreed() {
   // Things to run after ending an ascension & entering
@@ -7290,7 +7983,10 @@ function kingFreed() {
 }
 function dailies() {
   // This section begins your day; it's effectively a more
-  //   compressed version of mafia's "breakfast" script. 
+  //   compressed version of mafia's "breakfast" script. I
+  //   am adding property comparisons whenever possible to
+  //   try and make this stupid thing as error-proof as I 
+  //   possibly can.
   if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)('_scotchIntro') == '1') {
     // Exit the intro if you've already completed it.
     return "Intro already complete!";
@@ -7305,20 +8001,22 @@ function dailies() {
   }
 
   if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)("questS01OldGuy") !== "unstarted") {
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject()));
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=thesea&action=thesea_left2');
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runChoice)(1);
+    if (!getPropertyBoolean("_seaJellyHarvested")) {
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject2()));
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=thesea&action=thesea_left2');
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runChoice)(1);
+    }
   } // Visit the chateau potion bar; does this throw errors w/o chateau?
 
 
-  if (getPropertyBoolean('chateauAvailable') && !getPropertyBoolean('_chateauDeskHarvested') && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.isUnrestricted)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject2()))) {
+  if (getPropertyBoolean('chateauAvailable') && !getPropertyBoolean('_chateauDeskHarvested')) {
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=chateau&action=chateauDesk2');
   } // Get your clan VIP swimming item
 
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('swim item'); // Get your free crazy horse
+  if (!getPropertyBoolean('_olympicSwimmingPoolItemFound')) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('swim item'); // Apply crazy horse, even if it costs meat, because it's ideal for barf farming.
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('horsery crazy'); // Request cheesefax fortune stuff 
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('horsery crazy'); // Request cheesefax fortune stuff; not really -needed- but I like the shot at a skillbook.
 
   while (getPropertyInt("_clanFortuneConsultUses") < 3 && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.isOnline)('3038166')) {
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("fortune cheesefax portza bortman thick");
@@ -7326,14 +8024,20 @@ function dailies() {
   } // Check for a defective game grid token
 
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=arcade&action=arcade_plumber'); // Snag mainstat +XP% from the clan shower
+  if (!getPropertyBoolean('_defectiveTokenChecked')) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=arcade&action=arcade_plumber', false);
+  } // Snag mainstat +XP% from the clan shower
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("shower ".concat((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myPrimestat)())); // Use infinite bacon machine & buy a print-screen button
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject3()));
+  if (!getPropertyBoolean('_aprilShower')) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("shower ".concat((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myPrimestat)())); // Use infinite bacon machine & buy a print-screen button. Note that
+  //   the IBM gives you 100 per day and the button costs 111; I have 
+  //   roughly 30,000 bacon in reserve, so I have no real issue with 
+  //   ignoring that 11 bacon overage, but YMMV.
+
+  useLimitedItem('_baconMachineUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject3()));
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$coinmaster)(_templateObject4()), 1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject5())); // Use etched hourglass for +5 adventures
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject6())); // STEP 2: MAKE CHOICES ================================
+  useLimitedItem('_etchedHourglassUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject6())); // STEP 2: MAKE CHOICES ================================
   // Add familiar weight to your cosplay saber
 
   if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject7())) > 0) {
@@ -7345,37 +8049,63 @@ function dailies() {
   if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)('boomBoxSong') !== 'Total Eclipse of Your Meat') {
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('boombox meat');
   } // STEP 3: SUMMONS =====================================
-  // Tome summons
-  // Deck summons; mana, mana. Reserve one for Robort.
+  // Tome summons; my old script had a big price-check thing,
+  //   now I am literally just going to summon 3x fam jacks
+  //   until I have time to do a full refactor here.
 
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('cheat island');
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('cheat ancestral recall'); // Visiting Looking Glass in clan VIP lounge
+  while (getPropertyInt("_clipartSummons") < 3) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.create)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject8()));
+  } // While you're at it, get your amulet coin
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('clan_viplounge.php?action=lookingglass&whichfloor=2');
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('swim item');
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject9()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject10())); // Doing two deck summons; mana, mana. Reserve one for Robort feliz-fishing.
+
+  while (getPropertyInt('_deckCardsDrawn') < 10) {
+    // This should, in theory, always get you to 10 deck draws. 
+    if (!(0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)('_deckCardsSeen').includes('Island')) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('cheat island');
+    if (!(0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)('_deckCardsSeen').includes('Ancestral Recall')) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('cheat ancestral recall');
+  } // Visiting Looking Glass in clan VIP lounge
+
+
+  if (getPropertyBoolean('_lookingGlass')) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('clan_viplounge.php?action=lookingglass&whichfloor=2'); // Snagging three pocket wishes every day
 
   while (getPropertyInt('_genieWishesUsed') < 3) {
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('genie wish for more wishes');
-  }
+  } // Cast your summonables; I am comparing against preferences for these. That
+  //   isn't always strictly required, but I've found that mafia occasionally
+  //   grumbles if you try and cast something you can't, so this helps handle
+  //   if you already used some of it and keep the script usable.
 
-  if (getPropertyInt('_candySummons') === 0) {
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject8()));
-  }
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject9()));
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject10()));
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject11()));
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject12()));
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject13()));
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject14()));
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject15()));
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject16()));
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject17())); // Get daily bird
+  useLimitedSkill('cocktailSummons', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject11()));
+  useLimitedSkill('reagentSummons', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject12()));
+  useLimitedSkill('noodleSummons', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject13()));
+  useLimitedSkill('_candySummons', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject14()));
+  useLimitedSkill('_perfectFreezeUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject15()));
+  useLimitedSkill('_spaghettiBreakfast', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject16()));
+  useLimitedSkill('_coldOne', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject17()));
+  useLimitedSkill('_incredibleSelfEsteemCast', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject18()));
+  useLimitedSkill('_rhinestonesAcquired', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject19()));
+  useLimitedSkill('_preventScurvy', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject20())); // Use a few 1-per-day items. Once again, using the limitedUse syntax in a 
+  //   tiny custom function. Thanks to Rev for recommending the pref change.
 
-  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject18())) > 0 && !(0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject19()))) {
+  useLimitedItem('_warbearBreakfastMachineUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject21()));
+  useLimitedItem('_warbearSodaMachineUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject22()));
+  useLimitedItem('_bagOfCandyUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject23()));
+  useLimitedItem('_milkOfMagnesiumUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject24()));
+  useLimitedItem('_glennGoldenDiceUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject25()));
+  useLimitedItem('_fishyPipeUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject26())); // There is currently no preference for Universal Seasoning.
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject27())); // Daily voting. Requires Ezandora's Voting Booth script
+  //   svn checkout https://github.com/Ezandora/Voting-Booth/trunk/Release/
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('VotingBooth.ash'); // Get daily bird
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject28())) > 0 && !(0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject29()))) {
     if (!getPropertyBoolean("_canSeekBirds")) {
-      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject20()));
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject30()));
     }
   } // Set the property to bypass intro on next run.
 
@@ -7385,19 +8115,64 @@ function dailies() {
 }
 function farmPrep() {
   // This function does purchases to set up for farming
-  // Purchase a dinseylandfill ticket, use it / get free FunFunds
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject21()));
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject22())); // Purchase robort drinks & feed them to robort; need to compare ingredient to the drink like old ash script
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)('_scotchPrepped') == '1') {
+    // Exit the intro if you've already completed it.
+    return "Farm prep already complete!";
+  } // Purchase a dinseylandfill ticket, use it / get free FunFunds
+
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject31()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject32())); // Get free funfunds from turning in park garbage. Like with BACON, I
+  //   kind of always have some in reserve, so this basically always works,
+  //   but I should probably add a check in here to ensure I have some.
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)("place.php?whichplace=airport_stench&intro=1");
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)("place.php?whichplace=airport_stench&action=airport3_tunnels");
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runChoice)(6); // Set up mumming trunk meat drop on my robortender
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject33()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('mummery meat'); // Purchase robort drinks & feed them to robort; need to compare ingredient 
+  //   to the drink like old ash script, but for now I'm just going to be lazy.
 
   var roboDrinks = ['newark', 'single entendre', 'drive-by shooting', 'bloody nora'];
   roboDrinks.forEach(function (value) {
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject23(), value));
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject34(), value));
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("robo ".concat(value));
-  }); // Set up mumming trunk nonsense
+  }); // Get bastille nonsense done with. Requires Ezandora's Bastille script.
+  //   svn checkout https://github.com/Ezandora/Bastille/branches/Release/
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('bastille babar draftsman gesture sharks'); // Set the property to bypass farmPrep on next run.
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('_scotchPrepped', '1');
+  return "Intro completed.";
 }
 function calculateFarmingTurns() {
-  // Assess farming turns given available resources.
-  return 610;
+  // Assess farming turns given available resources. Currently
+  //   just going to use an approximation; I'm making this a 
+  //   function so that I can make it more effective later!
+  return 635;
+}
+function fillSpleen() {
+  // Fills spleen point by point according to the priority of:
+  //   #1: synthesis (until CalcFarmingTurns is hit)
+  //   #2: beggin cologne (just one)
+  //   #3: transdermal smoke patches
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.mySpleenUse)() < (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.spleenLimit)()) {
+    var spleenLeft = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.spleenLimit)() - (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.mySpleenUse)();
+
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject35())) < calculateFarmingTurns()) {
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject36()), 2);
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('create sugar chapeau');
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('create sugar shillelagh');
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.sweetSynthesis)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject37()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject38()));
+    } else if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject39())) < 10) {
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject40()), 1);
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.chew)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject41()), 1);
+    } else {
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject42()), spleenLeft);
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.chew)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject43()), spleenLeft);
+    }
+  }
 }
 function runDiet() {
   // Diet is relatively manual right now. Go full hobo for 
@@ -7405,46 +8180,277 @@ function runDiet() {
   //   transdermal smoke patches for spleen remainder.
   //   Eventually implement "value of adv" calculator and
   //   other options to help improve this. 
-  // Check barrelprayer buff and utilize if it's good.
+  // Start by filling spleen up.
+  fillSpleen(); // Check barrelprayer buff and utilize if it's good.
   // Use dirt julep on mime shotglass booze
+
   if (getPropertyBoolean("_mimeArmyShotglassUsed") != true) {
-    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject24()))) {
-      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)("_mimeArmyShotglassUsed", "true");
-    }
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject44()))) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)("_mimeArmyShotglassUsed", "true");
+  } // Drink up!
+
+
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.inebrietyLimit)() - (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myInebriety)() > 4) {
+    ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject45()));
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject46()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject47()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject48()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject49()), 1);
+    fillSpleen();
+  } // Drink up!
+
+
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.fullnessLimit)() - (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFullness)() > 4) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject50()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject51()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject52()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.eat)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject53()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.eat)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject54()), 1);
+    fillSpleen();
   }
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equip)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject55())); // Finish filling drinks
+
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.inebrietyLimit)() - (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myInebriety)() > 0) {
+    ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject56()));
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject57()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject58()), 1);
+  } // TO-DO: add distention/doghair pills here ////////////////////////////////////////////////
+
 }
 function buffUp() {
-  // This function buffs you up for meatfarming
-  // Get "free" beach-head familiar buff
-  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject25())); // Get witchess buff
+  // This function buffs you up for meatfarming, both with castable 
+  //   buffs, Buffbot stuff, 1/day buffs, etc.
+  // Here are the AT buffs we -want- for barf farming.
+  var wantedATBuffs = [(0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject59()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject60()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject61()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject62())]; // Start by shrugging off unwanted AT buffs. myEffects() is an ASH
+  //   array, so it needs to be handled a bit differently by taking
+  //   the effect name out and converting it into an $effect`` via 
+  //   dark and eldritch magick.
 
-  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject26())); // Get clan "aggressive" buffs
+  for (var _i = 0, _Object$keys = Object.keys((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myEffects)()); _i < _Object$keys.length; _i++) {
+    var efName = _Object$keys[_i];
+    var currEffect = Effect.get(efName);
+
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.toSkill)(currEffect)["class"] == (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$class)(_templateObject63())) {
+      if (!wantedATBuffs.includes(currEffect)) {
+        (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('shrug ' + currEffect.name);
+      }
+    }
+  } // Attempt to get buffy rolling, then wait to give buffy to proc.
+
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("send to buffy || 500 bull hell thrill jingle reptil tenaci empathy elemental polka phat");
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.waitq)(10);
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.refreshStatus)(); // Get "free" beach-head familiar buff, then use remaining combs.
+  //   This script requires Veracity's beachComber, located here:
+  // https://kolmafia.us/threads/beachcomber-fast-and-efficient-beach-combing.23993/
+
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject64()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('beachcomber 0'); // Get witchess buff
+
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject65())); // Get clan "aggressive" buffs; probably fails if you don't have VIP access?
 
   while (getPropertyInt('_poolGames') < 3) {
-    ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject27()));
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('pool billiards');
   } // Get mad tea party buff
-  // Get meat.enh buffs
 
+
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject66())); // Get meat.enh buffs
 
   while (getPropertyInt('_sourceTerminalEnhanceUses') < 3) {
-    ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject28()));
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('terminal enhance meat.enh');
   } // Get KGB buffs
 
 
-  while (getPropertyInt('_kgbClicksUsed') > 3) {
+  while (getPropertyInt('_kgbClicksUsed') < 21) {
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('briefcase buff meat');
   } // Get defective game grid buff
 
 
-  if (!getPropertyBoolean('_defectiveTokenUsed')) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject29())); // Get zatara meatsmith buff
+  if (!getPropertyBoolean('_defectiveTokenUsed')) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject67())); // Get zatara meatsmith buff
 
-  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject30())); // Summon otep'vekxen
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject68())); // Summon otep'vekxen
 
-  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject31())); // Get ballpit buff
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject69())); // Get ballpit buff
 
-  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject32()));
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject70())); // Get triple-sized for stat purposes.
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject71())); // Get bird buffs; do not re-favorite birds, fav bird is fine.
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject72())) > 0) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(7 - getPropertyInt("_birdsSoughtToday"), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject73()));
+  } // Get the daycare buff. Doing myst for +items/mp.
+
+
+  if (getPropertyBoolean('_daycareToday') && !getPropertyBoolean('_daycareSpa')) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('daycare mysticality'); // Max cast a few key farming skills.
+
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject74()));
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject75()));
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject76()));
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject77()));
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject78()));
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject79()));
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject80())); // Max cast skills that are not -that- useful, but are worth having on.
+
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject81()));
+
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject82())) < calculateFarmingTurns()) {
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myHp)() < 1000) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.restoreHp)(1000); // Restore if needed
+
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject83()), 30);
+  }
+
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject84())) < calculateFarmingTurns()) {
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myHp)() < 1000) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.restoreHp)(1000); // Restore if needed
+
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject85()), 30);
+  } // Ensure you have asdon driving observantly all day. Requires Ezandora's
+  //   asdonmartin script, I believe, although I'm not positive.
+
+
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject86())) < calculateFarmingTurns()) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('asdonmartin drive observantly');
+  } // Ensure you have turns of How to Avoid Scams all day.
+
+
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject87())) < calculateFarmingTurns()) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject88()), 10);
+  } // Heal up so that you are ready for free fights. 
+
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.restoreHp)((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myMaxhp)());
+}
+function farmEquipBuilder() {
+  var meatDrop = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 250;
+  // This is an equipment builder I can use to ensure my character is 
+  //   equipping the right stuff for each part of my farm script. I 
+  //   have based this partly on how Dictator's farm script builds his
+  //   loadouts, but it is a bit more compact.
+  // Essentially, the script assigns a "score" for each item. I am using
+  //   rough approximation of the equipment's net MPA. Monster base drop
+  //   is modified with the meatDrop parameter. The script will add all
+  //   "priority items" into the value array with very high values to
+  //   ensure they're always picked. 
+  // For free fights, I set meatDrop = 0. This isn't strictly true, but
+  //   it's close enough, as 90% of free fights either have enough meat
+  //   to hit the 1000 meat free fight cap or so little that meat% equip
+  //   is just not worth wearing. Value of familiar weight is based on
+  //   accessing myFamiliar() to determine if you have a meat fam. 
+  // As I get better at JS, I expect I will try to update with better 
+  //   valuation calculators on different equipment. For now, this is
+  //   basically fine though. 
+  // Example calls:
+  //   farmEquipBuilder(69,$item`Kramco Sausage-o-Matic&trade;`)
+  //   farmEquipBuilder(1000,$item`Mer-Kin Gladiator Mask`)
+  // First off, code in the lep meat drop calc.
+  var baseWeight = 20 + 5 + 5 + 5 + 5 + 20; // base 20 + leash + empathy + sympathy + beach buff + witchess
+
+  var lepCalc = (Math.pow(220 * baseWeight, 0.5) + 2 * baseWeight - 6) / 100;
+  var perPoundFamBonus = 0; // Modify fam bonus based on type of fam equipped
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)() === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject89())) {
+    perPoundFamBonus = lepCalc * 2.00 / baseWeight;
+  } else if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)() === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject90())) {
+    perPoundFamBonus = lepCalc * 1.25 / baseWeight;
+  } else if ((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiars)(_templateObject91()).includes((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)())) {
+    // I need to add more lep familiars.
+    perPoundFamBonus = lepCalc * 1.00 / baseWeight;
+  } // Now let's try to assess equipment value. I am hardcoding in equips because
+  //   I do not want the script to be running Maximizer all the time.
+
+
+  var itemValue = {
+    // FAMILIAR WEIGHT ITEMS
+    'plexiglass pith helmet': 5 * perPoundFamBonus * meatDrop,
+    'crumpled felt fedora': 10 * perPoundFamBonus * meatDrop,
+    'Fourth of May cosplay saber': 10 * perPoundFamBonus * meatDrop,
+    "Great Wolf's beastly trousers": 10 * perPoundFamBonus * meatDrop,
+    'Belt of Loathing': 10 * perPoundFamBonus * meatDrop,
+    "Stephen's Lab Coat": 5 * perPoundFamBonus * meatDrop,
+    "Beach Comb": 5 * perPoundFamBonus * meatDrop,
+    "Amulet Coin": 5 * perPoundFamBonus * meatDrop,
+    // MEAT DROP ITEMS
+    "wad of used tape": 0.30 * meatDrop,
+    "garbage sticker": 0.30 * meatDrop,
+    "Cloak of Dire Shadows": 0.30 * meatDrop,
+    "ring of the Skeleton Lord": 0.50 * meatDrop + 10,
+    // Adding a tiny boost due to item drop bonus
+    "Wormwood Wedding Ring": 0.50 * meatDrop,
+    'carpe': 0.60 * meatDrop,
+    // MIXED ITEMS
+    "latte lovers member's mug": (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.numericModifier)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject92()), "Familiar Weight") * perPoundFamBonus * meatDrop + (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.numericModifier)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject93()), "Meat Drop") * meatDrop / 100,
+    // SPECIAL ITEMS
+    'Pantsgiving': getPropertyInt('_pantsgivingFullness') > 2 ? 0.30 * meatDrop : 950,
+    // Always use until +3 fullness.
+    'Enhanced Signal Receiver': getPropertyInt('_scotchFreeFights') === 1 ? 950 : 0,
+    // Only run on free fight chain pre-PYEC.
+    'ittah bittah hookah': getPropertyInt('_scotchFreeFights') === 1 ? 950 : 0,
+    // Only run on free fight chain pre-PYEC.
+    'mafia thumb ring': getPropertyInt('_scotchFreeFights') === 1 ? 0 : 150,
+    // Only run outside of free fights.
+    // EXTRA DROP ITEMS
+    'Crown of Thrones': 700 * 0.2,
+    // Using ~ 700 MPA from whosits at a ~20% rate.
+    'mafia pointer finger ring': 2 * meatDrop,
+    // requires crit-killing, but basically best in slot.
+    'lucky gold ring': 200,
+    // LGR activations are weird and need to be spaded. Will closet sand dollars.
+    "Mr. Screege's Spectacles": 170,
+    // Some initial spading implies ~ 170 MPA from screege.
+    "Mr. Cheeng's Spectacles": 100,
+    // Cheeng's is much more questionable due to massive drop pool. Needs spading.
+    // CRIMBO 2020 -- donated candy drop maximization
+    'candy drive button': 950,
+    'fudgecycle': 900,
+    'cane-mail shirt': 500,
+    'peanut-brittle shield': 900,
+    'bakelite backpack': 500
+  };
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myClass)() !== (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$class)(_templateObject94())) {
+    // Non-SCs require cape + gun to utilize pointer ring; add as must-haves.
+    itemValue['unwrapped knock-off retro superhero cape'] = 2 * meatDrop;
+    itemValue['love'] = 2 * meatDrop; // +5 fam weight too
+  } // Add priorityItems to the equipment selector with max value of 1000 MPA.
+
+
+  for (var _len = arguments.length, priorityItems = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    priorityItems[_key - 1] = arguments[_key];
+  }
+
+  priorityItems.forEach(function (value) {
+    itemValue[value.name] = 1000;
+  }); // Iterate through the equipment selector item by item & equip if it is 
+  //   better than the current equipment utilized. Have to reference the
+  //   itemValue table with the Object.keys() thing.
+
+  Object.keys(itemValue).forEach(function (value) {
+    var tryEquip = false;
+
+    var _loop = function _loop() {
+      var currItem = (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject95(), value);
+      var currVal = itemValue[value]; // Set the slot we're looking at
+
+      var currSlot = [(0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.toSlot)(currItem)];
+      if (currSlot.includes((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$slot)(_templateObject96()))) currSlot = (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$slots)(_templateObject97());
+      currSlot.forEach(function (cSlot) {
+        var _itemValue$compItem$n;
+
+        var compItem = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equippedItem)(cSlot);
+        var compVal = (_itemValue$compItem$n = itemValue[compItem.name]) !== null && _itemValue$compItem$n !== void 0 ? _itemValue$compItem$n : 0; // If you can equip it, and it's more valuable, then equip it.
+
+        if (currVal > compVal && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.canEquip)(currItem)) tryEquip = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equip)(currItem, currSlot);
+      }); // At this point you've checked the whole loop. End it.
+
+      tryEquip = true;
+    };
+
+    while (!tryEquip) {
+      _loop();
+    }
+  });
 }
 function freeFights() {
+  //   _scotchFreeFight
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("Free fights are not yet implemented.");
 }
 function barfMountain() {
@@ -7465,55 +8471,86 @@ function nightCap() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "printHelp": () => /* binding */ printHelp,
 /* harmony export */   "main": () => /* binding */ main
 /* harmony export */ });
 /* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! kolmafia */ "kolmafia");
 /* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(kolmafia__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib */ "./src/lib.ts");
-// import {
-//   print,
-// } from 'kolmafia';
+/* harmony import */ var libram_src__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! libram/src */ "./node_modules/libram/src/index.ts");
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["Mer-Kin Gladiator Mask"]);
 
- // export function printHelp() {
-//   // Import package info like version # & name
-//   var packageData = require('../package.json');
-//   print("=========================================");
-//   print(` >>>>>>>> ${packageData.name} v${packageData.version} `);
-//   print("=========================================");
-//   print("");
-//   print("scotchac king freed");
-//   print("   > Pull from hagnks and get aftercore prep flags done.");
-// }
-// export function main(target = '') {
+  _templateObject = function _templateObject() {
+    return data;
+  };
 
-function main() {
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("this is a print statement for my friend bean");
-  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.dailies)();
-  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.calculateFarmingTurns)();
-  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.farmPrep)();
-  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.runDiet)();
-  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.buffUp)();
-  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.freeFights)();
-  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.barfMountain)();
-  (0,_lib__WEBPACK_IMPORTED_MODULE_1__.nightCap)(); // I want to make a control flow at some point but for now I just want something functional.
-  // Using a control flow to call scripts
-  // if (['king freed', 'kingfreed'].indexOf(t) >= 0) {
-  //   kingFreed();
-  //   return "You're ready for aftercore!";
-  // } else if (['help', 'faq', 'assist', , ""].indexOf(t) >= 0){
-  //   printHelp();
-  // } else if (['farm'].indexOf(t) >= 0){
-  //   throw "Farming not installed yet.";
-  // } else if (['buff'].indexOf(t) >= 0){
-  //   throw "Buffing not installed yet.";
-  // } else if (['freeFights'].indexOf(t) >= 0){
-  //   throw "Free Fights not installed yet.";
-  // } else if (['level'].indexOf(t) >= 0){
-  //   throw "Leveling not installed yet.";
-  // } else {
-  //   throw "That command didn't work. Try 'help'."
-  // }
+  return data;
 }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+function printHelp() {
+  // Import package info like version # & name
+  var packageData = __webpack_require__(/*! ../package.json */ "./package.json");
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("=========================================");
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)(" >>>>>>>> ".concat(packageData.name, " v").concat(packageData.version, " "));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("=========================================");
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("");
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("scotchac king freed");
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("   > Pull from hagnks and get aftercore prep flags done.");
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("scotchac farm");
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("   > Run the farming module; does >600 turns of barf farming.");
+}
+function main() {
+  var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+
+  // Using a control flow to call scripts
+  if (['king freed', 'kingfreed'].indexOf(target) >= 0) {
+    (0,_lib__WEBPACK_IMPORTED_MODULE_1__.kingFreed)();
+  } else if (['help', 'faq', 'assist',, ""].indexOf(target) >= 0) {
+    printHelp();
+  } else if (['farm'].indexOf(target) >= 0) {
+    (0,_lib__WEBPACK_IMPORTED_MODULE_1__.dailies)(); // Daily actions
+
+    (0,_lib__WEBPACK_IMPORTED_MODULE_1__.farmPrep)(); // Prep for barf farming
+
+    (0,_lib__WEBPACK_IMPORTED_MODULE_1__.runDiet)(); // Diet management
+
+    (0,_lib__WEBPACK_IMPORTED_MODULE_1__.buffUp)(); // Buff up for the whole day because I hate moods
+
+    (0,_lib__WEBPACK_IMPORTED_MODULE_1__.freeFights)(); // Run all free fights
+
+    (0,_lib__WEBPACK_IMPORTED_MODULE_1__.barfMountain)(); // Run barf mountain stuff
+
+    (0,_lib__WEBPACK_IMPORTED_MODULE_1__.nightCap)(); // Nightcap it
+  } else if (['buff'].indexOf(target) >= 0) {
+    (0,_lib__WEBPACK_IMPORTED_MODULE_1__.buffUp)();
+  } else if (['freeFights'].indexOf(target) >= 0) {
+    (0,_lib__WEBPACK_IMPORTED_MODULE_1__.freeFights)();
+  } else if (['level'].indexOf(target) >= 0) {
+    throw "Leveling not installed yet.";
+  } else if (['equipTest'].indexOf(target) >= 0) {
+    (0,_lib__WEBPACK_IMPORTED_MODULE_1__.farmEquipBuilder)(1000, (0,libram_src__WEBPACK_IMPORTED_MODULE_2__.$item)(_templateObject()));
+  } else {
+    throw "That command didn't work. Try 'help'.";
+  }
+}
+
+/***/ }),
+
+/***/ "./package.json":
+/*!**********************!*\
+  !*** ./package.json ***!
+  \**********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse("{\"name\":\"scotch-ac\",\"version\":\"0.0.1\",\"description\":\"Aftercore action module for KOL.\",\"main\":\"KoLmafia/scripts/scotch-ac/scotch-ac.js\",\"scripts\":{\"test\":\"echo \\\"Error: no test specified\\\" && exit 1\",\"postinstall\":\"patch-package\",\"build\":\"npm run build:types && npm run build:js\",\"build:types\":\"tsc\",\"build:js\":\"webpack\",\"watch\":\"webpack --watch --progress\"},\"devDependencies\":{\"@babel/cli\":\"^7.12.8\",\"@babel/core\":\"^7.12.9\",\"@babel/plugin-proposal-class-properties\":\"^7.12.1\",\"@babel/plugin-proposal-object-rest-spread\":\"^7.12.1\",\"@babel/preset-env\":\"^7.12.7\",\"@babel/preset-typescript\":\"^7.12.7\",\"@types/node\":\"^14.11.2\",\"babel-loader\":\"^8.2.2\",\"gts\":\"^3.0.2\",\"libram\":\"github:Loathing-Associates-Scripting-Society/libram\",\"patch-package\":\"^6.2.2\",\"typescript\":\"^4.0.3\",\"webpack\":\"^5.8.0\",\"webpack-cli\":\"^4.2.0\"},\"dependencies\":{\"kolmafia\":\"^1.0.2\"},\"author\":\"Captain Scotch\",\"license\":\"ISC\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/docrostov/kol-js-starter.git\"},\"keywords\":[\"KoLMafia\",\"JS\",\"TS\"],\"bugs\":{\"url\":\"https://github.com/docrostov/kol-js-starter/issues\"},\"homepage\":\"https://github.com/docrostov/kol-js-starter#readme\"}");
 
 /***/ }),
 

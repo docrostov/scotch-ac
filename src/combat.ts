@@ -15,7 +15,7 @@ import {
     useSkill,
     throwItem,
 } from 'kolmafia';
-import { $skill, $familiar, $effect, $location, $monster, $item } from 'libram/src';
+import { $skill, $familiar, $effect, $location, $monster, $item, $phylum } from 'libram/src';
 import { getPropertyInt, getPropertyBoolean } from './lib'
 
 
@@ -114,31 +114,36 @@ export function main(initround: number, foe: Monster) {
     // Alright trying to set this stupid thing up now.
     const loc = myLocation();
 
+    // == FREE FIGHT STUFF ====================================
+    // Getting relevant free fight nonsense out of the way.
+
     // Kill time-spinner pranks right off.
     if (foe === $monster`time-spinner prank`) new GenerateMacro().kill().submit();
     
-    //   Will start by handling prof copies.
+    //   Will start by handling prof copies. Currently lecturing Witchess or Kramco fights.
     if (myFamiliar() === $familiar`Pocket Professor`) {
-        if (loc === $location`The Neverending Party`) {
-            new GenerateMacro()
-                .skill($skill`deliver your thesis!`) // Feynmantron, deliver your thesis!
-                .kill()
-                .submit();
-        } else {
-            if (foe === $monster`Witchess Bishop` || foe === $monster`Witchess Knight`) {
-                new GenerateMacro()
-                    .skill($skill`Sing Along`)
-                    .skill($skill`Lecture on Relativity`)
-                    .kill()
-                    .submit();
-            }
-        }
+        new GenerateMacro()
+            .externalIf(loc === $location`The Neverending Party`, 'skill deliver your thesis!')
+            .externalIf(foe === $monster`Witchess Bishop`, 'skill Lecture on Relativity')
+            .externalIf(foe === $monster`Witchess Knight`, 'skill Lecture on Relativity')
+            .externalIf(foe === $monster`sausage goblin`, 'skill Lecture on Relativity')
+            .kill().submit();
     }
-
+    
     // I use my NEP turns to become a bat.
     if (loc === $location`The Neverending Party`) {
         new GenerateMacro()
             .skill($skill`Become a Bat`)
+            .kill().submit();
+        }
+        
+    // == BARF MOUNTAIN ====================================
+    // Some barf mountain handling; mostly just embezzies --
+
+    // Olfact the garbage tourist
+    if (foe === $monster`garbage tourist`) {
+        new GenerateMacro()
+            .externalIf(haveEffect($effect`On the Trail`) === 0,'skill Transcendent Olfaction')
             .kill().submit();
     }
 
@@ -161,6 +166,32 @@ export function main(initround: number, foe: Monster) {
             .kill().submit();
     }
 
+    // == EXCEPTIONS ====================================
+    // Some more specific use cases here. ---------------
+    
+    // Shatterpunches for scarab beatles.
+    if (foe === $monster`swarm of scarab beatles`) {
+        new GenerateMacro().skill($skill`Shattering Punch`).kill().submit();
+    }
+
+    // Chest x-rays for the hole in the sky.
+    if (loc == $location`The Hole in the Sky`){
+        new GenerateMacro().skill($skill`Chest X-Ray`).kill().submit();
+    }
+
+    // For elf phylum kills with Robort, use jokester's gun
+    if (foe.phylum === $phylum`elf`) {
+        new GenerateMacro().skill($skill`Fire the Jokester's Gun`).kill().submit();
+    }
+    
+    // Duplicate for distention/doghair pills at the end of the day
+    if (loc === $location`Domed City of Grimacia` && foe.phylum === $phylum`dude`) {
+        new GenerateMacro()
+            .externalIf(getPropertyInt('_sourceTerminalDuplicateUses') < 1, 'skill Duplicate')
+            .externalIf(getPropertyInt('_missileLauncherUsed') < 1, 'skill Asdon Martin: Missile Launcher')
+            .kill().submit();
+    }
+
     // If it's a free fight I encounter, I want to off it.
     if (foe.attributes.includes('FREE')) new GenerateMacro().kill().submit();
     
@@ -168,6 +199,9 @@ export function main(initround: number, foe: Monster) {
     if (myFamiliar() === $familiar`Frumious Bandersnatch` && haveEffect($effect`Ode to Booze`) > 0) {
         runaway();
     }
+
+    // Finally, just kill anything else I encounter.
+    new GenerateMacro().kill().submit();
 
     // Continuing in the event we hit a multi-fight.
     multiFight();
