@@ -3,10 +3,10 @@ import {
     cliExecute, availableAmount, visitUrl, runChoice, getProperty, setProperty, print, abort, isUnrestricted,
     isOnline, myPrimestat, use, eat, mySpleenUse, spleenLimit, sweetSynthesis, chew, myInebriety, inebrietyLimit, 
     fullnessLimit, myFullness, equip, myMp, haveSkill, mpCost, restoreMp, myEffects, putShopUsingStorage, waitq, 
-    refreshStatus, myHp, restoreHp, toSkill, myClass, myFamiliar, numericModifier, myMaxhp, equippedItem, canEquip, toSlot
+    refreshStatus, myHp, restoreHp, toSkill, myClass, myFamiliar, numericModifier, myMaxhp, equippedItem, canEquip, toSlot, equippedAmount
   } from 'kolmafia';
   
-import { $familiar, $familiars, $item, $coinmaster, $effect, $effects, $skill, $slot, $slots, $location, $stat, $monster, $class } from 'libram/src';
+import { $familiar, $familiars, $item, $items, $coinmaster, $effect, $effects, $skill, $slot, $slots, $location, $stat, $monster, $class } from 'libram/src';
 
 const clanCache: { [index: string]: number } = {};
 export function setClan(target: string) {
@@ -302,12 +302,12 @@ export function farmPrep() {
     
     // Purchase robort drinks & feed them to robort; need to compare ingredient 
     //   to the drink like old ash script, but for now I'm just going to be lazy.
-    let roboDrinks = ['newark', 'single entendre', 'drive-by shooting', 'bloody nora'];
+    let roboDrinks = $items`newark,single entendre,drive-by shooting,bloody nora`;
     
-    roboDrinks.forEach(function (value) {
-      buy(1, $item`${value}`);
-      cliExecute(`robo ${value}`); 
-    });
+    for (const roboDrink of roboDrinks) {
+      buy(1, roboDrink);
+      cliExecute(`robo ${roboDrink}`); 
+    };
 
     // Get bastille nonsense done with. Requires Ezandora's Bastille script.
     //   svn checkout https://github.com/Ezandora/Bastille/branches/Release/
@@ -577,7 +577,7 @@ export function farmEquipBuilder(meatDrop = 250, ...priorityItems: Item[]) {
     'Belt of Loathing': 10*perPoundFamBonus*meatDrop,
     "Stephen's Lab Coat": 5*perPoundFamBonus*meatDrop,
     "Beach Comb": 5*perPoundFamBonus*meatDrop,
-    "Amulet Coin": 5*perPoundFamBonus*meatDrop,
+    "Amulet Coin": 10*perPoundFamBonus*meatDrop,
 
     // MEAT DROP ITEMS
     "wad of used tape": 0.30*meatDrop,
@@ -605,7 +605,7 @@ export function farmEquipBuilder(meatDrop = 250, ...priorityItems: Item[]) {
     
     // CRIMBO 2020 -- donated candy drop maximization
     'candy drive button': 950,
-    'fudgecycle': 900,
+    // 'fudgecycle': 900,
     'cane-mail shirt': 500,
     'peanut-brittle shield': 900,
     'bakelite backpack': 500,
@@ -631,19 +631,24 @@ export function farmEquipBuilder(meatDrop = 250, ...priorityItems: Item[]) {
     while (!tryEquip) {
       let currItem = $item`${value}`;
       let currVal = itemValue[value];
+
+      // No dupe items in barf setup right now.
+      if (equippedAmount(currItem) > 0) tryEquip = true;
   
       // Set the slot we're looking at
       let currSlot = [toSlot(currItem)];
-      if (currSlot.includes($slot`acc1`)) currSlot = $slots`acc1, acc2, acc3`;
-      
-      currSlot.forEach(function (cSlot) {
+      if (currSlot.includes($slot`acc1`)) currSlot = $slots`acc1,acc2,acc3`;
+       
+      for (const cSlot of currSlot) {
         
         let compItem = equippedItem(cSlot);
         let compVal = itemValue[compItem.name] ?? 0;
         
-        // If you can equip it, and it's more valuable, then equip it.
-        if (currVal > compVal && canEquip(currItem)) tryEquip = equip(currItem,currSlot);
-      });
+        // If you can equip it, and it's more valuable, and you have one... equip it.
+        if (currVal > compVal && canEquip(currItem) && availableAmount(currItem) > 0) { 
+          tryEquip = equip(currItem,cSlot);
+        }
+      }
   
       // At this point you've checked the whole loop. End it.
       tryEquip = true;

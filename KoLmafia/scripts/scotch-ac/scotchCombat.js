@@ -7419,7 +7419,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(kolmafia__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var libram_src__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! libram/src */ "./node_modules/libram/src/index.ts");
 function _templateObject97() {
-  var data = _taggedTemplateLiteral(["acc1, acc2, acc3"]);
+  var data = _taggedTemplateLiteral(["acc1,acc2,acc3"]);
 
   _templateObject97 = function _templateObject97() {
     return data;
@@ -8048,8 +8048,14 @@ function _templateObject35() {
   return data;
 }
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function _templateObject34() {
-  var data = _taggedTemplateLiteral(["", ""]);
+  var data = _taggedTemplateLiteral(["newark,single entendre,drive-by shooting,bloody nora"]);
 
   _templateObject34 = function _templateObject34() {
     return data;
@@ -8665,11 +8671,24 @@ function farmPrep() {
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('mummery meat'); // Purchase robort drinks & feed them to robort; need to compare ingredient 
   //   to the drink like old ash script, but for now I'm just going to be lazy.
 
-  var roboDrinks = ['newark', 'single entendre', 'drive-by shooting', 'bloody nora'];
-  roboDrinks.forEach(function (value) {
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject34(), value));
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("robo ".concat(value));
-  }); // Get bastille nonsense done with. Requires Ezandora's Bastille script.
+  var roboDrinks = (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$items)(_templateObject34());
+
+  var _iterator = _createForOfIteratorHelper(roboDrinks),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var roboDrink = _step.value;
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)(1, roboDrink);
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("robo ".concat(roboDrink));
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+
+  ; // Get bastille nonsense done with. Requires Ezandora's Bastille script.
   //   svn checkout https://github.com/Ezandora/Bastille/branches/Release/
 
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('bastille babar draftsman gesture sharks'); // Set the property to bypass farmPrep on next run.
@@ -8898,7 +8917,7 @@ function farmEquipBuilder() {
     'Belt of Loathing': 10 * perPoundFamBonus * meatDrop,
     "Stephen's Lab Coat": 5 * perPoundFamBonus * meatDrop,
     "Beach Comb": 5 * perPoundFamBonus * meatDrop,
-    "Amulet Coin": 5 * perPoundFamBonus * meatDrop,
+    "Amulet Coin": 10 * perPoundFamBonus * meatDrop,
     // MEAT DROP ITEMS
     "wad of used tape": 0.30 * meatDrop,
     "garbage sticker": 0.30 * meatDrop,
@@ -8931,7 +8950,7 @@ function farmEquipBuilder() {
     // Cheeng's is much more questionable due to massive drop pool. Needs spading.
     // CRIMBO 2020 -- donated candy drop maximization
     'candy drive button': 950,
-    'fudgecycle': 900,
+    // 'fudgecycle': 900,
     'cane-mail shirt': 500,
     'peanut-brittle shield': 900,
     'bakelite backpack': 500
@@ -8957,26 +8976,38 @@ function farmEquipBuilder() {
   Object.keys(itemValue).forEach(function (value) {
     var tryEquip = false;
 
-    var _loop = function _loop() {
+    while (!tryEquip) {
       var currItem = (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject95(), value);
-      var currVal = itemValue[value]; // Set the slot we're looking at
+      var currVal = itemValue[value]; // No dupe items in barf setup right now.
+
+      if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equippedAmount)(currItem) > 0) tryEquip = true; // Set the slot we're looking at
 
       var currSlot = [(0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.toSlot)(currItem)];
       if (currSlot.includes((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$slot)(_templateObject96()))) currSlot = (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$slots)(_templateObject97());
-      currSlot.forEach(function (cSlot) {
-        var _itemValue$compItem$n;
 
-        var compItem = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equippedItem)(cSlot);
-        var compVal = (_itemValue$compItem$n = itemValue[compItem.name]) !== null && _itemValue$compItem$n !== void 0 ? _itemValue$compItem$n : 0; // If you can equip it, and it's more valuable, then equip it.
+      var _iterator2 = _createForOfIteratorHelper(currSlot),
+          _step2;
 
-        if (currVal > compVal && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.canEquip)(currItem)) tryEquip = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equip)(currItem, currSlot);
-      }); // At this point you've checked the whole loop. End it.
+      try {
+        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+          var _itemValue$compItem$n;
+
+          var cSlot = _step2.value;
+          var compItem = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equippedItem)(cSlot);
+          var compVal = (_itemValue$compItem$n = itemValue[compItem.name]) !== null && _itemValue$compItem$n !== void 0 ? _itemValue$compItem$n : 0; // If you can equip it, and it's more valuable, and you have one... equip it.
+
+          if (currVal > compVal && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.canEquip)(currItem) && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)(currItem) > 0) {
+            tryEquip = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equip)(currItem, cSlot);
+          }
+        } // At this point you've checked the whole loop. End it.
+
+      } catch (err) {
+        _iterator2.e(err);
+      } finally {
+        _iterator2.f();
+      }
 
       tryEquip = true;
-    };
-
-    while (!tryEquip) {
-      _loop();
     }
   });
 }

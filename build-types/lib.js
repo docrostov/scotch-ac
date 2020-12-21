@@ -263,11 +263,12 @@ function farmPrep() {
     kolmafia_1.cliExecute('mummery meat');
     // Purchase robort drinks & feed them to robort; need to compare ingredient 
     //   to the drink like old ash script, but for now I'm just going to be lazy.
-    let roboDrinks = ['newark', 'single entendre', 'drive-by shooting', 'bloody nora'];
-    roboDrinks.forEach(function (value) {
-        kolmafia_1.buy(1, src_1.$item `${value}`);
-        kolmafia_1.cliExecute(`robo ${value}`);
-    });
+    let roboDrinks = src_1.$items `newark,single entendre,drive-by shooting,bloody nora`;
+    for (const roboDrink of roboDrinks) {
+        kolmafia_1.buy(1, roboDrink);
+        kolmafia_1.cliExecute(`robo ${roboDrink}`);
+    }
+    ;
     // Get bastille nonsense done with. Requires Ezandora's Bastille script.
     //   svn checkout https://github.com/Ezandora/Bastille/branches/Release/
     kolmafia_1.cliExecute('bastille babar draftsman gesture sharks');
@@ -492,7 +493,7 @@ function farmEquipBuilder(meatDrop = 250, ...priorityItems) {
         'Belt of Loathing': 10 * perPoundFamBonus * meatDrop,
         "Stephen's Lab Coat": 5 * perPoundFamBonus * meatDrop,
         "Beach Comb": 5 * perPoundFamBonus * meatDrop,
-        "Amulet Coin": 5 * perPoundFamBonus * meatDrop,
+        "Amulet Coin": 10 * perPoundFamBonus * meatDrop,
         // MEAT DROP ITEMS
         "wad of used tape": 0.30 * meatDrop,
         "garbage sticker": 0.30 * meatDrop,
@@ -515,7 +516,7 @@ function farmEquipBuilder(meatDrop = 250, ...priorityItems) {
         "Mr. Cheeng's Spectacles": 100,
         // CRIMBO 2020 -- donated candy drop maximization
         'candy drive button': 950,
-        'fudgecycle': 900,
+        // 'fudgecycle': 900,
         'cane-mail shirt': 500,
         'peanut-brittle shield': 900,
         'bakelite backpack': 500,
@@ -533,22 +534,26 @@ function farmEquipBuilder(meatDrop = 250, ...priorityItems) {
     //   better than the current equipment utilized. Have to reference the
     //   itemValue table with the Object.keys() thing.
     Object.keys(itemValue).forEach(function (value) {
+        var _a;
         let tryEquip = false;
         while (!tryEquip) {
             let currItem = src_1.$item `${value}`;
             let currVal = itemValue[value];
+            // No dupe items in barf setup right now.
+            if (kolmafia_1.equippedAmount(currItem) > 0)
+                tryEquip = true;
             // Set the slot we're looking at
             let currSlot = [kolmafia_1.toSlot(currItem)];
             if (currSlot.includes(src_1.$slot `acc1`))
-                currSlot = src_1.$slots `acc1, acc2, acc3`;
-            currSlot.forEach(function (cSlot) {
-                var _a;
+                currSlot = src_1.$slots `acc1,acc2,acc3`;
+            for (const cSlot of currSlot) {
                 let compItem = kolmafia_1.equippedItem(cSlot);
                 let compVal = (_a = itemValue[compItem.name]) !== null && _a !== void 0 ? _a : 0;
-                // If you can equip it, and it's more valuable, then equip it.
-                if (currVal > compVal && kolmafia_1.canEquip(currItem))
-                    tryEquip = kolmafia_1.equip(currItem, currSlot);
-            });
+                // If you can equip it, and it's more valuable, and you have one... equip it.
+                if (currVal > compVal && kolmafia_1.canEquip(currItem) && kolmafia_1.availableAmount(currItem) > 0) {
+                    tryEquip = kolmafia_1.equip(currItem, cSlot);
+                }
+            }
             // At this point you've checked the whole loop. End it.
             tryEquip = true;
         }
