@@ -632,14 +632,14 @@ export function farmEquipBuilder(meatDrop = 250, ...priorityItems: Item[]) {
       let currItem = $item`${value}`;
       let currVal = itemValue[value];
 
-      // No dupe items in barf setup right now.
-      if (equippedAmount(currItem) > 0) tryEquip = true;
-  
+      
       // Set the slot we're looking at
       let currSlot = [toSlot(currItem)];
       if (currSlot.includes($slot`acc1`)) currSlot = $slots`acc1,acc2,acc3`;
-       
+      
       for (const cSlot of currSlot) {
+        // No dupe items in barf setup right now.
+        if (equippedAmount(currItem) > 0) tryEquip = true;
         
         let compItem = equippedItem(cSlot);
         let compVal = itemValue[compItem.name] ?? 0;

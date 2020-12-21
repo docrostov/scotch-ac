@@ -539,14 +539,14 @@ function farmEquipBuilder(meatDrop = 250, ...priorityItems) {
         while (!tryEquip) {
             let currItem = src_1.$item `${value}`;
             let currVal = itemValue[value];
-            // No dupe items in barf setup right now.
-            if (kolmafia_1.equippedAmount(currItem) > 0)
-                tryEquip = true;
             // Set the slot we're looking at
             let currSlot = [kolmafia_1.toSlot(currItem)];
             if (currSlot.includes(src_1.$slot `acc1`))
                 currSlot = src_1.$slots `acc1,acc2,acc3`;
             for (const cSlot of currSlot) {
+                // No dupe items in barf setup right now.
+                if (kolmafia_1.equippedAmount(currItem) > 0)
+                    tryEquip = true;
                 let compItem = kolmafia_1.equippedItem(cSlot);
                 let compVal = (_a = itemValue[compItem.name]) !== null && _a !== void 0 ? _a : 0;
                 // If you can equip it, and it's more valuable, and you have one... equip it.

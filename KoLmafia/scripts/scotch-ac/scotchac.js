@@ -8447,9 +8447,7 @@ function farmEquipBuilder() {
 
     while (!tryEquip) {
       var currItem = (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject95(), value);
-      var currVal = itemValue[value]; // No dupe items in barf setup right now.
-
-      if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equippedAmount)(currItem) > 0) tryEquip = true; // Set the slot we're looking at
+      var currVal = itemValue[value]; // Set the slot we're looking at
 
       var currSlot = [(0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.toSlot)(currItem)];
       if (currSlot.includes((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$slot)(_templateObject96()))) currSlot = (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$slots)(_templateObject97());
@@ -8462,6 +8460,8 @@ function farmEquipBuilder() {
           var _itemValue$compItem$n;
 
           var cSlot = _step2.value;
+          // No dupe items in barf setup right now.
+          if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equippedAmount)(currItem) > 0) tryEquip = true;
           var compItem = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equippedItem)(cSlot);
           var compVal = (_itemValue$compItem$n = itemValue[compItem.name]) !== null && _itemValue$compItem$n !== void 0 ? _itemValue$compItem$n : 0; // If you can equip it, and it's more valuable, and you have one... equip it.
 
