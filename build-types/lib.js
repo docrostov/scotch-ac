@@ -1,9 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.nightCap = exports.barfMountain = exports.freeFights = exports.farmEquipBuilder = exports.buffUp = exports.runDiet = exports.fillSpleen = exports.calculateFarmingTurns = exports.farmPrep = exports.dailies = exports.kingFreed = exports.setProps = exports.farmCastSkill = exports.useLimitedItem = exports.useLimitedSkill = exports.setPropertyInt = exports.getPropertyBoolean = exports.getPropertyInt = exports.tryEnsureEffect = exports.ensureEffect = exports.setClan = void 0;
+exports.nightCap = exports.barfMountain = exports.freeFights = exports.adventureHere = exports.afterAdventure = exports.kramcoPercent = exports.selectFamiliar = exports.libramBurn = exports.farmEquipBuilder = exports.buffUp = exports.runDiet = exports.fillSpleen = exports.calculateFarmingTurns = exports.farmPrep = exports.dailies = exports.kingFreed = exports.setProps = exports.farmCastSkill = exports.useLimitedItem = exports.useLimitedSkill = exports.setPropertyInt = exports.getPropertyBoolean = exports.getPropertyInt = exports.tryEnsureEffect = exports.ensureEffect = exports.setClan = void 0;
 const kolmafia_1 = require("kolmafia");
 const src_1 = require("libram/src");
+// Check if you are in CS aftercore; true if yes, false if no
+const inCSAftercore = kolmafia_1.getProperty("csServicesPerformed").split(",").length == 11;
 const clanCache = {};
+const kramco = src_1.$item `Kramco Sausage-o-Matic&trade;`;
 function setClan(target) {
     // Script from bean to set a user's clan to something else
     if (kolmafia_1.getClanName() !== target) {
@@ -100,6 +103,18 @@ function setProps() {
     kolmafia_1.setProperty('_scotchIntro', '0');
     kolmafia_1.setProperty('_scotchPrepped', '0');
     kolmafia_1.setProperty('_scotchBuffed', '0');
+    // Set choice adventure defaults
+    kolmafia_1.setProperty('choiceAdventure1201', '1'); // science tent; tentacle
+    kolmafia_1.setProperty('choiceAdventure1222', '1'); // LOV; entry
+    kolmafia_1.setProperty('choiceAdventure1223', '1'); // LOV; take first fight
+    kolmafia_1.setProperty('choiceAdventure1224', '3'); // LOV; take earrings
+    kolmafia_1.setProperty('choiceAdventure1225', '1'); // LOV; take second fight
+    kolmafia_1.setProperty('choiceAdventure1226', '2'); // LOV; take fam weight
+    kolmafia_1.setProperty('choiceAdventure1227', '1'); // LOV; take third fight
+    kolmafia_1.setProperty('choiceAdventure1228', '1'); // LOV; take enamorang
+    kolmafia_1.setProperty('choiceAdventure1310', '3'); // god lobster; take stats
+    kolmafia_1.setProperty('choiceAdventure1322', '2'); // NEP entry; skip quest
+    kolmafia_1.setProperty('choiceAdventure1324', '5'); // NEP normal NC; fight monster
 }
 exports.setProps = setProps;
 function kingFreed() {
@@ -127,6 +142,9 @@ function dailies() {
         // Exit the intro if you've already completed it.
         return "Intro already complete!";
     }
+    if (kolmafia_1.getProperty('_scotchStartingTurncount') === "") {
+        kolmafia_1.setProperty('_scotchStartingTurncount', `${kolmafia_1.myTurncount()}`);
+    }
     // Ensure I'm in the right clan
     setClan('Bonus Adventures from Hell');
     // STEP 1: GAIN PASSIVE RESOURCES ======================
@@ -149,7 +167,8 @@ function dailies() {
     if (!getPropertyBoolean('_olympicSwimmingPoolItemFound'))
         kolmafia_1.cliExecute('swim item');
     // Apply crazy horse, even if it costs meat, because it's ideal for barf farming.
-    kolmafia_1.cliExecute('horsery crazy');
+    if (kolmafia_1.getProperty('_horsery') !== 'crazy horse')
+        kolmafia_1.cliExecute('horsery crazy');
     // Request cheesefax fortune stuff; not really -needed- but I like the shot at a skillbook.
     while (getPropertyInt("_clanFortuneConsultUses") < 3 && kolmafia_1.isOnline('3038166')) {
         kolmafia_1.cliExecute("fortune cheesefax portza bortman thick");
@@ -167,7 +186,9 @@ function dailies() {
     //   roughly 30,000 bacon in reserve, so I have no real issue with 
     //   ignoring that 11 bacon overage, but YMMV.
     useLimitedItem('_baconMachineUsed', src_1.$item `infinite bacon machine`);
-    kolmafia_1.buy(src_1.$coinmaster `internet meme shop`, 1, src_1.$item `print screen button`);
+    if (!getPropertyBoolean('_internetPrintScreenButtonBought')) {
+        kolmafia_1.buy(src_1.$coinmaster `internet meme shop`, 1, src_1.$item `print screen button`);
+    }
     // Use etched hourglass for +5 adventures
     useLimitedItem('_etchedHourglassUsed', src_1.$item `etched hourglass`);
     // STEP 2: MAKE CHOICES ================================
@@ -189,7 +210,8 @@ function dailies() {
     }
     // While you're at it, get your amulet coin
     kolmafia_1.useFamiliar(src_1.$familiar `Cornbeefadon`);
-    kolmafia_1.use(src_1.$item `Box of Familiar Jacks`);
+    if (kolmafia_1.availableAmount(src_1.$item `amulet coin`))
+        kolmafia_1.use(src_1.$item `Box of Familiar Jacks`);
     // Doing two deck summons; mana, mana. Reserve one for Robort feliz-fishing.
     while (getPropertyInt('_deckCardsDrawn') < 10) {
         // This should, in theory, always get you to 10 deck draws. 
@@ -219,6 +241,7 @@ function dailies() {
     useLimitedSkill('_incredibleSelfEsteemCast', src_1.$skill `Incredible Self-Esteem`);
     useLimitedSkill('_rhinestonesAcquired', src_1.$skill `Acquire Rhinestones`);
     useLimitedSkill('_preventScurvy', src_1.$skill `Prevent Scurvy and Sobriety`);
+    useLimitedSkill('_lunchBreak', src_1.$skill `Lunch Break`);
     // Use a few 1-per-day items. Once again, using the limitedUse syntax in a 
     //   tiny custom function. Thanks to Rev for recommending the pref change.
     useLimitedItem('_warbearBreakfastMachineUsed', src_1.$item `warbear breakfast machine`);
@@ -227,8 +250,11 @@ function dailies() {
     useLimitedItem('_milkOfMagnesiumUsed', src_1.$item `milk of magnesium`);
     useLimitedItem('_glennGoldenDiceUsed', src_1.$item `Glenn's Golden Dice`);
     useLimitedItem('_fishyPipeUsed', src_1.$item `fishy pipe`);
+    useLimitedItem('_trivialAvocationsGame', src_1.$item `Trivial Avocations board game`);
+    useLimitedItem('_jackassPlumberGame', src_1.$item `Jackass Plumber home game`);
+    useLimitedItem('_eternalCarBatteryUsed', src_1.$item `eternal car battery`);
     // There is currently no preference for Universal Seasoning.
-    kolmafia_1.use(src_1.$item `Universal Seasoning`);
+    // use($item`Universal Seasoning`);
     // Daily voting. Requires Ezandora's Voting Booth script
     //   svn checkout https://github.com/Ezandora/Voting-Booth/trunk/Release/
     kolmafia_1.cliExecute('VotingBooth.ash');
@@ -263,12 +289,15 @@ function farmPrep() {
     kolmafia_1.cliExecute('mummery meat');
     // Purchase robort drinks & feed them to robort; need to compare ingredient 
     //   to the drink like old ash script, but for now I'm just going to be lazy.
-    let roboDrinks = src_1.$items `newark,single entendre,drive-by shooting,bloody nora`;
+    let roboDrinks = src_1.$items `newark,single entendre,drive-by shooting,bloody nora,feliz navidad`;
     for (const roboDrink of roboDrinks) {
         kolmafia_1.buy(1, roboDrink);
         kolmafia_1.cliExecute(`robo ${roboDrink}`);
     }
-    ;
+    // Buy a 4-d camera.
+    kolmafia_1.buy(1, src_1.$item `4-d camera`);
+    // Buy some pulled green taffy
+    kolmafia_1.buy(1, src_1.$item `pulled green taffy`);
     // Get bastille nonsense done with. Requires Ezandora's Bastille script.
     //   svn checkout https://github.com/Ezandora/Bastille/branches/Release/
     kolmafia_1.cliExecute('bastille babar draftsman gesture sharks');
@@ -291,6 +320,14 @@ function fillSpleen() {
     //   #3: transdermal smoke patches
     while (kolmafia_1.mySpleenUse() < kolmafia_1.spleenLimit()) {
         let spleenLeft = kolmafia_1.spleenLimit() - kolmafia_1.mySpleenUse();
+        // Adding "calculate the universe" handling in fillSpleen
+        let calcsUsed = getPropertyInt("_universeCalculated");
+        let calcsAvailable = getPropertyInt("skillLevel144");
+        if (kolmafia_1.haveSkill(src_1.$skill `Calculate the Universe`) && calcsAvailable > calcsUsed) {
+            // Numberology is for adventures (69). If I was bosskilling I would swap to 37.
+            if (Object.keys(kolmafia_1.reverseNumberology(0, 0)).includes("69"))
+                kolmafia_1.cliExecute("numberology 69");
+        }
         if (kolmafia_1.haveEffect(src_1.$effect `Synthesis: Greed`) < calculateFarmingTurns()) {
             kolmafia_1.buy(src_1.$item `sugar sheet`, 2);
             kolmafia_1.cliExecute('create sugar chapeau');
@@ -319,6 +356,8 @@ function runDiet() {
     // Check barrelprayer buff and utilize if it's good.
     // Use dirt julep on mime shotglass booze
     if (getPropertyBoolean("_mimeArmyShotglassUsed") != true) {
+        if (kolmafia_1.availableAmount(src_1.$item `Dirt Julep`) < 1)
+            kolmafia_1.buy(src_1.$item `Dirt Julep`, 1);
         if (kolmafia_1.drink(src_1.$item `Dirt Julep`))
             kolmafia_1.setProperty("_mimeArmyShotglassUsed", "true");
     }
@@ -373,9 +412,11 @@ function buffUp() {
         }
     }
     // Attempt to get buffy rolling, then wait to give buffy to proc.
-    kolmafia_1.cliExecute("send to buffy || 500 bull hell thrill jingle reptil tenaci empathy elemental polka phat");
-    kolmafia_1.waitq(10);
-    kolmafia_1.refreshStatus();
+    if (kolmafia_1.haveEffect(src_1.$effect `Carol of the Thrills`) > 400) {
+        kolmafia_1.cliExecute("send to buffy || 500 bull hell thrill jingle reptil tenaci empathy elemental polka phat");
+        kolmafia_1.waitq(10);
+        kolmafia_1.refreshStatus();
+    }
     // Get "free" beach-head familiar buff, then use remaining combs.
     //   This script requires Veracity's beachComber, located here:
     // https://kolmafia.us/threads/beachcomber-fast-and-efficient-beach-combing.23993/
@@ -401,17 +442,33 @@ function buffUp() {
     // Get zatara meatsmith buff
     ensureEffect(src_1.$effect `Meet the Meat`);
     // Summon otep'vekxen
-    ensureEffect(src_1.$effect `Preternatural Greed`);
+    if (!getPropertyBoolean('demonSummoned') && !inCSAftercore) {
+        kolmafia_1.buy(src_1.$item `scroll of ancient forbidden unspeakable evil`, 1);
+        kolmafia_1.buy(src_1.$item `thin black candle`, 3);
+        ensureEffect(src_1.$effect `Preternatural Greed`);
+    }
     // Get ballpit buff
     ensureEffect(src_1.$effect `Having a Ball!`);
+    // Get the stat buff from Spacegate
+    if (!getPropertyBoolean('_spacegateVaccine')) {
+        kolmafia_1.print("YOU HAVE NOT YET INSTALLED THE SPACEGATE VACCINE!");
+    }
     // Get triple-sized for stat purposes.
+    kolmafia_1.equip(src_1.$item `Powerful Glove`, src_1.$slot `acc1`);
     kolmafia_1.useSkill(1, src_1.$skill `CHEAT CODE: Triple Size`);
+    // Do random things to increase your early stats.
+    if (!getPropertyBoolean("telescopeLookedHigh"))
+        kolmafia_1.cliExecute("telescope high");
+    if (!getPropertyBoolean("_lyleFavored"))
+        kolmafia_1.cliExecute("monorail buff");
+    if (!getPropertyBoolean("_streamsCrossed"))
+        kolmafia_1.cliExecute("crossstreams");
     // Get bird buffs; do not re-favorite birds, fav bird is fine.
     if (kolmafia_1.availableAmount(src_1.$item `bird-a-day calendar`) > 0) {
         kolmafia_1.useSkill(7 - getPropertyInt("_birdsSoughtToday"), src_1.$skill `seek out a bird`);
     }
     // Get the daycare buff. Doing myst for +items/mp.
-    if (getPropertyBoolean('_daycareToday') && !getPropertyBoolean('_daycareSpa'))
+    if (!getPropertyBoolean('_daycareSpa'))
         kolmafia_1.cliExecute('daycare mysticality');
     // Max cast a few key farming skills.
     farmCastSkill(src_1.$skill `Disco Leer`);
@@ -473,7 +530,7 @@ function farmEquipBuilder(meatDrop = 250, ...priorityItems) {
     let perPoundFamBonus = 0;
     // Modify fam bonus based on type of fam equipped
     if (kolmafia_1.myFamiliar() === src_1.$familiar `robortender`) {
-        perPoundFamBonus = (lepCalc * 2.00) / baseWeight;
+        perPoundFamBonus = (lepCalc * 2.10) / baseWeight; // It's actually 2x, but +item is worth a tiny amount too.
     }
     else if (kolmafia_1.myFamiliar() === src_1.$familiar `hobo monkey`) {
         perPoundFamBonus = (lepCalc * 1.25) / baseWeight;
@@ -518,7 +575,7 @@ function farmEquipBuilder(meatDrop = 250, ...priorityItems) {
         'candy drive button': 950,
         // 'fudgecycle': 900,
         'cane-mail shirt': 500,
-        'peanut-brittle shield': 900,
+        'peanut brittle shield': 900,
         'bakelite backpack': 500,
     };
     if (kolmafia_1.myClass() !== src_1.$class `Seal Clubber`) {
@@ -535,38 +592,258 @@ function farmEquipBuilder(meatDrop = 250, ...priorityItems) {
     //   itemValue table with the Object.keys() thing.
     Object.keys(itemValue).forEach(function (value) {
         var _a;
-        let tryEquip = false;
-        while (!tryEquip) {
-            let currItem = src_1.$item `${value}`;
-            let currVal = itemValue[value];
-            // Set the slot we're looking at
-            let currSlot = [kolmafia_1.toSlot(currItem)];
-            if (currSlot.includes(src_1.$slot `acc1`))
-                currSlot = src_1.$slots `acc1,acc2,acc3`;
-            for (const cSlot of currSlot) {
-                // No dupe items in barf setup right now.
-                if (kolmafia_1.equippedAmount(currItem) > 0)
-                    tryEquip = true;
-                let compItem = kolmafia_1.equippedItem(cSlot);
-                let compVal = (_a = itemValue[compItem.name]) !== null && _a !== void 0 ? _a : 0;
-                // If you can equip it, and it's more valuable, and you have one... equip it.
-                if (currVal > compVal && kolmafia_1.canEquip(currItem) && kolmafia_1.availableAmount(currItem) > 0) {
-                    tryEquip = kolmafia_1.equip(currItem, cSlot);
-                }
+        let currItem = src_1.$item `${value}`;
+        let currVal = itemValue[value];
+        // Set the slot we're looking at
+        let possibleSlots = [kolmafia_1.toSlot(currItem)];
+        if (possibleSlots.includes(src_1.$slot `acc1`))
+            possibleSlots = src_1.$slots `acc1,acc2,acc3`;
+        for (const currSlot of possibleSlots) {
+            // No dupe items in barf setup right now.
+            if (kolmafia_1.equippedAmount(currItem) > 0)
+                break;
+            let compItem = kolmafia_1.equippedItem(currSlot);
+            let compVal = (_a = itemValue[compItem.name]) !== null && _a !== void 0 ? _a : 0;
+            // If you can equip it, and it's more valuable, and you have one... equip it.
+            if (currVal > compVal && kolmafia_1.canEquip(currItem) && kolmafia_1.availableAmount(currItem) > 0) {
+                kolmafia_1.equip(currItem, currSlot);
+                kolmafia_1.print(`Equipping ${currVal} with an observed value of ${currVal}.`);
+                break;
             }
-            // At this point you've checked the whole loop. End it.
-            tryEquip = true;
         }
     });
 }
 exports.farmEquipBuilder = farmEquipBuilder;
+function libramBurn() {
+    // Pretty simple function that burns MP on librams.
+    let minMPLeft = 500;
+    while (kolmafia_1.myMp() - minMPLeft > kolmafia_1.mpCost(src_1.$skill `Summon Candy Heart`)) {
+        if (getPropertyInt('_favorRareSummons') < 4) {
+            kolmafia_1.useSkill(src_1.$skill `Summon Party Favor`, 1);
+        }
+        else {
+            kolmafia_1.useSkill(src_1.$skill `Summon Candy Heart`, 1);
+        }
+    }
+}
+exports.libramBurn = libramBurn;
+function selectFamiliar(loc) {
+    // Function that selects the right familiar for free fights given
+    //   submitted fights. Currently just returns fist turkey.
+    return src_1.$familiar `Fist Turkey`;
+}
+exports.selectFamiliar = selectFamiliar;
+function kramcoPercent() {
+    // Calculates the % chance of a Kramco. Stole this from Rev.
+    let numberKramcosToday = getPropertyInt('_sausageFights');
+    let kramcoNumber = 5 + numberKramcosToday * 3 + Math.pow(Math.max(0, numberKramcosToday - 5), 3);
+    return Math.max(Math.min((kolmafia_1.totalTurnsPlayed() - getPropertyInt("_lastSausageMonsterTurn") + 1) / kramcoNumber, 1.0), 0.0);
+}
+exports.kramcoPercent = kramcoPercent;
+function afterAdventure() {
+    // Generalized after-adventure script
+    // Fill extra pantsgiving fullness
+    if (kolmafia_1.fullnessLimit() - kolmafia_1.myFullness() > 0) {
+        kolmafia_1.buy(src_1.$item `Jumping Horseradish`, 1);
+        kolmafia_1.buy(src_1.$item `Special Seasoning`, 1);
+        kolmafia_1.eat(src_1.$item `Jumping Horseradish`);
+    }
+    // Make sure I don't die.
+    if (kolmafia_1.myHp() < 100)
+        kolmafia_1.restoreHp(1000);
+    if (kolmafia_1.myMp() < 50)
+        kolmafia_1.restoreMp(200);
+    // If you're >15 turns into the farming day & Kramco% is > 30%, use Kramco.
+    if (kolmafia_1.myTurncount() - getPropertyInt('_scotchStartingTurncount') > 15) {
+        if (kramcoPercent() > 0.30)
+            farmEquipBuilder(250, kramco);
+        if (kramcoPercent() < 0.30 && kolmafia_1.equippedAmount(kramco) > 0)
+            farmEquipBuilder(250);
+    }
+    // TO-DO
+    // Use Kramco if probability is > 50 and you've spent >10 turns. 
+    // Use protopack if a ghost is up
+    // Place digitizes in wanderer zones?
+}
+exports.afterAdventure = afterAdventure;
+function adventureHere(loc, fam = src_1.$familiar `none`) {
+    // Just submits an adv1 and also allows you to do an afterAdventure
+    //   script. Also changes your familiar, if required. You could
+    //   potentially refactor this to run the outfitSelector every 
+    //   combat 
+    if (fam === src_1.$familiar `none`)
+        fam = selectFamiliar(loc);
+    if (kolmafia_1.myFamiliar() !== fam)
+        kolmafia_1.useFamiliar(fam);
+    kolmafia_1.adv1(loc, -1, '');
+    afterAdventure();
+}
+exports.adventureHere = adventureHere;
 function freeFights() {
-    //   _scotchFreeFight
-    kolmafia_1.print("Free fights are not yet implemented.");
+    // This property should be 2 if it's done, 1 if in-progress, undefined start of day.
+    if (kolmafia_1.getProperty('_scotchFreeFights') == '2')
+        return "You've finished your free fights";
+    kolmafia_1.setProperty('_scotchFreeFights', '1');
+    // Start out with your starter equip; free fight stuff.  
+    farmEquipBuilder(25);
+    // Let's start out with LOV.
+    if (!getPropertyBoolean('_loveTunnelUsed')) {
+        adventureHere(src_1.$location `The Tunnel of L.O.V.E.`);
+    }
+    // Let's do machine elf fights now.
+    while (getPropertyInt("_machineTunnelsAdv") < 5) {
+        adventureHere(src_1.$location `The Deep Machine Tunnels`, src_1.$familiar `Machine Elf`);
+    }
+    // Now let's do Witchess to ensure the Professor has enough XP for a thesis. 
+    while (getPropertyInt("_witchessFights") < 5) {
+        // Swap to professor for the last fight.
+        if (getPropertyInt("_witchessFights") === 1) {
+            kolmafia_1.useFamiliar(src_1.$familiar `Pocket Professor`);
+            kolmafia_1.equip(src_1.$item `Pocket Professor memory chip`);
+        }
+        kolmafia_1.visitUrl("campground.php?action=witchess");
+        kolmafia_1.visitUrl("choice.php?whichchoice=1181&option=1");
+        kolmafia_1.visitUrl(`choice.php?whichchoice=1182&option=1&piece=${src_1.$monster `Witchess Knight`.id}&pwd=${kolmafia_1.myHash()}`, false);
+        kolmafia_1.runCombat();
+    }
+    // Let's do God Lobster combats now.
+    while (getPropertyInt("_godLobsterFights") < 3) {
+        kolmafia_1.useFamiliar(src_1.$familiar `God Lobster`);
+        kolmafia_1.visitUrl('main.php?fightgodlobster=1'); // Very straightforward URL!
+        kolmafia_1.runCombat();
+        kolmafia_1.visitUrl('choice.php'); // Ensuring I hit the choice.
+        kolmafia_1.runChoice(2); // Should default to stats due to setProps
+    }
+    // Let's do NEP now. Put on cloake for batform.
+    farmEquipBuilder(100, src_1.$item `Vampyric Cloake`);
+    while (getPropertyInt('_neverendingPartyFreeTurns') < 10) {
+        if (getPropertyInt('_neverendingPartyFreeTurns') === 1) {
+            // Swap to prof for my thesis.
+            adventureHere(src_1.$location `The Neverending Party`, src_1.$familiar `Pocket Professor`);
+        }
+        adventureHere(src_1.$location `The Neverending Party`, src_1.$familiar `Artistic Goth Kid`);
+    }
+    // Powdered madness farming.
+    kolmafia_1.useFamiliar(src_1.$familiar `red-nosed snapper`);
+    // Evoke eldritch horror & visit the science tent.
+    if (!getPropertyBoolean('_eldritchTentacleFought')) {
+        kolmafia_1.visitUrl('place.php?whichplace=forestvillage&action=fv_scientist');
+        kolmafia_1.runChoice(-1);
+        kolmafia_1.runCombat();
+    }
+    kolmafia_1.useSkill(src_1.$skill `Evoke Eldritch Horror`, 1);
+    kolmafia_1.runCombat();
+    // Use hot tub to heal if you encounter the weird boss monster.
+    if (kolmafia_1.haveEffect(src_1.$effect `Feeling Insignificant`)) {
+        kolmafia_1.cliExecute('hottub');
+    }
+    // Finally, summon seals.
+    if (kolmafia_1.myClass() === src_1.$class `Seal Clubber` && kolmafia_1.guildStoreAvailable()) {
+        kolmafia_1.buy(src_1.$item `figurine of a wretched-looking seal`, 10);
+        farmEquipBuilder(25, src_1.$item `old dry bone`);
+        // This is 10 for me, but may be less if you have never done the SC nemesis quest!
+        while (getPropertyInt('_sealsSummoned') < 10) {
+            kolmafia_1.use(src_1.$item `figurine of a wretched-looking seal`);
+            kolmafia_1.runCombat();
+        }
+    }
+    farmEquipBuilder(25);
+    // Script will swap familiars here.
+    while (getPropertyInt('_snojoFreeFights') < 10) {
+        adventureHere(src_1.$location `The X-32-F Combat Training Snowman`);
+    }
+    // Closet all bowling balls to ensure you can adventure in bowling alley.
+    if (kolmafia_1.availableAmount(src_1.$item `Bowling Ball`) > 0) {
+        kolmafia_1.putCloset(kolmafia_1.availableAmount(src_1.$item `Bowling Ball`), src_1.$item `Bowling Ball`);
+    }
+    // Need to add in drunk pygmy support into combat.ts w/ extra banishes before I
+    //   actually use this in the script.
+    // buy($item`Bowl of Scorpions`,11);
+    // farmEquipBuilder(0,$item`Kremlin's Greatest Briefcase`);
+    // while (getPropertyInt('_drunkPygmyBanishes') < 11) {
+    //   adventureHere($location`The Hidden Bowling Alley`);
+    // }
+    libramBurn();
+    kolmafia_1.use(src_1.$item `Platinum Yendorian Express Card`);
+    // Set the property to bypass farmPrep on next run.
+    kolmafia_1.setProperty('_scotchFreeFights', '2');
+    return "Free fights are complete.";
 }
 exports.freeFights = freeFights;
 function barfMountain() {
-    kolmafia_1.print("Barf mountain is not yet implemented.");
+    // Alright, let's farm barf mountain I guess. Start out by requesting a KGE.
+    //   Code stolen from bean's HCCS script: https://github.com/phulin/bean-hccs/
+    if (!getPropertyBoolean('_photocopyUsed')) {
+        kolmafia_1.chatPrivate('cheesefax', 'Knob Goblin Embezzler');
+        for (let i = 0; i < 2; i++) {
+            kolmafia_1.wait(10);
+            kolmafia_1.cliExecute('fax receive');
+            if (kolmafia_1.getProperty('photocopyMonster') === 'Knob Goblin Embezzler')
+                break;
+            // otherwise got the wrong monster, put it back.
+            kolmafia_1.cliExecute('fax send');
+        }
+    }
+    // With the KGE requested and around, time to prep for barf. First fight
+    //   includes our buddy the reanimator for +3 KGEs. 
+    kolmafia_1.useFamiliar(src_1.$familiar `Reanimated Reanimator`);
+    farmEquipBuilder(1000);
+    // Ensure you have digitize
+    if (![kolmafia_1.getProperty('sourceTerminalEducate1'), kolmafia_1.getProperty('sourceTerminalEducate2')].includes('digitize.edu')) {
+        kolmafia_1.cliExecute('terminal educate digitize');
+    }
+    // Fight that first KGE.
+    kolmafia_1.use(1, src_1.$item `photocopied monster`);
+    // Use a free run in the bowling alley first.
+    kolmafia_1.useFamiliar(src_1.$familiar `Pair of Stomping Boots`);
+    adventureHere(src_1.$location `The Hidden Bowling Alley`, src_1.$familiar `Pair of Stomping Boots`);
+    // Now switch to Robort for the rest of the day.
+    kolmafia_1.useFamiliar(src_1.$familiar `Robortender`);
+    farmEquipBuilder(1000);
+    // Now fight the chateau KGE. Again, heavily stolen from Bean.
+    if (!getPropertyBoolean('_chateauMonsterFought')) {
+        const chateauText = kolmafia_1.visitUrl('place.php?whichplace=chateau', false);
+        const match = chateauText.match(/alt="Painting of an? ([^(]*) .1."/);
+        if (match && match[1] === 'Knob Goblin Embezzler') {
+            kolmafia_1.visitUrl('place.php?whichplace=chateau&action=chateau_painting', false);
+            kolmafia_1.runCombat();
+        }
+        else {
+            throw 'Wrong painting.';
+        }
+    }
+    // Now fight your spooky putty chain. Should only break when KGE 
+    while (kolmafia_1.itemAmount(src_1.$item `Spooky Putty Monster`) > 0) {
+        kolmafia_1.use(1, src_1.$item `Spooky Putty Monster`);
+    }
+    // Now fight your 4-d camera KGE
+    if (kolmafia_1.itemAmount(src_1.$item `shaking 4-d camera`) > 0) {
+        kolmafia_1.use(1, src_1.$item `shaking 4-d camera`);
+    }
+    // Now fight your first digitized KGE, who should be showing up in the sea!
+    farmEquipBuilder(1000, src_1.$item `Mer-kin gladiator mask`);
+    adventureHere(src_1.$location `The Briny Deeps`, src_1.$familiar `Robortender`);
+    farmEquipBuilder(1000);
+    // Now fight the envyfish egg KGE
+    if (kolmafia_1.itemAmount(src_1.$item `envyfish egg`) > 0) {
+        kolmafia_1.use(1, src_1.$item `envyfish egg`);
+    }
+    farmEquipBuilder(250);
+    // Now fight the semirare KGE, if you aren't in CS aftercore
+    if (!inCSAftercore) {
+        if (getPropertyBoolean("_freePillKeeperUsed")) {
+            kolmafia_1.cliExecute("pillkeeper semirare");
+            adventureHere(src_1.$location `Cobb's Knob Treasury`, src_1.$familiar `Robortender`);
+        }
+    }
+    // Now go fight in barf until you're out of adventures!
+    while (kolmafia_1.myAdventures() > 5) {
+        adventureHere(src_1.$location `Barf Mountain`, src_1.$familiar `Robortender`);
+        if (getPropertyInt('_pantsgivingFullness') > 2)
+            farmEquipBuilder(250);
+    }
+    //TO-DO
+    // Add a grimacia map
 }
 exports.barfMountain = barfMountain;
 function nightCap() {

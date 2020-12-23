@@ -113,6 +113,9 @@ export class GenerateMacro {
 export function main(initround: number, foe: Monster) {
     // Alright trying to set this stupid thing up now.
     const loc = myLocation();
+    // == BANISH HANDLING =====================================
+    // There are certain monsters I never want to fight. Here, I banish them to the Shadow Realm.
+
 
     // == FREE FIGHT STUFF ====================================
     // Getting relevant free fight nonsense out of the way.
@@ -123,7 +126,7 @@ export function main(initround: number, foe: Monster) {
     //   Will start by handling prof copies. Currently lecturing Witchess or Kramco fights.
     if (myFamiliar() === $familiar`Pocket Professor`) {
         new GenerateMacro()
-            .externalIf(loc === $location`The Neverending Party`, 'skill deliver your thesis!')
+            .externalIf(loc === $location`The Neverending Party` && !getPropertyBoolean('_thesisDelivered'), 'skill deliver your thesis!')
             .externalIf(foe === $monster`Witchess Bishop`, 'skill Lecture on Relativity')
             .externalIf(foe === $monster`Witchess Knight`, 'skill Lecture on Relativity')
             .externalIf(foe === $monster`sausage goblin`, 'skill Lecture on Relativity')
@@ -133,7 +136,7 @@ export function main(initround: number, foe: Monster) {
     // I use my NEP turns to become a bat.
     if (loc === $location`The Neverending Party`) {
         new GenerateMacro()
-            .skill($skill`Become a Bat`)
+            .externalIf(getPropertyInt('_vampyreCloakeFormUses')<10,`skill Become a Bat`)
             .kill().submit();
         }
         
@@ -197,6 +200,10 @@ export function main(initround: number, foe: Monster) {
     
     // Handle free runs I guess.
     if (myFamiliar() === $familiar`Frumious Bandersnatch` && haveEffect($effect`Ode to Booze`) > 0) {
+        runaway();
+    }
+
+    if (myFamiliar() === $familiar`Pair of Stomping Boots`) {
         runaway();
     }
 

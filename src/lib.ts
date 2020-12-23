@@ -3,12 +3,18 @@ import {
     cliExecute, availableAmount, visitUrl, runChoice, getProperty, setProperty, print, abort, isUnrestricted,
     isOnline, myPrimestat, use, eat, mySpleenUse, spleenLimit, sweetSynthesis, chew, myInebriety, inebrietyLimit, 
     fullnessLimit, myFullness, equip, myMp, haveSkill, mpCost, restoreMp, myEffects, putShopUsingStorage, waitq, 
-    refreshStatus, myHp, restoreHp, toSkill, myClass, myFamiliar, numericModifier, myMaxhp, equippedItem, canEquip, toSlot, equippedAmount
+    refreshStatus, myHp, restoreHp, toSkill, splitString, myClass, myFamiliar, numericModifier, myMaxhp, equippedItem, canEquip, toSlot, equippedAmount, adv1, runCombat, reverseNumberology, guildStoreAvailable, chatPrivate, wait, putCloset, itemAmount, myAdventures, myHash, totalTurnsPlayed, max
   } from 'kolmafia';
   
 import { $familiar, $familiars, $item, $items, $coinmaster, $effect, $effects, $skill, $slot, $slots, $location, $stat, $monster, $class } from 'libram/src';
 
+// Check if you are in CS aftercore; true if yes, false if no
+const inCSAftercore = getProperty("csServicesPerformed").split(",").length == 11;
+
 const clanCache: { [index: string]: number } = {};
+
+const kramco = $item`Kramco Sausage-o-Matic&trade;`;
+
 export function setClan(target: string) {
     // Script from bean to set a user's clan to something else
     if (getClanName() !== target) {
@@ -107,6 +113,19 @@ export function setProps() {
     setProperty('_scotchIntro', '0');
     setProperty('_scotchPrepped', '0');
     setProperty('_scotchBuffed', '0');
+
+    // Set choice adventure defaults
+    setProperty('choiceAdventure1201', '1'); // science tent; tentacle
+    setProperty('choiceAdventure1222', '1'); // LOV; entry
+    setProperty('choiceAdventure1223', '1'); // LOV; take first fight
+    setProperty('choiceAdventure1224', '3'); // LOV; take earrings
+    setProperty('choiceAdventure1225', '1'); // LOV; take second fight
+    setProperty('choiceAdventure1226', '2'); // LOV; take fam weight
+    setProperty('choiceAdventure1227', '1'); // LOV; take third fight
+    setProperty('choiceAdventure1228', '1'); // LOV; take enamorang
+    setProperty('choiceAdventure1310', '3'); // god lobster; take stats
+    setProperty('choiceAdventure1322', '2'); // NEP entry; skip quest
+    setProperty('choiceAdventure1324', '5'); // NEP normal NC; fight monster
 }
   
 export function kingFreed() {
@@ -139,6 +158,10 @@ export function dailies() {
       // Exit the intro if you've already completed it.
       return "Intro already complete!";
     }
+
+    if (getProperty('_scotchStartingTurncount') === "") {
+      setProperty('_scotchStartingTurncount', `${myTurncount()}`);
+    }
   
     // Ensure I'm in the right clan
     setClan('Bonus Adventures from Hell');
@@ -167,7 +190,7 @@ export function dailies() {
     if (!getPropertyBoolean('_olympicSwimmingPoolItemFound')) cliExecute('swim item');
 
     // Apply crazy horse, even if it costs meat, because it's ideal for barf farming.
-    cliExecute('horsery crazy');
+    if (getProperty('_horsery') !== 'crazy horse' ) cliExecute('horsery crazy');
 
     // Request cheesefax fortune stuff; not really -needed- but I like the shot at a skillbook.
     while(getPropertyInt("_clanFortuneConsultUses") < 3 && isOnline('3038166')) {
@@ -188,7 +211,9 @@ export function dailies() {
     //   roughly 30,000 bacon in reserve, so I have no real issue with 
     //   ignoring that 11 bacon overage, but YMMV.
     useLimitedItem('_baconMachineUsed', $item`infinite bacon machine`);
-    buy($coinmaster`internet meme shop`, 1, $item`print screen button`);
+    if (!getPropertyBoolean('_internetPrintScreenButtonBought')) {
+      buy($coinmaster`internet meme shop`, 1, $item`print screen button`);
+    }
 
     // Use etched hourglass for +5 adventures
     useLimitedItem('_etchedHourglassUsed', $item`etched hourglass`);
@@ -217,7 +242,7 @@ export function dailies() {
 
     // While you're at it, get your amulet coin
     useFamiliar($familiar`Cornbeefadon`);
-    use($item`Box of Familiar Jacks`);
+    if (availableAmount($item`amulet coin`)) use($item`Box of Familiar Jacks`);
 
     // Doing two deck summons; mana, mana. Reserve one for Robort feliz-fishing.
     while (getPropertyInt('_deckCardsDrawn') < 10){
@@ -248,6 +273,7 @@ export function dailies() {
     useLimitedSkill('_incredibleSelfEsteemCast', $skill`Incredible Self-Esteem`);
     useLimitedSkill('_rhinestonesAcquired',  $skill`Acquire Rhinestones`);
     useLimitedSkill('_preventScurvy', $skill`Prevent Scurvy and Sobriety`);
+    useLimitedSkill('_lunchBreak', $skill`Lunch Break`);
 
     // Use a few 1-per-day items. Once again, using the limitedUse syntax in a 
     //   tiny custom function. Thanks to Rev for recommending the pref change.
@@ -257,9 +283,12 @@ export function dailies() {
     useLimitedItem('_milkOfMagnesiumUsed',$item`milk of magnesium`);
     useLimitedItem('_glennGoldenDiceUsed',$item`Glenn's Golden Dice`);
     useLimitedItem('_fishyPipeUsed',$item`fishy pipe`);
+    useLimitedItem('_trivialAvocationsGame',$item`Trivial Avocations board game`);
+    useLimitedItem('_jackassPlumberGame',$item`Jackass Plumber home game`);
+    useLimitedItem('_eternalCarBatteryUsed',$item`eternal car battery`);
 
     // There is currently no preference for Universal Seasoning.
-    use($item`Universal Seasoning`);
+    // use($item`Universal Seasoning`);
 
     // Daily voting. Requires Ezandora's Voting Booth script
     //   svn checkout https://github.com/Ezandora/Voting-Booth/trunk/Release/
@@ -302,12 +331,18 @@ export function farmPrep() {
     
     // Purchase robort drinks & feed them to robort; need to compare ingredient 
     //   to the drink like old ash script, but for now I'm just going to be lazy.
-    let roboDrinks = $items`newark,single entendre,drive-by shooting,bloody nora`;
+    let roboDrinks = $items`newark,single entendre,drive-by shooting,bloody nora,feliz navidad`;
     
     for (const roboDrink of roboDrinks) {
       buy(1, roboDrink);
       cliExecute(`robo ${roboDrink}`); 
-    };
+    }
+
+    // Buy a 4-d camera.
+    buy(1, $item`4-d camera`);
+
+    // Buy some pulled green taffy
+    buy(1, $item`pulled green taffy`);
 
     // Get bastille nonsense done with. Requires Ezandora's Bastille script.
     //   svn checkout https://github.com/Ezandora/Bastille/branches/Release/
@@ -337,6 +372,15 @@ export function fillSpleen() {
   while (mySpleenUse() < spleenLimit()) {
 
     let spleenLeft = spleenLimit() - mySpleenUse();
+
+    // Adding "calculate the universe" handling in fillSpleen
+    let calcsUsed = getPropertyInt("_universeCalculated");
+    let calcsAvailable = getPropertyInt("skillLevel144");
+
+    if (haveSkill($skill`Calculate the Universe`) && calcsAvailable > calcsUsed){
+      // Numberology is for adventures (69). If I was bosskilling I would swap to 37.
+      if (Object.keys(reverseNumberology(0,0)).includes("69")) cliExecute("numberology 69"); 
+    }
 
     if (haveEffect($effect`Synthesis: Greed`) < calculateFarmingTurns()) {
       buy($item`sugar sheet`,2);
@@ -370,6 +414,7 @@ export function runDiet() {
 
     // Use dirt julep on mime shotglass booze
     if (getPropertyBoolean("_mimeArmyShotglassUsed") != true) {
+      if (availableAmount($item`Dirt Julep`) < 1) buy($item`Dirt Julep`, 1);
       if (drink($item`Dirt Julep`)) setProperty("_mimeArmyShotglassUsed","true");
     }
 
@@ -437,9 +482,11 @@ export function buffUp() {
     }
 
     // Attempt to get buffy rolling, then wait to give buffy to proc.
-    cliExecute("send to buffy || 500 bull hell thrill jingle reptil tenaci empathy elemental polka phat");
-    waitq(10);
-    refreshStatus();
+    if (haveEffect($effect`Carol of the Thrills`) > 400){
+      cliExecute("send to buffy || 500 bull hell thrill jingle reptil tenaci empathy elemental polka phat");
+      waitq(10);
+      refreshStatus();
+    }
 
     // Get "free" beach-head familiar buff, then use remaining combs.
     //   This script requires Veracity's beachComber, located here:
@@ -471,13 +518,28 @@ export function buffUp() {
     ensureEffect($effect`Meet the Meat`);
 
     // Summon otep'vekxen
-    ensureEffect($effect`Preternatural Greed`);
-    
+    if (!getPropertyBoolean('demonSummoned') && !inCSAftercore) {
+      buy($item`scroll of ancient forbidden unspeakable evil`,1);
+      buy($item`thin black candle`,3);
+      ensureEffect($effect`Preternatural Greed`);  
+    }
+
     // Get ballpit buff
     ensureEffect($effect`Having a Ball!`);
 
+    // Get the stat buff from Spacegate
+    if (!getPropertyBoolean('_spacegateVaccine')) {
+      print("YOU HAVE NOT YET INSTALLED THE SPACEGATE VACCINE!");
+    }
+
     // Get triple-sized for stat purposes.
+    equip($item`Powerful Glove`, $slot`acc1`);
     useSkill(1, $skill`CHEAT CODE: Triple Size`);
+
+    // Do random things to increase your early stats.
+    if (!getPropertyBoolean("telescopeLookedHigh")) cliExecute("telescope high");
+    if (!getPropertyBoolean("_lyleFavored")) cliExecute("monorail buff");
+    if (!getPropertyBoolean("_streamsCrossed")) cliExecute("crossstreams")
 
     // Get bird buffs; do not re-favorite birds, fav bird is fine.
     if (availableAmount($item`bird-a-day calendar`) > 0) {
@@ -485,7 +547,7 @@ export function buffUp() {
     }
 
     // Get the daycare buff. Doing myst for +items/mp.
-    if (getPropertyBoolean('_daycareToday') && !getPropertyBoolean('_daycareSpa')) cliExecute('daycare mysticality');
+    if (!getPropertyBoolean('_daycareSpa')) cliExecute('daycare mysticality');
 
     // Max cast a few key farming skills.
     farmCastSkill($skill`Disco Leer`);
@@ -558,7 +620,7 @@ export function farmEquipBuilder(meatDrop = 250, ...priorityItems: Item[]) {
 
   // Modify fam bonus based on type of fam equipped
   if (myFamiliar() === $familiar`robortender`) {
-    perPoundFamBonus = (lepCalc * 2.00)/baseWeight;
+    perPoundFamBonus = (lepCalc * 2.10)/baseWeight; // It's actually 2x, but +item is worth a tiny amount too.
   } else if (myFamiliar() === $familiar`hobo monkey`) {
     perPoundFamBonus = (lepCalc * 1.25)/baseWeight;
   } else if ($familiars`cornbeefadon, leprechaun`.includes(myFamiliar())) {
@@ -607,7 +669,7 @@ export function farmEquipBuilder(meatDrop = 250, ...priorityItems: Item[]) {
     'candy drive button': 950,
     // 'fudgecycle': 900,
     'cane-mail shirt': 500,
-    'peanut-brittle shield': 900,
+    'peanut brittle shield': 900,
     'bakelite backpack': 500,
   }
 
@@ -626,45 +688,297 @@ export function farmEquipBuilder(meatDrop = 250, ...priorityItems: Item[]) {
   //   better than the current equipment utilized. Have to reference the
   //   itemValue table with the Object.keys() thing.
   Object.keys(itemValue).forEach( function (value) {
-    let tryEquip = false;
-
-    while (!tryEquip) {
-      let currItem = $item`${value}`;
-      let currVal = itemValue[value];
-
+    let currItem = $item`${value}`;
+    let currVal = itemValue[value];
       
-      // Set the slot we're looking at
-      let currSlot = [toSlot(currItem)];
-      if (currSlot.includes($slot`acc1`)) currSlot = $slots`acc1,acc2,acc3`;
+    // Set the slot we're looking at
+    let possibleSlots = [toSlot(currItem)];
+    if (possibleSlots.includes($slot`acc1`)) possibleSlots = $slots`acc1,acc2,acc3`;
+    
+    for (const currSlot of possibleSlots) {
+      // No dupe items in barf setup right now.
+      if (equippedAmount(currItem) > 0) break;
       
-      for (const cSlot of currSlot) {
-        // No dupe items in barf setup right now.
-        if (equippedAmount(currItem) > 0) tryEquip = true;
-        
-        let compItem = equippedItem(cSlot);
-        let compVal = itemValue[compItem.name] ?? 0;
-        
-        // If you can equip it, and it's more valuable, and you have one... equip it.
-        if (currVal > compVal && canEquip(currItem) && availableAmount(currItem) > 0) { 
-          tryEquip = equip(currItem,cSlot);
-        }
+      let compItem = equippedItem(currSlot);
+      let compVal = itemValue[compItem.name] ?? 0;
+      
+      // If you can equip it, and it's more valuable, and you have one... equip it.
+      if (currVal > compVal && canEquip(currItem) && availableAmount(currItem) > 0) { 
+        equip(currItem,currSlot);
+        print(`Equipping ${currVal} with an observed value of ${currVal}.`);
+        break;
       }
-  
-      // At this point you've checked the whole loop. End it.
-      tryEquip = true;
     }
-  });
+    });
 
+}
+
+export function libramBurn() {
+  // Pretty simple function that burns MP on librams.
+  let minMPLeft = 500;
+  while (myMp() - minMPLeft > mpCost($skill`Summon Candy Heart`)){
+    if (getPropertyInt('_favorRareSummons') < 4) {
+      useSkill($skill`Summon Party Favor`,1);
+    } else {
+      useSkill($skill`Summon Candy Heart`,1);
+    }
+  }
+}
+
+export function selectFamiliar(loc: Location) {
+  // Function that selects the right familiar for free fights given
+  //   submitted fights. Currently just returns fist turkey.
+  return $familiar`Fist Turkey`;
+}
+
+export function kramcoPercent(){ 
+  // Calculates the % chance of a Kramco. Stole this from Rev.
+  let numberKramcosToday = getPropertyInt('_sausageFights')
+  let kramcoNumber = 5+numberKramcosToday*3+Math.pow(Math.max(0,numberKramcosToday-5), 3);
+  return Math.max(Math.min((totalTurnsPlayed() - getPropertyInt("_lastSausageMonsterTurn") + 1) / kramcoNumber,1.0),0.0);
+}
+
+export function afterAdventure(){
+  // Generalized after-adventure script
+
+  // Fill extra pantsgiving fullness
+  if (fullnessLimit() - myFullness() > 0) {
+    buy($item`Jumping Horseradish`,1);
+    buy($item`Special Seasoning`,1);
+    eat($item`Jumping Horseradish`);
+  }
+
+  // Make sure I don't die.
+  if (myHp() < 100) restoreHp(1000);
+  if (myMp() < 50) restoreMp(200);
+
+  // If you're >15 turns into the farming day & Kramco% is > 30%, use Kramco.
+  if (myTurncount() - getPropertyInt('_scotchStartingTurncount') > 15) {
+    if (kramcoPercent() > 0.30) farmEquipBuilder(250,kramco);
+    if (kramcoPercent() < 0.30 && equippedAmount(kramco) > 0) farmEquipBuilder(250);
+  }
+
+
+
+  // TO-DO
+  // Use Kramco if probability is > 50 and you've spent >10 turns. 
+  // Use protopack if a ghost is up
+  // Place digitizes in wanderer zones?
+  
+
+}
+
+export function adventureHere(loc: Location, fam = $familiar`none`){
+  // Just submits an adv1 and also allows you to do an afterAdventure
+  //   script. Also changes your familiar, if required. You could
+  //   potentially refactor this to run the outfitSelector every 
+  //   combat 
+  if (fam === $familiar`none`) fam = selectFamiliar(loc);
+  if (myFamiliar() !== fam) useFamiliar(fam);
+  adv1(loc,-1,'');
+  afterAdventure();
 }
 
 export function freeFights() {
+  // This property should be 2 if it's done, 1 if in-progress, undefined start of day.
+  if (getProperty('_scotchFreeFights') == '2') return "You've finished your free fights";
+  setProperty('_scotchFreeFights', '1');
 
-//   _scotchFreeFight
-    print("Free fights are not yet implemented.");
+  // Start out with your starter equip; free fight stuff.  
+  farmEquipBuilder(25);
+
+  // Let's start out with LOV.
+  if (!getPropertyBoolean('_loveTunnelUsed')) {
+    adventureHere($location`The Tunnel of L.O.V.E.`);
+  }
+
+  // Let's do machine elf fights now.
+  while (getPropertyInt("_machineTunnelsAdv") < 5) {
+    adventureHere($location`The Deep Machine Tunnels`,$familiar`Machine Elf`);
+  }
+
+  // Now let's do Witchess to ensure the Professor has enough XP for a thesis. 
+  while (getPropertyInt("_witchessFights") < 5) {
+
+    // Swap to professor for the last fight.
+    if (getPropertyInt("_witchessFights") === 1) {
+      useFamiliar($familiar`Pocket Professor`);
+      equip($item`Pocket Professor memory chip`);
+    }
+
+    visitUrl("campground.php?action=witchess");
+    visitUrl("choice.php?whichchoice=1181&option=1" );
+    visitUrl(`choice.php?whichchoice=1182&option=1&piece=${$monster`Witchess Knight`.id}&pwd=${myHash()}`,false);
+    runCombat()
+  }
+
+  // Let's do God Lobster combats now.
+  while (getPropertyInt("_godLobsterFights") < 3) {
+    useFamiliar($familiar`God Lobster`);
+    visitUrl('main.php?fightgodlobster=1'); // Very straightforward URL!
+    runCombat();
+    visitUrl('choice.php'); // Ensuring I hit the choice.
+    runChoice(2); // Should default to stats due to setProps
+  }
+
+  // Let's do NEP now. Put on cloake for batform.
+  farmEquipBuilder(100, $item`Vampyric Cloake`);
+
+  while (getPropertyInt('_neverendingPartyFreeTurns') < 10) {
+    if (getPropertyInt('_neverendingPartyFreeTurns') === 1) {
+      // Swap to prof for my thesis.
+      adventureHere($location`The Neverending Party`, $familiar`Pocket Professor`);
+    }
+    adventureHere($location`The Neverending Party`, $familiar`Artistic Goth Kid`);
+  }
+
+  // Powdered madness farming.
+  useFamiliar($familiar`red-nosed snapper`);
+
+  // Evoke eldritch horror & visit the science tent.
+  if (!getPropertyBoolean('_eldritchTentacleFought')) {
+    visitUrl('place.php?whichplace=forestvillage&action=fv_scientist');
+    runChoice(-1);
+    runCombat();
+  }
+
+  useSkill($skill`Evoke Eldritch Horror`, 1);
+  runCombat();
+
+  // Use hot tub to heal if you encounter the weird boss monster.
+  if (haveEffect($effect`Feeling Insignificant`)){
+    cliExecute('hottub');
+  }
+
+  // Finally, summon seals.
+  if (myClass() === $class`Seal Clubber` && guildStoreAvailable()){
+    buy($item`figurine of a wretched-looking seal`,10);
+
+    farmEquipBuilder(25,$item`old dry bone`);
+
+    // This is 10 for me, but may be less if you have never done the SC nemesis quest!
+    while (getPropertyInt('_sealsSummoned') < 10) {
+      use($item`figurine of a wretched-looking seal`);
+      runCombat();
+    }
+  }
+
+  farmEquipBuilder(25);
+
+  // Script will swap familiars here.
+  while (getPropertyInt('_snojoFreeFights') < 10) {
+    adventureHere($location`The X-32-F Combat Training Snowman`);
+  }
+
+  // Closet all bowling balls to ensure you can adventure in bowling alley.
+  if (availableAmount($item`Bowling Ball`) > 0) {
+    putCloset(availableAmount($item`Bowling Ball`), $item`Bowling Ball`);
+  }
+
+  // Need to add in drunk pygmy support into combat.ts w/ extra banishes before I
+  //   actually use this in the script.
+  // buy($item`Bowl of Scorpions`,11);
+  // farmEquipBuilder(0,$item`Kremlin's Greatest Briefcase`);
+  // while (getPropertyInt('_drunkPygmyBanishes') < 11) {
+  //   adventureHere($location`The Hidden Bowling Alley`);
+  // }
+
+  libramBurn();
+  use($item`Platinum Yendorian Express Card`);
+
+  // Set the property to bypass farmPrep on next run.
+  setProperty('_scotchFreeFights', '2');
+  return "Free fights are complete.";
+
 }
 
 export function barfMountain() {
-  print("Barf mountain is not yet implemented.");
+  // Alright, let's farm barf mountain I guess. Start out by requesting a KGE.
+  //   Code stolen from bean's HCCS script: https://github.com/phulin/bean-hccs/
+
+  if (!getPropertyBoolean('_photocopyUsed')){   
+    chatPrivate('cheesefax', 'Knob Goblin Embezzler');
+    for (let i = 0; i < 2; i++) {
+      wait(10);
+      cliExecute('fax receive');
+      if (getProperty('photocopyMonster') === 'Knob Goblin Embezzler') break;
+      // otherwise got the wrong monster, put it back.
+      cliExecute('fax send');
+    }
+  }
+
+  // With the KGE requested and around, time to prep for barf. First fight
+  //   includes our buddy the reanimator for +3 KGEs. 
+  useFamiliar($familiar`Reanimated Reanimator`);
+  farmEquipBuilder(1000);
+
+  // Ensure you have digitize
+  if (![getProperty('sourceTerminalEducate1'), getProperty('sourceTerminalEducate2')].includes('digitize.edu')){
+    cliExecute('terminal educate digitize');
+  }
+
+  // Fight that first KGE.
+  use(1, $item`photocopied monster`);
+
+  // Use a free run in the bowling alley first.
+  useFamiliar($familiar`Pair of Stomping Boots`);
+  adventureHere($location`The Hidden Bowling Alley`, $familiar`Pair of Stomping Boots`);
+
+  // Now switch to Robort for the rest of the day.
+  useFamiliar($familiar`Robortender`);
+  farmEquipBuilder(1000);
+
+  // Now fight the chateau KGE. Again, heavily stolen from Bean.
+  if (!getPropertyBoolean('_chateauMonsterFought')) {
+    const chateauText = visitUrl('place.php?whichplace=chateau', false);
+    const match = chateauText.match(/alt="Painting of an? ([^(]*) .1."/);
+    if (match && match[1] === 'Knob Goblin Embezzler') {
+      visitUrl('place.php?whichplace=chateau&action=chateau_painting', false);
+      runCombat();
+    } else {
+      throw 'Wrong painting.';
+    }
+  }
+
+  // Now fight your spooky putty chain. Should only break when KGE 
+  while (itemAmount($item`Spooky Putty Monster`) > 0) {
+    use(1, $item`Spooky Putty Monster`);
+  }
+
+  // Now fight your 4-d camera KGE
+  if (itemAmount($item`shaking 4-d camera`) > 0) {
+    use(1, $item`shaking 4-d camera`);
+  }
+
+  // Now fight your first digitized KGE, who should be showing up in the sea!
+  farmEquipBuilder(1000, $item`Mer-kin gladiator mask`);
+  adventureHere($location`The Briny Deeps`,$familiar`Robortender`);
+  farmEquipBuilder(1000);
+
+  // Now fight the envyfish egg KGE
+  if (itemAmount($item`envyfish egg`) > 0) {
+    use(1, $item`envyfish egg`);
+  }
+
+  farmEquipBuilder(250);
+
+  // Now fight the semirare KGE, if you aren't in CS aftercore
+  if (!inCSAftercore) {
+    if (getPropertyBoolean("_freePillKeeperUsed")) {
+      cliExecute("pillkeeper semirare");
+      adventureHere($location`Cobb's Knob Treasury`, $familiar`Robortender`);
+    }
+  }
+
+  // Now go fight in barf until you're out of adventures!
+  while (myAdventures() > 5) {
+    adventureHere($location`Barf Mountain`, $familiar`Robortender`);
+    if (getPropertyInt('_pantsgivingFullness') > 2) farmEquipBuilder(250);
+  }
+
+  //TO-DO
+  // Add a grimacia map
+
 }
 
 export function nightCap() {

@@ -91,6 +91,8 @@ exports.GenerateMacro = GenerateMacro;
 function main(initround, foe) {
     // Alright trying to set this stupid thing up now.
     const loc = kolmafia_1.myLocation();
+    // == BANISH HANDLING =====================================
+    // There are certain monsters I never want to fight. Here, I banish them to the Shadow Realm.
     // == FREE FIGHT STUFF ====================================
     // Getting relevant free fight nonsense out of the way.
     // Kill time-spinner pranks right off.
@@ -99,7 +101,7 @@ function main(initround, foe) {
     //   Will start by handling prof copies. Currently lecturing Witchess or Kramco fights.
     if (kolmafia_1.myFamiliar() === src_1.$familiar `Pocket Professor`) {
         new GenerateMacro()
-            .externalIf(loc === src_1.$location `The Neverending Party`, 'skill deliver your thesis!')
+            .externalIf(loc === src_1.$location `The Neverending Party` && !lib_1.getPropertyBoolean('_thesisDelivered'), 'skill deliver your thesis!')
             .externalIf(foe === src_1.$monster `Witchess Bishop`, 'skill Lecture on Relativity')
             .externalIf(foe === src_1.$monster `Witchess Knight`, 'skill Lecture on Relativity')
             .externalIf(foe === src_1.$monster `sausage goblin`, 'skill Lecture on Relativity')
@@ -108,7 +110,7 @@ function main(initround, foe) {
     // I use my NEP turns to become a bat.
     if (loc === src_1.$location `The Neverending Party`) {
         new GenerateMacro()
-            .skill(src_1.$skill `Become a Bat`)
+            .externalIf(lib_1.getPropertyInt('_vampyreCloakeFormUses') < 10, `skill Become a Bat`)
             .kill().submit();
     }
     // == BARF MOUNTAIN ====================================
@@ -163,6 +165,9 @@ function main(initround, foe) {
         new GenerateMacro().kill().submit();
     // Handle free runs I guess.
     if (kolmafia_1.myFamiliar() === src_1.$familiar `Frumious Bandersnatch` && kolmafia_1.haveEffect(src_1.$effect `Ode to Booze`) > 0) {
+        kolmafia_1.runaway();
+    }
+    if (kolmafia_1.myFamiliar() === src_1.$familiar `Pair of Stomping Boots`) {
         kolmafia_1.runaway();
     }
     // Finally, just kill anything else I encounter.

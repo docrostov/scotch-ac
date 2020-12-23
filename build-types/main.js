@@ -37,14 +37,26 @@ function main(target = '') {
     else if (['buff'].indexOf(target) >= 0) {
         lib_1.buffUp();
     }
+    else if (['props'].indexOf(target) >= 0) {
+        lib_1.setProps();
+    }
     else if (['freeFights'].indexOf(target) >= 0) {
         lib_1.freeFights();
     }
     else if (['level'].indexOf(target) >= 0) {
         throw "Leveling not installed yet.";
     }
-    else if (['equipTest'].indexOf(target) >= 0) {
+    else if (['equipSea'].indexOf(target) >= 0) {
         lib_1.farmEquipBuilder(1000, src_1.$item `Mer-Kin Gladiator Mask`);
+    }
+    else if (['equipBarf'].indexOf(target) >= 0) {
+        lib_1.farmEquipBuilder(250);
+    }
+    else if (['equipFree'].indexOf(target) >= 0) {
+        lib_1.farmEquipBuilder(25);
+    }
+    else if (['kramco'].indexOf(target) >= 0) {
+        kolmafia_1.print(`Your % chance of a Kramco is currently ${lib_1.kramcoPercent()}`);
     }
     else {
         throw "That command didn't work. Try 'help'.";

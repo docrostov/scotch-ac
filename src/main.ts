@@ -1,6 +1,6 @@
 import { print } from 'kolmafia';
-import { kingFreed, dailies, farmPrep, runDiet, buffUp, 
-         freeFights, barfMountain, nightCap, farmEquipBuilder} from './lib';
+import { kingFreed, dailies, farmPrep, runDiet, buffUp, setProps,
+         freeFights, barfMountain, nightCap, farmEquipBuilder, kramcoPercent} from './lib';
 
 import { $item } from 'libram/src';
 
@@ -38,12 +38,20 @@ export function main(target = '') {
     nightCap();       // Nightcap it
   } else if (['buff'].indexOf(target) >= 0){
     buffUp();
+  } else if (['props'].indexOf(target) >= 0){
+    setProps();
   } else if (['freeFights'].indexOf(target) >= 0){
     freeFights();
   } else if (['level'].indexOf(target) >= 0){
     throw "Leveling not installed yet.";
-  } else if (['equipTest'].indexOf(target) >=0) {
+  } else if (['equipSea'].indexOf(target) >=0) {
     farmEquipBuilder(1000,$item`Mer-Kin Gladiator Mask`);
+  } else if (['equipBarf'].indexOf(target) >=0) {
+    farmEquipBuilder(250);
+  } else if (['equipFree'].indexOf(target) >=0) {
+    farmEquipBuilder(25);
+  } else if (['kramco'].indexOf(target) >=0) {
+    print(`Your % chance of a Kramco is currently ${kramcoPercent()}`);
   } else {
     throw "That command didn't work. Try 'help'."
   }

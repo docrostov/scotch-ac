@@ -6870,7 +6870,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var libram_src__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! libram/src */ "./node_modules/libram/src/index.ts");
 /* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib */ "./src/lib.ts");
 function _templateObject32() {
-  var data = _taggedTemplateLiteral(["Ode to Booze"]);
+  var data = _taggedTemplateLiteral(["Pair of Stomping Boots"]);
 
   _templateObject32 = function _templateObject32() {
     return data;
@@ -6880,7 +6880,7 @@ function _templateObject32() {
 }
 
 function _templateObject31() {
-  var data = _taggedTemplateLiteral(["Frumious Bandersnatch"]);
+  var data = _taggedTemplateLiteral(["Ode to Booze"]);
 
   _templateObject31 = function _templateObject31() {
     return data;
@@ -6890,7 +6890,7 @@ function _templateObject31() {
 }
 
 function _templateObject30() {
-  var data = _taggedTemplateLiteral(["dude"]);
+  var data = _taggedTemplateLiteral(["Frumious Bandersnatch"]);
 
   _templateObject30 = function _templateObject30() {
     return data;
@@ -6900,7 +6900,7 @@ function _templateObject30() {
 }
 
 function _templateObject29() {
-  var data = _taggedTemplateLiteral(["Domed City of Grimacia"]);
+  var data = _taggedTemplateLiteral(["dude"]);
 
   _templateObject29 = function _templateObject29() {
     return data;
@@ -6910,7 +6910,7 @@ function _templateObject29() {
 }
 
 function _templateObject28() {
-  var data = _taggedTemplateLiteral(["Fire the Jokester's Gun"]);
+  var data = _taggedTemplateLiteral(["Domed City of Grimacia"]);
 
   _templateObject28 = function _templateObject28() {
     return data;
@@ -6920,7 +6920,7 @@ function _templateObject28() {
 }
 
 function _templateObject27() {
-  var data = _taggedTemplateLiteral(["elf"]);
+  var data = _taggedTemplateLiteral(["Fire the Jokester's Gun"]);
 
   _templateObject27 = function _templateObject27() {
     return data;
@@ -6930,7 +6930,7 @@ function _templateObject27() {
 }
 
 function _templateObject26() {
-  var data = _taggedTemplateLiteral(["Chest X-Ray"]);
+  var data = _taggedTemplateLiteral(["elf"]);
 
   _templateObject26 = function _templateObject26() {
     return data;
@@ -6940,7 +6940,7 @@ function _templateObject26() {
 }
 
 function _templateObject25() {
-  var data = _taggedTemplateLiteral(["The Hole in the Sky"]);
+  var data = _taggedTemplateLiteral(["Chest X-Ray"]);
 
   _templateObject25 = function _templateObject25() {
     return data;
@@ -6950,7 +6950,7 @@ function _templateObject25() {
 }
 
 function _templateObject24() {
-  var data = _taggedTemplateLiteral(["Shattering Punch"]);
+  var data = _taggedTemplateLiteral(["The Hole in the Sky"]);
 
   _templateObject24 = function _templateObject24() {
     return data;
@@ -6960,7 +6960,7 @@ function _templateObject24() {
 }
 
 function _templateObject23() {
-  var data = _taggedTemplateLiteral(["swarm of scarab beatles"]);
+  var data = _taggedTemplateLiteral(["Shattering Punch"]);
 
   _templateObject23 = function _templateObject23() {
     return data;
@@ -6970,7 +6970,7 @@ function _templateObject23() {
 }
 
 function _templateObject22() {
-  var data = _taggedTemplateLiteral(["The Briny Deeps"]);
+  var data = _taggedTemplateLiteral(["swarm of scarab beatles"]);
 
   _templateObject22 = function _templateObject22() {
     return data;
@@ -6980,7 +6980,7 @@ function _templateObject22() {
 }
 
 function _templateObject21() {
-  var data = _taggedTemplateLiteral(["Digitize"]);
+  var data = _taggedTemplateLiteral(["The Briny Deeps"]);
 
   _templateObject21 = function _templateObject21() {
     return data;
@@ -6990,7 +6990,7 @@ function _templateObject21() {
 }
 
 function _templateObject20() {
-  var data = _taggedTemplateLiteral(["7168"]);
+  var data = _taggedTemplateLiteral(["Digitize"]);
 
   _templateObject20 = function _templateObject20() {
     return data;
@@ -7000,7 +7000,7 @@ function _templateObject20() {
 }
 
 function _templateObject19() {
-  var data = _taggedTemplateLiteral(["Reanimated Reanimator"]);
+  var data = _taggedTemplateLiteral(["7168"]);
 
   _templateObject19 = function _templateObject19() {
     return data;
@@ -7010,7 +7010,7 @@ function _templateObject19() {
 }
 
 function _templateObject18() {
-  var data = _taggedTemplateLiteral(["Knob Goblin Embezzler"]);
+  var data = _taggedTemplateLiteral(["Reanimated Reanimator"]);
 
   _templateObject18 = function _templateObject18() {
     return data;
@@ -7020,7 +7020,7 @@ function _templateObject18() {
 }
 
 function _templateObject17() {
-  var data = _taggedTemplateLiteral(["On the Trail"]);
+  var data = _taggedTemplateLiteral(["Knob Goblin Embezzler"]);
 
   _templateObject17 = function _templateObject17() {
     return data;
@@ -7030,7 +7030,7 @@ function _templateObject17() {
 }
 
 function _templateObject16() {
-  var data = _taggedTemplateLiteral(["garbage tourist"]);
+  var data = _taggedTemplateLiteral(["On the Trail"]);
 
   _templateObject16 = function _templateObject16() {
     return data;
@@ -7040,7 +7040,7 @@ function _templateObject16() {
 }
 
 function _templateObject15() {
-  var data = _taggedTemplateLiteral(["Become a Bat"]);
+  var data = _taggedTemplateLiteral(["garbage tourist"]);
 
   _templateObject15 = function _templateObject15() {
     return data;
@@ -7313,66 +7313,72 @@ var GenerateMacro = /*#__PURE__*/function () {
 }();
 function main(initround, foe) {
   // Alright trying to set this stupid thing up now.
-  var loc = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myLocation)(); // == FREE FIGHT STUFF ====================================
+  var loc = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myLocation)(); // == BANISH HANDLING =====================================
+  // There are certain monsters I never want to fight. Here, I banish them to the Shadow Realm.
+  // == FREE FIGHT STUFF ====================================
   // Getting relevant free fight nonsense out of the way.
   // Kill time-spinner pranks right off.
 
   if (foe === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$monster)(_templateObject8())) new GenerateMacro().kill().submit(); //   Will start by handling prof copies. Currently lecturing Witchess or Kramco fights.
 
   if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)() === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject9())) {
-    new GenerateMacro().externalIf(loc === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject10()), 'skill deliver your thesis!').externalIf(foe === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$monster)(_templateObject11()), 'skill Lecture on Relativity').externalIf(foe === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$monster)(_templateObject12()), 'skill Lecture on Relativity').externalIf(foe === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$monster)(_templateObject13()), 'skill Lecture on Relativity').kill().submit();
+    new GenerateMacro().externalIf(loc === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject10()) && !(0,_lib__WEBPACK_IMPORTED_MODULE_2__.getPropertyBoolean)('_thesisDelivered'), 'skill deliver your thesis!').externalIf(foe === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$monster)(_templateObject11()), 'skill Lecture on Relativity').externalIf(foe === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$monster)(_templateObject12()), 'skill Lecture on Relativity').externalIf(foe === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$monster)(_templateObject13()), 'skill Lecture on Relativity').kill().submit();
   } // I use my NEP turns to become a bat.
 
 
   if (loc === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject14())) {
-    new GenerateMacro().skill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject15())).kill().submit();
+    new GenerateMacro().externalIf((0,_lib__WEBPACK_IMPORTED_MODULE_2__.getPropertyInt)('_vampyreCloakeFormUses') < 10, "skill Become a Bat").kill().submit();
   } // == BARF MOUNTAIN ====================================
   // Some barf mountain handling; mostly just embezzies --
   // Olfact the garbage tourist
 
 
-  if (foe === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$monster)(_templateObject16())) {
-    new GenerateMacro().externalIf((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject17())) === 0, 'skill Transcendent Olfaction').kill().submit();
+  if (foe === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$monster)(_templateObject15())) {
+    new GenerateMacro().externalIf((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject16())) === 0, 'skill Transcendent Olfaction').kill().submit();
   } // Embezzler handling; lots to do here.
 
 
-  if (foe === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$monster)(_templateObject18())) {
+  if (foe === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$monster)(_templateObject17())) {
     // Run first combat w/ Reanimator; do some unique stuff there.
-    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)() === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject19())) {
-      new GenerateMacro().skill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject20())) // Reanimator Wink
-      .skill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject21())) // Ensure you digitize on first combat
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)() === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject18())) {
+      new GenerateMacro().skill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject19())) // Reanimator Wink
+      .skill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject20())) // Ensure you digitize on first combat
       .kill().submit();
     }
 
-    new GenerateMacro().externalIf((0,_lib__WEBPACK_IMPORTED_MODULE_2__.getPropertyInt)('spookyPuttyCopiesMade') < 5, 'use Spooky Putty Sheet').externalIf((0,_lib__WEBPACK_IMPORTED_MODULE_2__.getPropertyInt)('_enamorangs') < 1, 'use LOV Enamorang').externalIf(!(0,_lib__WEBPACK_IMPORTED_MODULE_2__.getPropertyBoolean)('_cameraUsed'), 'use 4-d camera').externalIf((0,_lib__WEBPACK_IMPORTED_MODULE_2__.getPropertyInt)('_sourceTerminalDigitizeMonsterCount') === 5, 'skill Digitize').externalIf(loc === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject22()), 'use pulled green taffy').externalIf((0,_lib__WEBPACK_IMPORTED_MODULE_2__.getPropertyInt)('_meteorShowerUses') < 5, 'skill Meteor Shower').kill().submit();
+    new GenerateMacro().externalIf((0,_lib__WEBPACK_IMPORTED_MODULE_2__.getPropertyInt)('spookyPuttyCopiesMade') < 5, 'use Spooky Putty Sheet').externalIf((0,_lib__WEBPACK_IMPORTED_MODULE_2__.getPropertyInt)('_enamorangs') < 1, 'use LOV Enamorang').externalIf(!(0,_lib__WEBPACK_IMPORTED_MODULE_2__.getPropertyBoolean)('_cameraUsed'), 'use 4-d camera').externalIf((0,_lib__WEBPACK_IMPORTED_MODULE_2__.getPropertyInt)('_sourceTerminalDigitizeMonsterCount') === 5, 'skill Digitize').externalIf(loc === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject21()), 'use pulled green taffy').externalIf((0,_lib__WEBPACK_IMPORTED_MODULE_2__.getPropertyInt)('_meteorShowerUses') < 5, 'skill Meteor Shower').kill().submit();
   } // == EXCEPTIONS ====================================
   // Some more specific use cases here. ---------------
   // Shatterpunches for scarab beatles.
 
 
-  if (foe === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$monster)(_templateObject23())) {
-    new GenerateMacro().skill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject24())).kill().submit();
+  if (foe === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$monster)(_templateObject22())) {
+    new GenerateMacro().skill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject23())).kill().submit();
   } // Chest x-rays for the hole in the sky.
 
 
-  if (loc == (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject25())) {
-    new GenerateMacro().skill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject26())).kill().submit();
+  if (loc == (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject24())) {
+    new GenerateMacro().skill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject25())).kill().submit();
   } // For elf phylum kills with Robort, use jokester's gun
 
 
-  if (foe.phylum === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$phylum)(_templateObject27())) {
-    new GenerateMacro().skill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject28())).kill().submit();
+  if (foe.phylum === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$phylum)(_templateObject26())) {
+    new GenerateMacro().skill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject27())).kill().submit();
   } // Duplicate for distention/doghair pills at the end of the day
 
 
-  if (loc === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject29()) && foe.phylum === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$phylum)(_templateObject30())) {
+  if (loc === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject28()) && foe.phylum === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$phylum)(_templateObject29())) {
     new GenerateMacro().externalIf((0,_lib__WEBPACK_IMPORTED_MODULE_2__.getPropertyInt)('_sourceTerminalDuplicateUses') < 1, 'skill Duplicate').externalIf((0,_lib__WEBPACK_IMPORTED_MODULE_2__.getPropertyInt)('_missileLauncherUsed') < 1, 'skill Asdon Martin: Missile Launcher').kill().submit();
   } // If it's a free fight I encounter, I want to off it.
 
 
   if (foe.attributes.includes('FREE')) new GenerateMacro().kill().submit(); // Handle free runs I guess.
 
-  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)() === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject31()) && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject32())) > 0) {
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)() === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject30()) && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject31())) > 0) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runaway)();
+  }
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)() === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject32())) {
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runaway)();
   } // Finally, just kill anything else I encounter.
 
@@ -7411,6 +7417,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "runDiet": () => /* binding */ runDiet,
 /* harmony export */   "buffUp": () => /* binding */ buffUp,
 /* harmony export */   "farmEquipBuilder": () => /* binding */ farmEquipBuilder,
+/* harmony export */   "libramBurn": () => /* binding */ libramBurn,
+/* harmony export */   "selectFamiliar": () => /* binding */ selectFamiliar,
+/* harmony export */   "kramcoPercent": () => /* binding */ kramcoPercent,
+/* harmony export */   "afterAdventure": () => /* binding */ afterAdventure,
+/* harmony export */   "adventureHere": () => /* binding */ adventureHere,
 /* harmony export */   "freeFights": () => /* binding */ freeFights,
 /* harmony export */   "barfMountain": () => /* binding */ barfMountain,
 /* harmony export */   "nightCap": () => /* binding */ nightCap
@@ -7418,8 +7429,678 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! kolmafia */ "kolmafia");
 /* harmony import */ var kolmafia__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(kolmafia__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var libram_src__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! libram/src */ "./node_modules/libram/src/index.ts");
-function _templateObject97() {
+function _templateObject164() {
+  var data = _taggedTemplateLiteral(["Robortender"]);
+
+  _templateObject164 = function _templateObject164() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject163() {
+  var data = _taggedTemplateLiteral(["Barf Mountain"]);
+
+  _templateObject163 = function _templateObject163() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject162() {
+  var data = _taggedTemplateLiteral(["Robortender"]);
+
+  _templateObject162 = function _templateObject162() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject161() {
+  var data = _taggedTemplateLiteral(["Cobb's Knob Treasury"]);
+
+  _templateObject161 = function _templateObject161() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject160() {
+  var data = _taggedTemplateLiteral(["envyfish egg"]);
+
+  _templateObject160 = function _templateObject160() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject159() {
+  var data = _taggedTemplateLiteral(["envyfish egg"]);
+
+  _templateObject159 = function _templateObject159() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject158() {
+  var data = _taggedTemplateLiteral(["Robortender"]);
+
+  _templateObject158 = function _templateObject158() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject157() {
+  var data = _taggedTemplateLiteral(["The Briny Deeps"]);
+
+  _templateObject157 = function _templateObject157() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject156() {
+  var data = _taggedTemplateLiteral(["Mer-kin gladiator mask"]);
+
+  _templateObject156 = function _templateObject156() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject155() {
+  var data = _taggedTemplateLiteral(["shaking 4-d camera"]);
+
+  _templateObject155 = function _templateObject155() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject154() {
+  var data = _taggedTemplateLiteral(["shaking 4-d camera"]);
+
+  _templateObject154 = function _templateObject154() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject153() {
+  var data = _taggedTemplateLiteral(["Spooky Putty Monster"]);
+
+  _templateObject153 = function _templateObject153() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject152() {
+  var data = _taggedTemplateLiteral(["Spooky Putty Monster"]);
+
+  _templateObject152 = function _templateObject152() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject151() {
+  var data = _taggedTemplateLiteral(["Robortender"]);
+
+  _templateObject151 = function _templateObject151() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject150() {
+  var data = _taggedTemplateLiteral(["Pair of Stomping Boots"]);
+
+  _templateObject150 = function _templateObject150() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject149() {
+  var data = _taggedTemplateLiteral(["The Hidden Bowling Alley"]);
+
+  _templateObject149 = function _templateObject149() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject148() {
+  var data = _taggedTemplateLiteral(["Pair of Stomping Boots"]);
+
+  _templateObject148 = function _templateObject148() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject147() {
+  var data = _taggedTemplateLiteral(["photocopied monster"]);
+
+  _templateObject147 = function _templateObject147() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject146() {
+  var data = _taggedTemplateLiteral(["Reanimated Reanimator"]);
+
+  _templateObject146 = function _templateObject146() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject145() {
+  var data = _taggedTemplateLiteral(["Platinum Yendorian Express Card"]);
+
+  _templateObject145 = function _templateObject145() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject144() {
+  var data = _taggedTemplateLiteral(["Bowling Ball"]);
+
+  _templateObject144 = function _templateObject144() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject143() {
+  var data = _taggedTemplateLiteral(["Bowling Ball"]);
+
+  _templateObject143 = function _templateObject143() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject142() {
+  var data = _taggedTemplateLiteral(["Bowling Ball"]);
+
+  _templateObject142 = function _templateObject142() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject141() {
+  var data = _taggedTemplateLiteral(["The X-32-F Combat Training Snowman"]);
+
+  _templateObject141 = function _templateObject141() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject140() {
+  var data = _taggedTemplateLiteral(["figurine of a wretched-looking seal"]);
+
+  _templateObject140 = function _templateObject140() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject139() {
+  var data = _taggedTemplateLiteral(["old dry bone"]);
+
+  _templateObject139 = function _templateObject139() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject138() {
+  var data = _taggedTemplateLiteral(["figurine of a wretched-looking seal"]);
+
+  _templateObject138 = function _templateObject138() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject137() {
+  var data = _taggedTemplateLiteral(["Seal Clubber"]);
+
+  _templateObject137 = function _templateObject137() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject136() {
+  var data = _taggedTemplateLiteral(["Feeling Insignificant"]);
+
+  _templateObject136 = function _templateObject136() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject135() {
+  var data = _taggedTemplateLiteral(["Evoke Eldritch Horror"]);
+
+  _templateObject135 = function _templateObject135() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject134() {
+  var data = _taggedTemplateLiteral(["red-nosed snapper"]);
+
+  _templateObject134 = function _templateObject134() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject133() {
+  var data = _taggedTemplateLiteral(["Artistic Goth Kid"]);
+
+  _templateObject133 = function _templateObject133() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject132() {
+  var data = _taggedTemplateLiteral(["The Neverending Party"]);
+
+  _templateObject132 = function _templateObject132() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject131() {
+  var data = _taggedTemplateLiteral(["Pocket Professor"]);
+
+  _templateObject131 = function _templateObject131() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject130() {
+  var data = _taggedTemplateLiteral(["The Neverending Party"]);
+
+  _templateObject130 = function _templateObject130() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject129() {
+  var data = _taggedTemplateLiteral(["Vampyric Cloake"]);
+
+  _templateObject129 = function _templateObject129() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject128() {
+  var data = _taggedTemplateLiteral(["God Lobster"]);
+
+  _templateObject128 = function _templateObject128() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject127() {
+  var data = _taggedTemplateLiteral(["Witchess Knight"]);
+
+  _templateObject127 = function _templateObject127() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject126() {
+  var data = _taggedTemplateLiteral(["Pocket Professor memory chip"]);
+
+  _templateObject126 = function _templateObject126() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject125() {
+  var data = _taggedTemplateLiteral(["Pocket Professor"]);
+
+  _templateObject125 = function _templateObject125() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject124() {
+  var data = _taggedTemplateLiteral(["Machine Elf"]);
+
+  _templateObject124 = function _templateObject124() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject123() {
+  var data = _taggedTemplateLiteral(["The Deep Machine Tunnels"]);
+
+  _templateObject123 = function _templateObject123() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject122() {
+  var data = _taggedTemplateLiteral(["The Tunnel of L.O.V.E."]);
+
+  _templateObject122 = function _templateObject122() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject121() {
+  var data = _taggedTemplateLiteral(["none"]);
+
+  _templateObject121 = function _templateObject121() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject120() {
+  var data = _taggedTemplateLiteral(["none"]);
+
+  _templateObject120 = function _templateObject120() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject119() {
+  var data = _taggedTemplateLiteral(["Jumping Horseradish"]);
+
+  _templateObject119 = function _templateObject119() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject118() {
+  var data = _taggedTemplateLiteral(["Special Seasoning"]);
+
+  _templateObject118 = function _templateObject118() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject117() {
+  var data = _taggedTemplateLiteral(["Jumping Horseradish"]);
+
+  _templateObject117 = function _templateObject117() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject116() {
+  var data = _taggedTemplateLiteral(["Fist Turkey"]);
+
+  _templateObject116 = function _templateObject116() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject115() {
+  var data = _taggedTemplateLiteral(["Summon Candy Heart"]);
+
+  _templateObject115 = function _templateObject115() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject114() {
+  var data = _taggedTemplateLiteral(["Summon Party Favor"]);
+
+  _templateObject114 = function _templateObject114() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject113() {
+  var data = _taggedTemplateLiteral(["Summon Candy Heart"]);
+
+  _templateObject113 = function _templateObject113() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject112() {
   var data = _taggedTemplateLiteral(["acc1,acc2,acc3"]);
+
+  _templateObject112 = function _templateObject112() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject111() {
+  var data = _taggedTemplateLiteral(["acc1"]);
+
+  _templateObject111 = function _templateObject111() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject110() {
+  var data = _taggedTemplateLiteral(["", ""]);
+
+  _templateObject110 = function _templateObject110() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject109() {
+  var data = _taggedTemplateLiteral(["Seal Clubber"]);
+
+  _templateObject109 = function _templateObject109() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject108() {
+  var data = _taggedTemplateLiteral(["latte lovers member's mug"]);
+
+  _templateObject108 = function _templateObject108() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject107() {
+  var data = _taggedTemplateLiteral(["latte lovers member's mug"]);
+
+  _templateObject107 = function _templateObject107() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject106() {
+  var data = _taggedTemplateLiteral(["cornbeefadon, leprechaun"]);
+
+  _templateObject106 = function _templateObject106() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject105() {
+  var data = _taggedTemplateLiteral(["hobo monkey"]);
+
+  _templateObject105 = function _templateObject105() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject104() {
+  var data = _taggedTemplateLiteral(["robortender"]);
+
+  _templateObject104 = function _templateObject104() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject103() {
+  var data = _taggedTemplateLiteral(["How to Avoid Scams"]);
+
+  _templateObject103 = function _templateObject103() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject102() {
+  var data = _taggedTemplateLiteral(["How to Scam Tourists"]);
+
+  _templateObject102 = function _templateObject102() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject101() {
+  var data = _taggedTemplateLiteral(["Driving Observantly"]);
+
+  _templateObject101 = function _templateObject101() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject100() {
+  var data = _taggedTemplateLiteral(["Blood Bubble"]);
+
+  _templateObject100 = function _templateObject100() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject99() {
+  var data = _taggedTemplateLiteral(["Blood Bubble"]);
+
+  _templateObject99 = function _templateObject99() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject98() {
+  var data = _taggedTemplateLiteral(["Blood Bond"]);
+
+  _templateObject98 = function _templateObject98() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject97() {
+  var data = _taggedTemplateLiteral(["Blood Bond"]);
 
   _templateObject97 = function _templateObject97() {
     return data;
@@ -7429,7 +8110,7 @@ function _templateObject97() {
 }
 
 function _templateObject96() {
-  var data = _taggedTemplateLiteral(["acc1"]);
+  var data = _taggedTemplateLiteral(["Get Big"]);
 
   _templateObject96 = function _templateObject96() {
     return data;
@@ -7439,7 +8120,7 @@ function _templateObject96() {
 }
 
 function _templateObject95() {
-  var data = _taggedTemplateLiteral(["", ""]);
+  var data = _taggedTemplateLiteral(["Fat Leon's Phat Loot Lyric"]);
 
   _templateObject95 = function _templateObject95() {
     return data;
@@ -7449,7 +8130,7 @@ function _templateObject95() {
 }
 
 function _templateObject94() {
-  var data = _taggedTemplateLiteral(["Seal Clubber"]);
+  var data = _taggedTemplateLiteral(["The Polka of Plenty"]);
 
   _templateObject94 = function _templateObject94() {
     return data;
@@ -7459,7 +8140,7 @@ function _templateObject94() {
 }
 
 function _templateObject93() {
-  var data = _taggedTemplateLiteral(["latte lovers member's mug"]);
+  var data = _taggedTemplateLiteral(["Singer's Faithful Ocelot"]);
 
   _templateObject93 = function _templateObject93() {
     return data;
@@ -7469,7 +8150,7 @@ function _templateObject93() {
 }
 
 function _templateObject92() {
-  var data = _taggedTemplateLiteral(["latte lovers member's mug"]);
+  var data = _taggedTemplateLiteral(["Empathy of the Newt"]);
 
   _templateObject92 = function _templateObject92() {
     return data;
@@ -7479,7 +8160,7 @@ function _templateObject92() {
 }
 
 function _templateObject91() {
-  var data = _taggedTemplateLiteral(["cornbeefadon, leprechaun"]);
+  var data = _taggedTemplateLiteral(["Leash of Linguini"]);
 
   _templateObject91 = function _templateObject91() {
     return data;
@@ -7489,7 +8170,7 @@ function _templateObject91() {
 }
 
 function _templateObject90() {
-  var data = _taggedTemplateLiteral(["hobo monkey"]);
+  var data = _taggedTemplateLiteral(["The Spirit of Taking"]);
 
   _templateObject90 = function _templateObject90() {
     return data;
@@ -7499,7 +8180,7 @@ function _templateObject90() {
 }
 
 function _templateObject89() {
-  var data = _taggedTemplateLiteral(["robortender"]);
+  var data = _taggedTemplateLiteral(["Disco Leer"]);
 
   _templateObject89 = function _templateObject89() {
     return data;
@@ -7509,7 +8190,7 @@ function _templateObject89() {
 }
 
 function _templateObject88() {
-  var data = _taggedTemplateLiteral(["How to Avoid Scams"]);
+  var data = _taggedTemplateLiteral(["seek out a bird"]);
 
   _templateObject88 = function _templateObject88() {
     return data;
@@ -7519,7 +8200,7 @@ function _templateObject88() {
 }
 
 function _templateObject87() {
-  var data = _taggedTemplateLiteral(["How to Scam Tourists"]);
+  var data = _taggedTemplateLiteral(["bird-a-day calendar"]);
 
   _templateObject87 = function _templateObject87() {
     return data;
@@ -7529,7 +8210,7 @@ function _templateObject87() {
 }
 
 function _templateObject86() {
-  var data = _taggedTemplateLiteral(["Driving Observantly"]);
+  var data = _taggedTemplateLiteral(["CHEAT CODE: Triple Size"]);
 
   _templateObject86 = function _templateObject86() {
     return data;
@@ -7539,7 +8220,7 @@ function _templateObject86() {
 }
 
 function _templateObject85() {
-  var data = _taggedTemplateLiteral(["Blood Bubble"]);
+  var data = _taggedTemplateLiteral(["acc1"]);
 
   _templateObject85 = function _templateObject85() {
     return data;
@@ -7549,7 +8230,7 @@ function _templateObject85() {
 }
 
 function _templateObject84() {
-  var data = _taggedTemplateLiteral(["Blood Bubble"]);
+  var data = _taggedTemplateLiteral(["Powerful Glove"]);
 
   _templateObject84 = function _templateObject84() {
     return data;
@@ -7559,7 +8240,7 @@ function _templateObject84() {
 }
 
 function _templateObject83() {
-  var data = _taggedTemplateLiteral(["Blood Bond"]);
+  var data = _taggedTemplateLiteral(["Having a Ball!"]);
 
   _templateObject83 = function _templateObject83() {
     return data;
@@ -7569,7 +8250,7 @@ function _templateObject83() {
 }
 
 function _templateObject82() {
-  var data = _taggedTemplateLiteral(["Blood Bond"]);
+  var data = _taggedTemplateLiteral(["Preternatural Greed"]);
 
   _templateObject82 = function _templateObject82() {
     return data;
@@ -7579,7 +8260,7 @@ function _templateObject82() {
 }
 
 function _templateObject81() {
-  var data = _taggedTemplateLiteral(["Get Big"]);
+  var data = _taggedTemplateLiteral(["thin black candle"]);
 
   _templateObject81 = function _templateObject81() {
     return data;
@@ -7589,7 +8270,7 @@ function _templateObject81() {
 }
 
 function _templateObject80() {
-  var data = _taggedTemplateLiteral(["Fat Leon's Phat Loot Lyric"]);
+  var data = _taggedTemplateLiteral(["scroll of ancient forbidden unspeakable evil"]);
 
   _templateObject80 = function _templateObject80() {
     return data;
@@ -7599,7 +8280,7 @@ function _templateObject80() {
 }
 
 function _templateObject79() {
-  var data = _taggedTemplateLiteral(["The Polka of Plenty"]);
+  var data = _taggedTemplateLiteral(["Meet the Meat"]);
 
   _templateObject79 = function _templateObject79() {
     return data;
@@ -7609,7 +8290,7 @@ function _templateObject79() {
 }
 
 function _templateObject78() {
-  var data = _taggedTemplateLiteral(["Singer's Faithful Ocelot"]);
+  var data = _taggedTemplateLiteral(["defective Game Grid token"]);
 
   _templateObject78 = function _templateObject78() {
     return data;
@@ -7619,7 +8300,7 @@ function _templateObject78() {
 }
 
 function _templateObject77() {
-  var data = _taggedTemplateLiteral(["Empathy of the Newt"]);
+  var data = _taggedTemplateLiteral(["Dances with Tweedles"]);
 
   _templateObject77 = function _templateObject77() {
     return data;
@@ -7629,7 +8310,7 @@ function _templateObject77() {
 }
 
 function _templateObject76() {
-  var data = _taggedTemplateLiteral(["Leash of Linguini"]);
+  var data = _taggedTemplateLiteral(["Puzzle Champ"]);
 
   _templateObject76 = function _templateObject76() {
     return data;
@@ -7639,7 +8320,7 @@ function _templateObject76() {
 }
 
 function _templateObject75() {
-  var data = _taggedTemplateLiteral(["The Spirit of Taking"]);
+  var data = _taggedTemplateLiteral(["Do I Know You From Somewhere?"]);
 
   _templateObject75 = function _templateObject75() {
     return data;
@@ -7649,7 +8330,7 @@ function _templateObject75() {
 }
 
 function _templateObject74() {
-  var data = _taggedTemplateLiteral(["Disco Leer"]);
+  var data = _taggedTemplateLiteral(["Carol of the Thrills"]);
 
   _templateObject74 = function _templateObject74() {
     return data;
@@ -7659,7 +8340,7 @@ function _templateObject74() {
 }
 
 function _templateObject73() {
-  var data = _taggedTemplateLiteral(["seek out a bird"]);
+  var data = _taggedTemplateLiteral(["Accordion Thief"]);
 
   _templateObject73 = function _templateObject73() {
     return data;
@@ -7669,7 +8350,7 @@ function _templateObject73() {
 }
 
 function _templateObject72() {
-  var data = _taggedTemplateLiteral(["bird-a-day calendar"]);
+  var data = _taggedTemplateLiteral(["Chorale of Companionship"]);
 
   _templateObject72 = function _templateObject72() {
     return data;
@@ -7679,7 +8360,7 @@ function _templateObject72() {
 }
 
 function _templateObject71() {
-  var data = _taggedTemplateLiteral(["CHEAT CODE: Triple Size"]);
+  var data = _taggedTemplateLiteral(["The Ballad of Richie Thingfinder"]);
 
   _templateObject71 = function _templateObject71() {
     return data;
@@ -7689,7 +8370,7 @@ function _templateObject71() {
 }
 
 function _templateObject70() {
-  var data = _taggedTemplateLiteral(["Having a Ball!"]);
+  var data = _taggedTemplateLiteral(["Polka of Plenty"]);
 
   _templateObject70 = function _templateObject70() {
     return data;
@@ -7699,7 +8380,7 @@ function _templateObject70() {
 }
 
 function _templateObject69() {
-  var data = _taggedTemplateLiteral(["Preternatural Greed"]);
+  var data = _taggedTemplateLiteral(["Fat Leon's Phat Loot Lyric"]);
 
   _templateObject69 = function _templateObject69() {
     return data;
@@ -7709,7 +8390,7 @@ function _templateObject69() {
 }
 
 function _templateObject68() {
-  var data = _taggedTemplateLiteral(["Meet the Meat"]);
+  var data = _taggedTemplateLiteral(["splendid martini"]);
 
   _templateObject68 = function _templateObject68() {
     return data;
@@ -7719,7 +8400,7 @@ function _templateObject68() {
 }
 
 function _templateObject67() {
-  var data = _taggedTemplateLiteral(["defective Game Grid token"]);
+  var data = _taggedTemplateLiteral(["splendid martini"]);
 
   _templateObject67 = function _templateObject67() {
     return data;
@@ -7729,7 +8410,7 @@ function _templateObject67() {
 }
 
 function _templateObject66() {
-  var data = _taggedTemplateLiteral(["Dances with Tweedles"]);
+  var data = _taggedTemplateLiteral(["Ode to Booze"]);
 
   _templateObject66 = function _templateObject66() {
     return data;
@@ -7739,7 +8420,7 @@ function _templateObject66() {
 }
 
 function _templateObject65() {
-  var data = _taggedTemplateLiteral(["Puzzle Champ"]);
+  var data = _taggedTemplateLiteral(["tuxedo shirt"]);
 
   _templateObject65 = function _templateObject65() {
     return data;
@@ -7749,7 +8430,7 @@ function _templateObject65() {
 }
 
 function _templateObject64() {
-  var data = _taggedTemplateLiteral(["Do I Know You From Somewhere?"]);
+  var data = _taggedTemplateLiteral(["extra-greasy slider"]);
 
   _templateObject64 = function _templateObject64() {
     return data;
@@ -7759,7 +8440,7 @@ function _templateObject64() {
 }
 
 function _templateObject63() {
-  var data = _taggedTemplateLiteral(["Accordion Thief"]);
+  var data = _taggedTemplateLiteral(["Ol' Scratch's Salad Fork"]);
 
   _templateObject63 = function _templateObject63() {
     return data;
@@ -7769,7 +8450,7 @@ function _templateObject63() {
 }
 
 function _templateObject62() {
-  var data = _taggedTemplateLiteral(["Chorale of Companionship"]);
+  var data = _taggedTemplateLiteral(["extra-greasy slider"]);
 
   _templateObject62 = function _templateObject62() {
     return data;
@@ -7779,7 +8460,7 @@ function _templateObject62() {
 }
 
 function _templateObject61() {
-  var data = _taggedTemplateLiteral(["The Ballad of Richie Thingfinder"]);
+  var data = _taggedTemplateLiteral(["Ol' Scratch's Salad Fork"]);
 
   _templateObject61 = function _templateObject61() {
     return data;
@@ -7789,7 +8470,7 @@ function _templateObject61() {
 }
 
 function _templateObject60() {
-  var data = _taggedTemplateLiteral(["Polka of Plenty"]);
+  var data = _taggedTemplateLiteral(["Special Seasoning"]);
 
   _templateObject60 = function _templateObject60() {
     return data;
@@ -7799,7 +8480,7 @@ function _templateObject60() {
 }
 
 function _templateObject59() {
-  var data = _taggedTemplateLiteral(["Fat Leon's Phat Loot Lyric"]);
+  var data = _taggedTemplateLiteral(["jar of fermented pickle juice"]);
 
   _templateObject59 = function _templateObject59() {
     return data;
@@ -7809,7 +8490,7 @@ function _templateObject59() {
 }
 
 function _templateObject58() {
-  var data = _taggedTemplateLiteral(["splendid martini"]);
+  var data = _taggedTemplateLiteral(["Frosty's Frosty Mug"]);
 
   _templateObject58 = function _templateObject58() {
     return data;
@@ -7819,7 +8500,7 @@ function _templateObject58() {
 }
 
 function _templateObject57() {
-  var data = _taggedTemplateLiteral(["splendid martini"]);
+  var data = _taggedTemplateLiteral(["jar of fermented pickle juice"]);
 
   _templateObject57 = function _templateObject57() {
     return data;
@@ -7829,7 +8510,7 @@ function _templateObject57() {
 }
 
 function _templateObject56() {
-  var data = _taggedTemplateLiteral(["Ode to Booze"]);
+  var data = _taggedTemplateLiteral(["Frosty's Frosty Mug"]);
 
   _templateObject56 = function _templateObject56() {
     return data;
@@ -7839,7 +8520,7 @@ function _templateObject56() {
 }
 
 function _templateObject55() {
-  var data = _taggedTemplateLiteral(["tuxedo shirt"]);
+  var data = _taggedTemplateLiteral(["Ode to Booze"]);
 
   _templateObject55 = function _templateObject55() {
     return data;
@@ -7849,7 +8530,7 @@ function _templateObject55() {
 }
 
 function _templateObject54() {
-  var data = _taggedTemplateLiteral(["extra-greasy slider"]);
+  var data = _taggedTemplateLiteral(["Dirt Julep"]);
 
   _templateObject54 = function _templateObject54() {
     return data;
@@ -7859,7 +8540,7 @@ function _templateObject54() {
 }
 
 function _templateObject53() {
-  var data = _taggedTemplateLiteral(["Ol' Scratch's Salad Fork"]);
+  var data = _taggedTemplateLiteral(["Dirt Julep"]);
 
   _templateObject53 = function _templateObject53() {
     return data;
@@ -7869,7 +8550,7 @@ function _templateObject53() {
 }
 
 function _templateObject52() {
-  var data = _taggedTemplateLiteral(["extra-greasy slider"]);
+  var data = _taggedTemplateLiteral(["Dirt Julep"]);
 
   _templateObject52 = function _templateObject52() {
     return data;
@@ -7879,7 +8560,7 @@ function _templateObject52() {
 }
 
 function _templateObject51() {
-  var data = _taggedTemplateLiteral(["Ol' Scratch's Salad Fork"]);
+  var data = _taggedTemplateLiteral(["transdermal smoke patch"]);
 
   _templateObject51 = function _templateObject51() {
     return data;
@@ -7889,7 +8570,7 @@ function _templateObject51() {
 }
 
 function _templateObject50() {
-  var data = _taggedTemplateLiteral(["Special Seasoning"]);
+  var data = _taggedTemplateLiteral(["transdermal smoke patch"]);
 
   _templateObject50 = function _templateObject50() {
     return data;
@@ -7899,7 +8580,7 @@ function _templateObject50() {
 }
 
 function _templateObject49() {
-  var data = _taggedTemplateLiteral(["jar of fermented pickle juice"]);
+  var data = _taggedTemplateLiteral(["beggin' cologne"]);
 
   _templateObject49 = function _templateObject49() {
     return data;
@@ -7909,7 +8590,7 @@ function _templateObject49() {
 }
 
 function _templateObject48() {
-  var data = _taggedTemplateLiteral(["Frosty's Frosty Mug"]);
+  var data = _taggedTemplateLiteral(["beggin' cologne"]);
 
   _templateObject48 = function _templateObject48() {
     return data;
@@ -7919,7 +8600,7 @@ function _templateObject48() {
 }
 
 function _templateObject47() {
-  var data = _taggedTemplateLiteral(["jar of fermented pickle juice"]);
+  var data = _taggedTemplateLiteral(["Eau d' Clochard"]);
 
   _templateObject47 = function _templateObject47() {
     return data;
@@ -7929,7 +8610,7 @@ function _templateObject47() {
 }
 
 function _templateObject46() {
-  var data = _taggedTemplateLiteral(["Frosty's Frosty Mug"]);
+  var data = _taggedTemplateLiteral(["sugar shillelagh"]);
 
   _templateObject46 = function _templateObject46() {
     return data;
@@ -7939,7 +8620,7 @@ function _templateObject46() {
 }
 
 function _templateObject45() {
-  var data = _taggedTemplateLiteral(["Ode to Booze"]);
+  var data = _taggedTemplateLiteral(["sugar chapeau"]);
 
   _templateObject45 = function _templateObject45() {
     return data;
@@ -7949,7 +8630,7 @@ function _templateObject45() {
 }
 
 function _templateObject44() {
-  var data = _taggedTemplateLiteral(["Dirt Julep"]);
+  var data = _taggedTemplateLiteral(["sugar sheet"]);
 
   _templateObject44 = function _templateObject44() {
     return data;
@@ -7959,7 +8640,7 @@ function _templateObject44() {
 }
 
 function _templateObject43() {
-  var data = _taggedTemplateLiteral(["transdermal smoke patch"]);
+  var data = _taggedTemplateLiteral(["Synthesis: Greed"]);
 
   _templateObject43 = function _templateObject43() {
     return data;
@@ -7969,7 +8650,7 @@ function _templateObject43() {
 }
 
 function _templateObject42() {
-  var data = _taggedTemplateLiteral(["transdermal smoke patch"]);
+  var data = _taggedTemplateLiteral(["Calculate the Universe"]);
 
   _templateObject42 = function _templateObject42() {
     return data;
@@ -7979,7 +8660,7 @@ function _templateObject42() {
 }
 
 function _templateObject41() {
-  var data = _taggedTemplateLiteral(["beggin' cologne"]);
+  var data = _taggedTemplateLiteral(["pulled green taffy"]);
 
   _templateObject41 = function _templateObject41() {
     return data;
@@ -7989,59 +8670,9 @@ function _templateObject41() {
 }
 
 function _templateObject40() {
-  var data = _taggedTemplateLiteral(["beggin' cologne"]);
+  var data = _taggedTemplateLiteral(["4-d camera"]);
 
   _templateObject40 = function _templateObject40() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject39() {
-  var data = _taggedTemplateLiteral(["Eau d' Clochard"]);
-
-  _templateObject39 = function _templateObject39() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject38() {
-  var data = _taggedTemplateLiteral(["sugar shillelagh"]);
-
-  _templateObject38 = function _templateObject38() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject37() {
-  var data = _taggedTemplateLiteral(["sugar chapeau"]);
-
-  _templateObject37 = function _templateObject37() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject36() {
-  var data = _taggedTemplateLiteral(["sugar sheet"]);
-
-  _templateObject36 = function _templateObject36() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject35() {
-  var data = _taggedTemplateLiteral(["Synthesis: Greed"]);
-
-  _templateObject35 = function _templateObject35() {
     return data;
   };
 
@@ -8054,8 +8685,58 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+function _templateObject39() {
+  var data = _taggedTemplateLiteral(["newark,single entendre,drive-by shooting,bloody nora,feliz navidad"]);
+
+  _templateObject39 = function _templateObject39() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject38() {
+  var data = _taggedTemplateLiteral(["Robortender"]);
+
+  _templateObject38 = function _templateObject38() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject37() {
+  var data = _taggedTemplateLiteral(["one-day ticket to Dinseylandfill"]);
+
+  _templateObject37 = function _templateObject37() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject36() {
+  var data = _taggedTemplateLiteral(["one-day ticket to Dinseylandfill"]);
+
+  _templateObject36 = function _templateObject36() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject35() {
+  var data = _taggedTemplateLiteral(["bird-a-day calendar"]);
+
+  _templateObject35 = function _templateObject35() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject34() {
-  var data = _taggedTemplateLiteral(["newark,single entendre,drive-by shooting,bloody nora"]);
+  var data = _taggedTemplateLiteral(["blessing of the bird"]);
 
   _templateObject34 = function _templateObject34() {
     return data;
@@ -8065,7 +8746,7 @@ function _templateObject34() {
 }
 
 function _templateObject33() {
-  var data = _taggedTemplateLiteral(["Robortender"]);
+  var data = _taggedTemplateLiteral(["bird-a-day calendar"]);
 
   _templateObject33 = function _templateObject33() {
     return data;
@@ -8075,7 +8756,7 @@ function _templateObject33() {
 }
 
 function _templateObject32() {
-  var data = _taggedTemplateLiteral(["one-day ticket to Dinseylandfill"]);
+  var data = _taggedTemplateLiteral(["eternal car battery"]);
 
   _templateObject32 = function _templateObject32() {
     return data;
@@ -8085,7 +8766,7 @@ function _templateObject32() {
 }
 
 function _templateObject31() {
-  var data = _taggedTemplateLiteral(["one-day ticket to Dinseylandfill"]);
+  var data = _taggedTemplateLiteral(["Jackass Plumber home game"]);
 
   _templateObject31 = function _templateObject31() {
     return data;
@@ -8095,7 +8776,7 @@ function _templateObject31() {
 }
 
 function _templateObject30() {
-  var data = _taggedTemplateLiteral(["bird-a-day calendar"]);
+  var data = _taggedTemplateLiteral(["Trivial Avocations board game"]);
 
   _templateObject30 = function _templateObject30() {
     return data;
@@ -8105,7 +8786,7 @@ function _templateObject30() {
 }
 
 function _templateObject29() {
-  var data = _taggedTemplateLiteral(["blessing of the bird"]);
+  var data = _taggedTemplateLiteral(["fishy pipe"]);
 
   _templateObject29 = function _templateObject29() {
     return data;
@@ -8115,7 +8796,7 @@ function _templateObject29() {
 }
 
 function _templateObject28() {
-  var data = _taggedTemplateLiteral(["bird-a-day calendar"]);
+  var data = _taggedTemplateLiteral(["Glenn's Golden Dice"]);
 
   _templateObject28 = function _templateObject28() {
     return data;
@@ -8125,7 +8806,7 @@ function _templateObject28() {
 }
 
 function _templateObject27() {
-  var data = _taggedTemplateLiteral(["Universal Seasoning"]);
+  var data = _taggedTemplateLiteral(["milk of magnesium"]);
 
   _templateObject27 = function _templateObject27() {
     return data;
@@ -8135,7 +8816,7 @@ function _templateObject27() {
 }
 
 function _templateObject26() {
-  var data = _taggedTemplateLiteral(["fishy pipe"]);
+  var data = _taggedTemplateLiteral(["Chester's bag of candy"]);
 
   _templateObject26 = function _templateObject26() {
     return data;
@@ -8145,7 +8826,7 @@ function _templateObject26() {
 }
 
 function _templateObject25() {
-  var data = _taggedTemplateLiteral(["Glenn's Golden Dice"]);
+  var data = _taggedTemplateLiteral(["warbear soda machine"]);
 
   _templateObject25 = function _templateObject25() {
     return data;
@@ -8155,7 +8836,7 @@ function _templateObject25() {
 }
 
 function _templateObject24() {
-  var data = _taggedTemplateLiteral(["milk of magnesium"]);
+  var data = _taggedTemplateLiteral(["warbear breakfast machine"]);
 
   _templateObject24 = function _templateObject24() {
     return data;
@@ -8165,7 +8846,7 @@ function _templateObject24() {
 }
 
 function _templateObject23() {
-  var data = _taggedTemplateLiteral(["Chester's bag of candy"]);
+  var data = _taggedTemplateLiteral(["Lunch Break"]);
 
   _templateObject23 = function _templateObject23() {
     return data;
@@ -8175,7 +8856,7 @@ function _templateObject23() {
 }
 
 function _templateObject22() {
-  var data = _taggedTemplateLiteral(["warbear soda machine"]);
+  var data = _taggedTemplateLiteral(["Prevent Scurvy and Sobriety"]);
 
   _templateObject22 = function _templateObject22() {
     return data;
@@ -8185,7 +8866,7 @@ function _templateObject22() {
 }
 
 function _templateObject21() {
-  var data = _taggedTemplateLiteral(["warbear breakfast machine"]);
+  var data = _taggedTemplateLiteral(["Acquire Rhinestones"]);
 
   _templateObject21 = function _templateObject21() {
     return data;
@@ -8195,7 +8876,7 @@ function _templateObject21() {
 }
 
 function _templateObject20() {
-  var data = _taggedTemplateLiteral(["Prevent Scurvy and Sobriety"]);
+  var data = _taggedTemplateLiteral(["Incredible Self-Esteem"]);
 
   _templateObject20 = function _templateObject20() {
     return data;
@@ -8205,7 +8886,7 @@ function _templateObject20() {
 }
 
 function _templateObject19() {
-  var data = _taggedTemplateLiteral(["Acquire Rhinestones"]);
+  var data = _taggedTemplateLiteral(["Grab a Cold One"]);
 
   _templateObject19 = function _templateObject19() {
     return data;
@@ -8215,7 +8896,7 @@ function _templateObject19() {
 }
 
 function _templateObject18() {
-  var data = _taggedTemplateLiteral(["Incredible Self-Esteem"]);
+  var data = _taggedTemplateLiteral(["Spaghetti Breakfast"]);
 
   _templateObject18 = function _templateObject18() {
     return data;
@@ -8225,7 +8906,7 @@ function _templateObject18() {
 }
 
 function _templateObject17() {
-  var data = _taggedTemplateLiteral(["Grab a Cold One"]);
+  var data = _taggedTemplateLiteral(["Perfect Freeze"]);
 
   _templateObject17 = function _templateObject17() {
     return data;
@@ -8235,7 +8916,7 @@ function _templateObject17() {
 }
 
 function _templateObject16() {
-  var data = _taggedTemplateLiteral(["Spaghetti Breakfast"]);
+  var data = _taggedTemplateLiteral(["Summon Crimbo Candy"]);
 
   _templateObject16 = function _templateObject16() {
     return data;
@@ -8245,7 +8926,7 @@ function _templateObject16() {
 }
 
 function _templateObject15() {
-  var data = _taggedTemplateLiteral(["Perfect Freeze"]);
+  var data = _taggedTemplateLiteral(["Pastamastery"]);
 
   _templateObject15 = function _templateObject15() {
     return data;
@@ -8255,7 +8936,7 @@ function _templateObject15() {
 }
 
 function _templateObject14() {
-  var data = _taggedTemplateLiteral(["Summon Crimbo Candy"]);
+  var data = _taggedTemplateLiteral(["Advanced Saucecrafting"]);
 
   _templateObject14 = function _templateObject14() {
     return data;
@@ -8265,7 +8946,7 @@ function _templateObject14() {
 }
 
 function _templateObject13() {
-  var data = _taggedTemplateLiteral(["Pastamastery"]);
+  var data = _taggedTemplateLiteral(["Advanced Cocktailcrafting"]);
 
   _templateObject13 = function _templateObject13() {
     return data;
@@ -8275,7 +8956,7 @@ function _templateObject13() {
 }
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["Advanced Saucecrafting"]);
+  var data = _taggedTemplateLiteral(["Box of Familiar Jacks"]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -8285,7 +8966,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral(["Advanced Cocktailcrafting"]);
+  var data = _taggedTemplateLiteral(["amulet coin"]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -8295,7 +8976,7 @@ function _templateObject11() {
 }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["Box of Familiar Jacks"]);
+  var data = _taggedTemplateLiteral(["Cornbeefadon"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -8305,7 +8986,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["Cornbeefadon"]);
+  var data = _taggedTemplateLiteral(["Box of Familiar Jacks"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -8315,7 +8996,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["Box of Familiar Jacks"]);
+  var data = _taggedTemplateLiteral(["Fourth of May Cosplay Saber"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -8325,7 +9006,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["Fourth of May Cosplay Saber"]);
+  var data = _taggedTemplateLiteral(["etched hourglass"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -8335,7 +9016,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["etched hourglass"]);
+  var data = _taggedTemplateLiteral(["print screen button"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -8345,7 +9026,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["print screen button"]);
+  var data = _taggedTemplateLiteral(["internet meme shop"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -8355,7 +9036,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["internet meme shop"]);
+  var data = _taggedTemplateLiteral(["infinite bacon machine"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -8365,7 +9046,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["infinite bacon machine"]);
+  var data = _taggedTemplateLiteral(["space jellyfish"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -8375,7 +9056,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["space jellyfish"]);
+  var data = _taggedTemplateLiteral(["magical sausage"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -8385,7 +9066,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["magical sausage"]);
+  var data = _taggedTemplateLiteral(["Kramco Sausage-o-Matic&trade;"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -8397,8 +9078,11 @@ function _templateObject() {
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
+ // Check if you are in CS aftercore; true if yes, false if no
 
+var inCSAftercore = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)("csServicesPerformed").split(",").length == 11;
 var clanCache = {};
+var kramco = (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject());
 function setClan(target) {
   // Script from bean to set a user's clan to something else
   if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getClanName)() !== target) {
@@ -8485,7 +9169,7 @@ function useLimitedItem(prop, currItem) {
 function farmCastSkill(sk) {
   // Function that ensures you have enough of X skill to cover the whole farmday.
   while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.toEffect)(sk)) < calculateFarmingTurns()) {
-    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myMp)() < (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.mpCost)(sk)) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.eat)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject())); // sausage for regen!
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myMp)() < (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.mpCost)(sk)) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.eat)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject2())); // sausage for regen!
 
     var currTurns = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.toEffect)(sk));
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(sk, 1);
@@ -8501,7 +9185,29 @@ function setProps() {
   // Function to set up relevant scotch-ac properties.
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('_scotchIntro', '0');
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('_scotchPrepped', '0');
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('_scotchBuffed', '0');
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('_scotchBuffed', '0'); // Set choice adventure defaults
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('choiceAdventure1201', '1'); // science tent; tentacle
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('choiceAdventure1222', '1'); // LOV; entry
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('choiceAdventure1223', '1'); // LOV; take first fight
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('choiceAdventure1224', '3'); // LOV; take earrings
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('choiceAdventure1225', '1'); // LOV; take second fight
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('choiceAdventure1226', '2'); // LOV; take fam weight
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('choiceAdventure1227', '1'); // LOV; take third fight
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('choiceAdventure1228', '1'); // LOV; take enamorang
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('choiceAdventure1310', '3'); // god lobster; take stats
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('choiceAdventure1322', '2'); // NEP entry; skip quest
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('choiceAdventure1324', '5'); // NEP normal NC; fight monster
 }
 function kingFreed() {
   // Things to run after ending an ascension & entering
@@ -8527,6 +9233,10 @@ function dailies() {
   if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)('_scotchIntro') == '1') {
     // Exit the intro if you've already completed it.
     return "Intro already complete!";
+  }
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)('_scotchStartingTurncount') === "") {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('_scotchStartingTurncount', "".concat((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myTurncount)()));
   } // Ensure I'm in the right clan
 
 
@@ -8539,7 +9249,7 @@ function dailies() {
 
   if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)("questS01OldGuy") !== "unstarted") {
     if (!getPropertyBoolean("_seaJellyHarvested")) {
-      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject2()));
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject3()));
       (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=thesea&action=thesea_left2');
       (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runChoice)(1);
     }
@@ -8553,7 +9263,7 @@ function dailies() {
 
   if (!getPropertyBoolean('_olympicSwimmingPoolItemFound')) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('swim item'); // Apply crazy horse, even if it costs meat, because it's ideal for barf farming.
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('horsery crazy'); // Request cheesefax fortune stuff; not really -needed- but I like the shot at a skillbook.
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)('_horsery') !== 'crazy horse') (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('horsery crazy'); // Request cheesefax fortune stuff; not really -needed- but I like the shot at a skillbook.
 
   while (getPropertyInt("_clanFortuneConsultUses") < 3 && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.isOnline)('3038166')) {
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("fortune cheesefax portza bortman thick");
@@ -8571,13 +9281,17 @@ function dailies() {
   //   roughly 30,000 bacon in reserve, so I have no real issue with 
   //   ignoring that 11 bacon overage, but YMMV.
 
-  useLimitedItem('_baconMachineUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject3()));
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$coinmaster)(_templateObject4()), 1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject5())); // Use etched hourglass for +5 adventures
+  useLimitedItem('_baconMachineUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject4()));
 
-  useLimitedItem('_etchedHourglassUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject6())); // STEP 2: MAKE CHOICES ================================
+  if (!getPropertyBoolean('_internetPrintScreenButtonBought')) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$coinmaster)(_templateObject5()), 1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject6()));
+  } // Use etched hourglass for +5 adventures
+
+
+  useLimitedItem('_etchedHourglassUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject7())); // STEP 2: MAKE CHOICES ================================
   // Add familiar weight to your cosplay saber
 
-  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject7())) > 0) {
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject8())) > 0) {
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('main.php?action=may4');
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runChoice)(4);
   } // Set boombox to meat.
@@ -8592,12 +9306,12 @@ function dailies() {
 
 
   while (getPropertyInt("_clipartSummons") < 3) {
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.create)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject8()));
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.create)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject9()));
   } // While you're at it, get your amulet coin
 
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject9()));
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject10())); // Doing two deck summons; mana, mana. Reserve one for Robort feliz-fishing.
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject10()));
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject11()))) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject12())); // Doing two deck summons; mana, mana. Reserve one for Robort feliz-fishing.
 
   while (getPropertyInt('_deckCardsDrawn') < 10) {
     // This should, in theory, always get you to 10 deck draws. 
@@ -8616,33 +9330,37 @@ function dailies() {
   //   if you already used some of it and keep the script usable.
 
 
-  useLimitedSkill('cocktailSummons', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject11()));
-  useLimitedSkill('reagentSummons', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject12()));
-  useLimitedSkill('noodleSummons', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject13()));
-  useLimitedSkill('_candySummons', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject14()));
-  useLimitedSkill('_perfectFreezeUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject15()));
-  useLimitedSkill('_spaghettiBreakfast', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject16()));
-  useLimitedSkill('_coldOne', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject17()));
-  useLimitedSkill('_incredibleSelfEsteemCast', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject18()));
-  useLimitedSkill('_rhinestonesAcquired', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject19()));
-  useLimitedSkill('_preventScurvy', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject20())); // Use a few 1-per-day items. Once again, using the limitedUse syntax in a 
+  useLimitedSkill('cocktailSummons', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject13()));
+  useLimitedSkill('reagentSummons', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject14()));
+  useLimitedSkill('noodleSummons', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject15()));
+  useLimitedSkill('_candySummons', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject16()));
+  useLimitedSkill('_perfectFreezeUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject17()));
+  useLimitedSkill('_spaghettiBreakfast', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject18()));
+  useLimitedSkill('_coldOne', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject19()));
+  useLimitedSkill('_incredibleSelfEsteemCast', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject20()));
+  useLimitedSkill('_rhinestonesAcquired', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject21()));
+  useLimitedSkill('_preventScurvy', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject22()));
+  useLimitedSkill('_lunchBreak', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject23())); // Use a few 1-per-day items. Once again, using the limitedUse syntax in a 
   //   tiny custom function. Thanks to Rev for recommending the pref change.
 
-  useLimitedItem('_warbearBreakfastMachineUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject21()));
-  useLimitedItem('_warbearSodaMachineUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject22()));
-  useLimitedItem('_bagOfCandyUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject23()));
-  useLimitedItem('_milkOfMagnesiumUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject24()));
-  useLimitedItem('_glennGoldenDiceUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject25()));
-  useLimitedItem('_fishyPipeUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject26())); // There is currently no preference for Universal Seasoning.
-
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject27())); // Daily voting. Requires Ezandora's Voting Booth script
+  useLimitedItem('_warbearBreakfastMachineUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject24()));
+  useLimitedItem('_warbearSodaMachineUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject25()));
+  useLimitedItem('_bagOfCandyUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject26()));
+  useLimitedItem('_milkOfMagnesiumUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject27()));
+  useLimitedItem('_glennGoldenDiceUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject28()));
+  useLimitedItem('_fishyPipeUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject29()));
+  useLimitedItem('_trivialAvocationsGame', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject30()));
+  useLimitedItem('_jackassPlumberGame', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject31()));
+  useLimitedItem('_eternalCarBatteryUsed', (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject32())); // There is currently no preference for Universal Seasoning.
+  // use($item`Universal Seasoning`);
+  // Daily voting. Requires Ezandora's Voting Booth script
   //   svn checkout https://github.com/Ezandora/Voting-Booth/trunk/Release/
 
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('VotingBooth.ash'); // Get daily bird
 
-  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject28())) > 0 && !(0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject29()))) {
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject33())) > 0 && !(0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject34()))) {
     if (!getPropertyBoolean("_canSeekBirds")) {
-      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject30()));
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject35()));
     }
   } // Set the property to bypass intro on next run.
 
@@ -8658,8 +9376,8 @@ function farmPrep() {
   } // Purchase a dinseylandfill ticket, use it / get free FunFunds
 
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject31()));
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject32())); // Get free funfunds from turning in park garbage. Like with BACON, I
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject36()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject37())); // Get free funfunds from turning in park garbage. Like with BACON, I
   //   kind of always have some in reserve, so this basically always works,
   //   but I should probably add a check in here to ensure I have some.
 
@@ -8667,11 +9385,11 @@ function farmPrep() {
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)("place.php?whichplace=airport_stench&action=airport3_tunnels");
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runChoice)(6); // Set up mumming trunk meat drop on my robortender
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject33()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject38()));
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('mummery meat'); // Purchase robort drinks & feed them to robort; need to compare ingredient 
   //   to the drink like old ash script, but for now I'm just going to be lazy.
 
-  var roboDrinks = (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$items)(_templateObject34());
+  var roboDrinks = (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$items)(_templateObject39());
 
   var _iterator = _createForOfIteratorHelper(roboDrinks),
       _step;
@@ -8681,14 +9399,17 @@ function farmPrep() {
       var roboDrink = _step.value;
       (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)(1, roboDrink);
       (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("robo ".concat(roboDrink));
-    }
+    } // Buy a 4-d camera.
+
   } catch (err) {
     _iterator.e(err);
   } finally {
     _iterator.f();
   }
 
-  ; // Get bastille nonsense done with. Requires Ezandora's Bastille script.
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject40())); // Buy some pulled green taffy
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject41())); // Get bastille nonsense done with. Requires Ezandora's Bastille script.
   //   svn checkout https://github.com/Ezandora/Bastille/branches/Release/
 
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('bastille babar draftsman gesture sharks'); // Set the property to bypass farmPrep on next run.
@@ -8708,19 +9429,27 @@ function fillSpleen() {
   //   #2: beggin cologne (just one)
   //   #3: transdermal smoke patches
   while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.mySpleenUse)() < (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.spleenLimit)()) {
-    var spleenLeft = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.spleenLimit)() - (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.mySpleenUse)();
+    var spleenLeft = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.spleenLimit)() - (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.mySpleenUse)(); // Adding "calculate the universe" handling in fillSpleen
 
-    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject35())) < calculateFarmingTurns()) {
-      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject36()), 2);
+    var calcsUsed = getPropertyInt("_universeCalculated");
+    var calcsAvailable = getPropertyInt("skillLevel144");
+
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveSkill)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject42())) && calcsAvailable > calcsUsed) {
+      // Numberology is for adventures (69). If I was bosskilling I would swap to 37.
+      if (Object.keys((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.reverseNumberology)(0, 0)).includes("69")) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("numberology 69");
+    }
+
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject43())) < calculateFarmingTurns()) {
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject44()), 2);
       (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('create sugar chapeau');
       (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('create sugar shillelagh');
-      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.sweetSynthesis)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject37()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject38()));
-    } else if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject39())) < 10) {
-      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject40()), 1);
-      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.chew)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject41()), 1);
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.sweetSynthesis)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject45()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject46()));
+    } else if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject47())) < 10) {
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject48()), 1);
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.chew)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject49()), 1);
     } else {
-      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject42()), spleenLeft);
-      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.chew)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject43()), spleenLeft);
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject50()), spleenLeft);
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.chew)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject51()), spleenLeft);
     }
   }
 }
@@ -8735,35 +9464,36 @@ function runDiet() {
   // Use dirt julep on mime shotglass booze
 
   if (getPropertyBoolean("_mimeArmyShotglassUsed") != true) {
-    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject44()))) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)("_mimeArmyShotglassUsed", "true");
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject52())) < 1) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject53()), 1);
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject54()))) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)("_mimeArmyShotglassUsed", "true");
   } // Drink up!
 
 
   while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.inebrietyLimit)() - (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myInebriety)() > 4) {
-    ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject45()));
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject46()), 1);
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject47()), 1);
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject48()), 1);
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject49()), 1);
+    ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject55()));
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject56()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject57()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject58()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject59()), 1);
     fillSpleen();
   } // Drink up!
 
 
   while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.fullnessLimit)() - (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFullness)() > 4) {
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject50()), 1);
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject51()), 1);
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject52()), 1);
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.eat)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject53()), 1);
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.eat)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject54()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject60()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject61()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject62()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.eat)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject63()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.eat)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject64()), 1);
     fillSpleen();
   }
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equip)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject55())); // Finish filling drinks
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equip)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject65())); // Finish filling drinks
 
   while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.inebrietyLimit)() - (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myInebriety)() > 0) {
-    ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject56()));
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject57()), 1);
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject58()), 1);
+    ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject66()));
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject67()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.drink)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject68()), 1);
   } // TO-DO: add distention/doghair pills here ////////////////////////////////////////////////
 
 }
@@ -8771,7 +9501,7 @@ function buffUp() {
   // This function buffs you up for meatfarming, both with castable 
   //   buffs, Buffbot stuff, 1/day buffs, etc.
   // Here are the AT buffs we -want- for barf farming.
-  var wantedATBuffs = [(0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject59()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject60()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject61()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject62())]; // Start by shrugging off unwanted AT buffs. myEffects() is an ASH
+  var wantedATBuffs = [(0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject69()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject70()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject71()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject72())]; // Start by shrugging off unwanted AT buffs. myEffects() is an ASH
   //   array, so it needs to be handled a bit differently by taking
   //   the effect name out and converting it into an $effect`` via 
   //   dark and eldritch magick.
@@ -8780,7 +9510,7 @@ function buffUp() {
     var efName = _Object$keys[_i];
     var currEffect = Effect.get(efName);
 
-    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.toSkill)(currEffect)["class"] == (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$class)(_templateObject63())) {
+    if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.toSkill)(currEffect)["class"] == (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$class)(_templateObject73())) {
       if (!wantedATBuffs.includes(currEffect)) {
         (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('shrug ' + currEffect.name);
       }
@@ -8788,23 +9518,26 @@ function buffUp() {
   } // Attempt to get buffy rolling, then wait to give buffy to proc.
 
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("send to buffy || 500 bull hell thrill jingle reptil tenaci empathy elemental polka phat");
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.waitq)(10);
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.refreshStatus)(); // Get "free" beach-head familiar buff, then use remaining combs.
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject74())) > 400) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("send to buffy || 500 bull hell thrill jingle reptil tenaci empathy elemental polka phat");
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.waitq)(10);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.refreshStatus)();
+  } // Get "free" beach-head familiar buff, then use remaining combs.
   //   This script requires Veracity's beachComber, located here:
   // https://kolmafia.us/threads/beachcomber-fast-and-efficient-beach-combing.23993/
 
-  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject64()));
+
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject75()));
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('beachcomber 0'); // Get witchess buff
 
-  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject65())); // Get clan "aggressive" buffs; probably fails if you don't have VIP access?
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject76())); // Get clan "aggressive" buffs; probably fails if you don't have VIP access?
 
   while (getPropertyInt('_poolGames') < 3) {
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('pool billiards');
   } // Get mad tea party buff
 
 
-  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject66())); // Get meat.enh buffs
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject77())); // Get meat.enh buffs
 
   while (getPropertyInt('_sourceTerminalEnhanceUses') < 3) {
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('terminal enhance meat.enh');
@@ -8816,54 +9549,69 @@ function buffUp() {
   } // Get defective game grid buff
 
 
-  if (!getPropertyBoolean('_defectiveTokenUsed')) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject67())); // Get zatara meatsmith buff
+  if (!getPropertyBoolean('_defectiveTokenUsed')) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject78())); // Get zatara meatsmith buff
 
-  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject68())); // Summon otep'vekxen
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject79())); // Summon otep'vekxen
 
-  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject69())); // Get ballpit buff
+  if (!getPropertyBoolean('demonSummoned') && !inCSAftercore) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject80()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject81()), 3);
+    ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject82()));
+  } // Get ballpit buff
 
-  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject70())); // Get triple-sized for stat purposes.
 
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject71())); // Get bird buffs; do not re-favorite birds, fav bird is fine.
+  ensureEffect((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject83())); // Get the stat buff from Spacegate
 
-  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject72())) > 0) {
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(7 - getPropertyInt("_birdsSoughtToday"), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject73()));
+  if (!getPropertyBoolean('_spacegateVaccine')) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("YOU HAVE NOT YET INSTALLED THE SPACEGATE VACCINE!");
+  } // Get triple-sized for stat purposes.
+
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equip)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject84()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$slot)(_templateObject85()));
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject86())); // Do random things to increase your early stats.
+
+  if (!getPropertyBoolean("telescopeLookedHigh")) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("telescope high");
+  if (!getPropertyBoolean("_lyleFavored")) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("monorail buff");
+  if (!getPropertyBoolean("_streamsCrossed")) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("crossstreams"); // Get bird buffs; do not re-favorite birds, fav bird is fine.
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject87())) > 0) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)(7 - getPropertyInt("_birdsSoughtToday"), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject88()));
   } // Get the daycare buff. Doing myst for +items/mp.
 
 
-  if (getPropertyBoolean('_daycareToday') && !getPropertyBoolean('_daycareSpa')) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('daycare mysticality'); // Max cast a few key farming skills.
+  if (!getPropertyBoolean('_daycareSpa')) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('daycare mysticality'); // Max cast a few key farming skills.
 
-  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject74()));
-  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject75()));
-  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject76()));
-  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject77()));
-  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject78()));
-  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject79()));
-  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject80())); // Max cast skills that are not -that- useful, but are worth having on.
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject89()));
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject90()));
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject91()));
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject92()));
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject93()));
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject94()));
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject95())); // Max cast skills that are not -that- useful, but are worth having on.
 
-  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject81()));
+  farmCastSkill((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject96()));
 
-  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject82())) < calculateFarmingTurns()) {
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject97())) < calculateFarmingTurns()) {
     if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myHp)() < 1000) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.restoreHp)(1000); // Restore if needed
 
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject83()), 30);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject98()), 30);
   }
 
-  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject84())) < calculateFarmingTurns()) {
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject99())) < calculateFarmingTurns()) {
     if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myHp)() < 1000) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.restoreHp)(1000); // Restore if needed
 
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject85()), 30);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject100()), 30);
   } // Ensure you have asdon driving observantly all day. Requires Ezandora's
   //   asdonmartin script, I believe, although I'm not positive.
 
 
-  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject86())) < calculateFarmingTurns()) {
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject101())) < calculateFarmingTurns()) {
     (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('asdonmartin drive observantly');
   } // Ensure you have turns of How to Avoid Scams all day.
 
 
-  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject87())) < calculateFarmingTurns()) {
-    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject88()), 10);
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject102())) < calculateFarmingTurns()) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject103()), 10);
   } // Heal up so that you are ready for free fights. 
 
 
@@ -8897,11 +9645,11 @@ function farmEquipBuilder() {
   var lepCalc = (Math.pow(220 * baseWeight, 0.5) + 2 * baseWeight - 6) / 100;
   var perPoundFamBonus = 0; // Modify fam bonus based on type of fam equipped
 
-  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)() === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject89())) {
-    perPoundFamBonus = lepCalc * 2.00 / baseWeight;
-  } else if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)() === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject90())) {
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)() === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject104())) {
+    perPoundFamBonus = lepCalc * 2.10 / baseWeight; // It's actually 2x, but +item is worth a tiny amount too.
+  } else if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)() === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject105())) {
     perPoundFamBonus = lepCalc * 1.25 / baseWeight;
-  } else if ((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiars)(_templateObject91()).includes((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)())) {
+  } else if ((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiars)(_templateObject106()).includes((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)())) {
     // I need to add more lep familiars.
     perPoundFamBonus = lepCalc * 1.00 / baseWeight;
   } // Now let's try to assess equipment value. I am hardcoding in equips because
@@ -8927,7 +9675,7 @@ function farmEquipBuilder() {
     "Wormwood Wedding Ring": 0.50 * meatDrop,
     'carpe': 0.60 * meatDrop,
     // MIXED ITEMS
-    "latte lovers member's mug": (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.numericModifier)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject92()), "Familiar Weight") * perPoundFamBonus * meatDrop + (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.numericModifier)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject93()), "Meat Drop") * meatDrop / 100,
+    "latte lovers member's mug": (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.numericModifier)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject107()), "Familiar Weight") * perPoundFamBonus * meatDrop + (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.numericModifier)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject108()), "Meat Drop") * meatDrop / 100,
     // SPECIAL ITEMS
     'Pantsgiving': getPropertyInt('_pantsgivingFullness') > 2 ? 0.30 * meatDrop : 950,
     // Always use until +3 fullness.
@@ -8952,11 +9700,11 @@ function farmEquipBuilder() {
     'candy drive button': 950,
     // 'fudgecycle': 900,
     'cane-mail shirt': 500,
-    'peanut-brittle shield': 900,
+    'peanut brittle shield': 900,
     'bakelite backpack': 500
   };
 
-  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myClass)() !== (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$class)(_templateObject94())) {
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myClass)() !== (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$class)(_templateObject109())) {
     // Non-SCs require cape + gun to utilize pointer ring; add as must-haves.
     itemValue['unwrapped knock-off retro superhero cape'] = 2 * meatDrop;
     itemValue['love'] = 2 * meatDrop; // +5 fam weight too
@@ -8974,49 +9722,278 @@ function farmEquipBuilder() {
   //   itemValue table with the Object.keys() thing.
 
   Object.keys(itemValue).forEach(function (value) {
-    var tryEquip = false;
+    var currItem = (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject110(), value);
+    var currVal = itemValue[value]; // Set the slot we're looking at
 
-    while (!tryEquip) {
-      var currItem = (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject95(), value);
-      var currVal = itemValue[value]; // Set the slot we're looking at
+    var possibleSlots = [(0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.toSlot)(currItem)];
+    if (possibleSlots.includes((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$slot)(_templateObject111()))) possibleSlots = (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$slots)(_templateObject112());
 
-      var currSlot = [(0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.toSlot)(currItem)];
-      if (currSlot.includes((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$slot)(_templateObject96()))) currSlot = (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$slots)(_templateObject97());
+    var _iterator2 = _createForOfIteratorHelper(possibleSlots),
+        _step2;
 
-      var _iterator2 = _createForOfIteratorHelper(currSlot),
-          _step2;
+    try {
+      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+        var _itemValue$compItem$n;
 
-      try {
-        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-          var _itemValue$compItem$n;
+        var currSlot = _step2.value;
+        // No dupe items in barf setup right now.
+        if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equippedAmount)(currItem) > 0) break;
+        var compItem = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equippedItem)(currSlot);
+        var compVal = (_itemValue$compItem$n = itemValue[compItem.name]) !== null && _itemValue$compItem$n !== void 0 ? _itemValue$compItem$n : 0; // If you can equip it, and it's more valuable, and you have one... equip it.
 
-          var cSlot = _step2.value;
-          // No dupe items in barf setup right now.
-          if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equippedAmount)(currItem) > 0) tryEquip = true;
-          var compItem = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equippedItem)(cSlot);
-          var compVal = (_itemValue$compItem$n = itemValue[compItem.name]) !== null && _itemValue$compItem$n !== void 0 ? _itemValue$compItem$n : 0; // If you can equip it, and it's more valuable, and you have one... equip it.
-
-          if (currVal > compVal && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.canEquip)(currItem) && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)(currItem) > 0) {
-            tryEquip = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equip)(currItem, cSlot);
-          }
-        } // At this point you've checked the whole loop. End it.
-
-      } catch (err) {
-        _iterator2.e(err);
-      } finally {
-        _iterator2.f();
+        if (currVal > compVal && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.canEquip)(currItem) && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)(currItem) > 0) {
+          (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equip)(currItem, currSlot);
+          (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("Equipping ".concat(currVal, " with an observed value of ").concat(currVal, "."));
+          break;
+        }
       }
-
-      tryEquip = true;
+    } catch (err) {
+      _iterator2.e(err);
+    } finally {
+      _iterator2.f();
     }
   });
 }
+function libramBurn() {
+  // Pretty simple function that burns MP on librams.
+  var minMPLeft = 500;
+
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myMp)() - minMPLeft > (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.mpCost)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject113()))) {
+    if (getPropertyInt('_favorRareSummons') < 4) {
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject114()), 1);
+    } else {
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject115()), 1);
+    }
+  }
+}
+function selectFamiliar(loc) {
+  // Function that selects the right familiar for free fights given
+  //   submitted fights. Currently just returns fist turkey.
+  return (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject116());
+}
+function kramcoPercent() {
+  // Calculates the % chance of a Kramco. Stole this from Rev.
+  var numberKramcosToday = getPropertyInt('_sausageFights');
+  var kramcoNumber = 5 + numberKramcosToday * 3 + Math.pow(Math.max(0, numberKramcosToday - 5), 3);
+  return Math.max(Math.min(((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.totalTurnsPlayed)() - getPropertyInt("_lastSausageMonsterTurn") + 1) / kramcoNumber, 1.0), 0.0);
+}
+function afterAdventure() {
+  // Generalized after-adventure script
+  // Fill extra pantsgiving fullness
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.fullnessLimit)() - (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFullness)() > 0) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject117()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject118()), 1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.eat)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject119()));
+  } // Make sure I don't die.
+
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myHp)() < 100) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.restoreHp)(1000);
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myMp)() < 50) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.restoreMp)(200); // If you're >15 turns into the farming day & Kramco% is > 30%, use Kramco.
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myTurncount)() - getPropertyInt('_scotchStartingTurncount') > 15) {
+    if (kramcoPercent() > 0.30) farmEquipBuilder(250, kramco);
+    if (kramcoPercent() < 0.30 && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equippedAmount)(kramco) > 0) farmEquipBuilder(250);
+  } // TO-DO
+  // Use Kramco if probability is > 50 and you've spent >10 turns. 
+  // Use protopack if a ghost is up
+  // Place digitizes in wanderer zones?
+
+}
+function adventureHere(loc) {
+  var fam = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject120());
+  // Just submits an adv1 and also allows you to do an afterAdventure
+  //   script. Also changes your familiar, if required. You could
+  //   potentially refactor this to run the outfitSelector every 
+  //   combat 
+  if (fam === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject121())) fam = selectFamiliar(loc);
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myFamiliar)() !== fam) (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)(fam);
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.adv1)(loc, -1, '');
+  afterAdventure();
+}
 function freeFights() {
-  //   _scotchFreeFight
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("Free fights are not yet implemented.");
+  // This property should be 2 if it's done, 1 if in-progress, undefined start of day.
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)('_scotchFreeFights') == '2') return "You've finished your free fights";
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('_scotchFreeFights', '1'); // Start out with your starter equip; free fight stuff.  
+
+  farmEquipBuilder(25); // Let's start out with LOV.
+
+  if (!getPropertyBoolean('_loveTunnelUsed')) {
+    adventureHere((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject122()));
+  } // Let's do machine elf fights now.
+
+
+  while (getPropertyInt("_machineTunnelsAdv") < 5) {
+    adventureHere((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject123()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject124()));
+  } // Now let's do Witchess to ensure the Professor has enough XP for a thesis. 
+
+
+  while (getPropertyInt("_witchessFights") < 5) {
+    // Swap to professor for the last fight.
+    if (getPropertyInt("_witchessFights") === 1) {
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject125()));
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.equip)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject126()));
+    }
+
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)("campground.php?action=witchess");
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)("choice.php?whichchoice=1181&option=1");
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)("choice.php?whichchoice=1182&option=1&piece=".concat((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$monster)(_templateObject127()).id, "&pwd=").concat((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myHash)()), false);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runCombat)();
+  } // Let's do God Lobster combats now.
+
+
+  while (getPropertyInt("_godLobsterFights") < 3) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject128()));
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('main.php?fightgodlobster=1'); // Very straightforward URL!
+
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runCombat)();
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('choice.php'); // Ensuring I hit the choice.
+
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runChoice)(2); // Should default to stats due to setProps
+  } // Let's do NEP now. Put on cloake for batform.
+
+
+  farmEquipBuilder(100, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject129()));
+
+  while (getPropertyInt('_neverendingPartyFreeTurns') < 10) {
+    if (getPropertyInt('_neverendingPartyFreeTurns') === 1) {
+      // Swap to prof for my thesis.
+      adventureHere((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject130()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject131()));
+    }
+
+    adventureHere((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject132()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject133()));
+  } // Powdered madness farming.
+
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject134())); // Evoke eldritch horror & visit the science tent.
+
+  if (!getPropertyBoolean('_eldritchTentacleFought')) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=forestvillage&action=fv_scientist');
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runChoice)(-1);
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runCombat)();
+  }
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useSkill)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$skill)(_templateObject135()), 1);
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runCombat)(); // Use hot tub to heal if you encounter the weird boss monster.
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.haveEffect)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$effect)(_templateObject136()))) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('hottub');
+  } // Finally, summon seals.
+
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myClass)() === (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$class)(_templateObject137()) && (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.guildStoreAvailable)()) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.buy)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject138()), 10);
+    farmEquipBuilder(25, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject139())); // This is 10 for me, but may be less if you have never done the SC nemesis quest!
+
+    while (getPropertyInt('_sealsSummoned') < 10) {
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject140()));
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runCombat)();
+    }
+  }
+
+  farmEquipBuilder(25); // Script will swap familiars here.
+
+  while (getPropertyInt('_snojoFreeFights') < 10) {
+    adventureHere((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject141()));
+  } // Closet all bowling balls to ensure you can adventure in bowling alley.
+
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject142())) > 0) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.putCloset)((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.availableAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject143())), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject144()));
+  } // Need to add in drunk pygmy support into combat.ts w/ extra banishes before I
+  //   actually use this in the script.
+  // buy($item`Bowl of Scorpions`,11);
+  // farmEquipBuilder(0,$item`Kremlin's Greatest Briefcase`);
+  // while (getPropertyInt('_drunkPygmyBanishes') < 11) {
+  //   adventureHere($location`The Hidden Bowling Alley`);
+  // }
+
+
+  libramBurn();
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject145())); // Set the property to bypass farmPrep on next run.
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.setProperty)('_scotchFreeFights', '2');
+  return "Free fights are complete.";
 }
 function barfMountain() {
-  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("Barf mountain is not yet implemented.");
+  // Alright, let's farm barf mountain I guess. Start out by requesting a KGE.
+  //   Code stolen from bean's HCCS script: https://github.com/phulin/bean-hccs/
+  if (!getPropertyBoolean('_photocopyUsed')) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.chatPrivate)('cheesefax', 'Knob Goblin Embezzler');
+
+    for (var i = 0; i < 2; i++) {
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.wait)(10);
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('fax receive');
+      if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)('photocopyMonster') === 'Knob Goblin Embezzler') break; // otherwise got the wrong monster, put it back.
+
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('fax send');
+    }
+  } // With the KGE requested and around, time to prep for barf. First fight
+  //   includes our buddy the reanimator for +3 KGEs. 
+
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject146()));
+  farmEquipBuilder(1000); // Ensure you have digitize
+
+  if (![(0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)('sourceTerminalEducate1'), (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.getProperty)('sourceTerminalEducate2')].includes('digitize.edu')) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)('terminal educate digitize');
+  } // Fight that first KGE.
+
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject147())); // Use a free run in the bowling alley first.
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject148()));
+  adventureHere((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject149()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject150())); // Now switch to Robort for the rest of the day.
+
+  (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.useFamiliar)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject151()));
+  farmEquipBuilder(1000); // Now fight the chateau KGE. Again, heavily stolen from Bean.
+
+  if (!getPropertyBoolean('_chateauMonsterFought')) {
+    var chateauText = (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=chateau', false);
+    var match = chateauText.match(/alt="Painting of an? ([^(]*) .1."/);
+
+    if (match && match[1] === 'Knob Goblin Embezzler') {
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.visitUrl)('place.php?whichplace=chateau&action=chateau_painting', false);
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.runCombat)();
+    } else {
+      throw 'Wrong painting.';
+    }
+  } // Now fight your spooky putty chain. Should only break when KGE 
+
+
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.itemAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject152())) > 0) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject153()));
+  } // Now fight your 4-d camera KGE
+
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.itemAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject154())) > 0) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject155()));
+  } // Now fight your first digitized KGE, who should be showing up in the sea!
+
+
+  farmEquipBuilder(1000, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject156()));
+  adventureHere((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject157()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject158()));
+  farmEquipBuilder(1000); // Now fight the envyfish egg KGE
+
+  if ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.itemAmount)((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject159())) > 0) {
+    (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.use)(1, (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$item)(_templateObject160()));
+  }
+
+  farmEquipBuilder(250); // Now fight the semirare KGE, if you aren't in CS aftercore
+
+  if (!inCSAftercore) {
+    if (getPropertyBoolean("_freePillKeeperUsed")) {
+      (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.cliExecute)("pillkeeper semirare");
+      adventureHere((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject161()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject162()));
+    }
+  } // Now go fight in barf until you're out of adventures!
+
+
+  while ((0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.myAdventures)() > 5) {
+    adventureHere((0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$location)(_templateObject163()), (0,libram_src__WEBPACK_IMPORTED_MODULE_1__.$familiar)(_templateObject164()));
+    if (getPropertyInt('_pantsgivingFullness') > 2) farmEquipBuilder(250);
+  } //TO-DO
+  // Add a grimacia map
+
 }
 function nightCap() {
   (0,kolmafia__WEBPACK_IMPORTED_MODULE_0__.print)("Nightcap is not yet implemented.");
