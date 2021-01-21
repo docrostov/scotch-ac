@@ -37,6 +37,9 @@ function main(target = '') {
     else if (['buff'].indexOf(target) >= 0) {
         lib_1.buffUp();
     }
+    else if (['daily', 'dailies'].indexOf(target) >= 0) {
+        lib_1.dailies();
+    }
     else if (['props'].indexOf(target) >= 0) {
         lib_1.setProps();
     }

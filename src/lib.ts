@@ -3,7 +3,7 @@ import {
     cliExecute, availableAmount, visitUrl, runChoice, getProperty, setProperty, print, abort, isUnrestricted,
     isOnline, myPrimestat, use, eat, mySpleenUse, spleenLimit, sweetSynthesis, chew, myInebriety, inebrietyLimit, 
     fullnessLimit, myFullness, equip, myMp, haveSkill, mpCost, restoreMp, myEffects, putShopUsingStorage, waitq, 
-    refreshStatus, myHp, restoreHp, toSkill, splitString, myClass, myFamiliar, numericModifier, myMaxhp, equippedItem, canEquip, toSlot, equippedAmount, adv1, runCombat, reverseNumberology, guildStoreAvailable, chatPrivate, wait, putCloset, itemAmount, myAdventures, myHash, totalTurnsPlayed, max
+    refreshStatus, myHp, restoreHp, toSkill, splitString, myClass, myFamiliar, numericModifier, myMaxhp, equippedItem, canEquip, toSlot, equippedAmount, adv1, runCombat, reverseNumberology, guildStoreAvailable, chatPrivate, wait, putCloset, itemAmount, myAdventures, myHash, totalTurnsPlayed, max, maximize
   } from 'kolmafia';
   
 import { $familiar, $familiars, $item, $items, $coinmaster, $effect, $effects, $skill, $slot, $slots, $location, $stat, $monster, $class } from 'libram/src';
@@ -14,6 +14,25 @@ const inCSAftercore = getProperty("csServicesPerformed").split(",").length == 11
 const clanCache: { [index: string]: number } = {};
 
 const kramco = $item`Kramco Sausage-o-Matic&trade;`;
+
+export function farmMPA(turns: number) {
+  // Calculates expected MPA of your first X turns of the day. Used
+  //   to tabulate MPA of X potion over those turns.
+  let normalTurn = 275; // Normal barf monster.
+  let kgeTurn = 1025;   // KGE
+
+  let advArray = [1025];
+
+  // Turn #1 is always a KGE, via a fax.
+  advArray.push(kgeTurn);
+
+  // Add available spooky putty copies.
+  
+  getPropertyInt('spookyPuttyCopiesMade');
+
+  return 1;
+
+}
 
 export function setClan(target: string) {
     // Script from bean to set a user's clan to something else
@@ -242,7 +261,7 @@ export function dailies() {
 
     // While you're at it, get your amulet coin
     useFamiliar($familiar`Cornbeefadon`);
-    if (availableAmount($item`amulet coin`)) use($item`Box of Familiar Jacks`);
+    if (availableAmount($item`amulet coin`) === 0) use($item`Box of Familiar Jacks`);
 
     // Doing two deck summons; mana, mana. Reserve one for Robort feliz-fishing.
     while (getPropertyInt('_deckCardsDrawn') < 10){
@@ -359,7 +378,7 @@ export function calculateFarmingTurns() {
     //   just going to use an approximation; I'm making this a 
     //   function so that I can make it more effective later!
 
-    return 635;
+    return 650;
 
 }
 
@@ -441,12 +460,9 @@ export function runDiet() {
       fillSpleen();
     }
 
-    
-    equip($item`tuxedo shirt`);
-
     // Finish filling drinks
     while (inebrietyLimit() - myInebriety() > 0) {
-
+      equip($item`tuxedo shirt`);
       ensureEffect($effect`Ode to Booze`);
       buy($item`splendid martini`,1);
       drink($item`splendid martini`,1);
@@ -482,7 +498,7 @@ export function buffUp() {
     }
 
     // Attempt to get buffy rolling, then wait to give buffy to proc.
-    if (haveEffect($effect`Carol of the Thrills`) > 400){
+    if (haveEffect($effect`Carol of the Thrills`) < 400){
       cliExecute("send to buffy || 500 bull hell thrill jingle reptil tenaci empathy elemental polka phat");
       waitq(10);
       refreshStatus();
@@ -541,10 +557,10 @@ export function buffUp() {
     if (!getPropertyBoolean("_lyleFavored")) cliExecute("monorail buff");
     if (!getPropertyBoolean("_streamsCrossed")) cliExecute("crossstreams")
 
-    // Get bird buffs; do not re-favorite birds, fav bird is fine.
-    if (availableAmount($item`bird-a-day calendar`) > 0) {
-      useSkill(7-getPropertyInt("_birdsSoughtToday"),$skill`seek out a bird`);
-    }
+    // // Get bird buffs; do not re-favorite birds, fav bird is fine.
+    // if (availableAmount($item`bird-a-day calendar`) > 0) {
+    //   useSkill(7-getPropertyInt("_birdsSoughtToday"),$skill`seek out a bird`);
+    // }
 
     // Get the daycare buff. Doing myst for +items/mp.
     if (!getPropertyBoolean('_daycareSpa')) cliExecute('daycare mysticality');
@@ -666,11 +682,11 @@ export function farmEquipBuilder(meatDrop = 250, ...priorityItems: Item[]) {
     "Mr. Cheeng's Spectacles": 100, // Cheeng's is much more questionable due to massive drop pool. Needs spading.
     
     // CRIMBO 2020 -- donated candy drop maximization
-    'candy drive button': 950,
-    // 'fudgecycle': 900,
-    'cane-mail shirt': 500,
-    'peanut brittle shield': 900,
-    'bakelite backpack': 500,
+    // 'candy drive button': 950,
+    // // 'fudgecycle': 900,
+    // 'cane-mail shirt': 500,
+    // 'peanut brittle shield': 900,
+    // 'bakelite backpack': 500,
   }
 
   if (myClass() !== $class`Seal Clubber`) {
@@ -705,7 +721,8 @@ export function farmEquipBuilder(meatDrop = 250, ...priorityItems: Item[]) {
       // If you can equip it, and it's more valuable, and you have one... equip it.
       if (currVal > compVal && canEquip(currItem) && availableAmount(currItem) > 0) { 
         equip(currItem,currSlot);
-        print(`Equipping ${currVal} with an observed value of ${currVal}.`);
+        print(`Equipping ${currItem} with an observed value of ${currVal}`);
+        print(`   =====> This replaces ${compItem} with an observed value of ${compVal}`);
         break;
       }
     }
@@ -754,7 +771,7 @@ export function afterAdventure(){
 
   // If you're >15 turns into the farming day & Kramco% is > 30%, use Kramco.
   if (myTurncount() - getPropertyInt('_scotchStartingTurncount') > 15) {
-    if (kramcoPercent() > 0.30) farmEquipBuilder(250,kramco);
+    if (kramcoPercent() > 0.30 && equippedAmount(kramco) === 0) farmEquipBuilder(250,kramco);
     if (kramcoPercent() < 0.30 && equippedAmount(kramco) > 0) farmEquipBuilder(250);
   }
 
@@ -853,6 +870,7 @@ export function freeFights() {
   // Finally, summon seals.
   if (myClass() === $class`Seal Clubber` && guildStoreAvailable()){
     buy($item`figurine of a wretched-looking seal`,10);
+    buy($item`seal-blubber candle`,10);
 
     farmEquipBuilder(25,$item`old dry bone`);
 
@@ -918,7 +936,9 @@ export function barfMountain() {
   }
 
   // Fight that first KGE.
-  use(1, $item`photocopied monster`);
+  if (!getPropertyBoolean('_photocopyUsed')){
+    use(1, $item`photocopied monster`);
+  }
 
   // Use a free run in the bowling alley first.
   useFamiliar($familiar`Pair of Stomping Boots`);
@@ -951,8 +971,11 @@ export function barfMountain() {
   }
 
   // Now fight your first digitized KGE, who should be showing up in the sea!
-  farmEquipBuilder(1000, $item`Mer-kin gladiator mask`);
-  adventureHere($location`The Briny Deeps`,$familiar`Robortender`);
+  if (getPropertyInt('_sourceTerminalDigitizeMonsterCount') === 0 && getPropertyInt('_sourceTerminalDigitizeUses') === 1 ) {
+    farmEquipBuilder(1000, $item`Mer-kin gladiator mask`);
+    adventureHere($location`The Briny Deeps`,$familiar`Robortender`);
+  }
+  
   farmEquipBuilder(1000);
 
   // Now fight the envyfish egg KGE
@@ -964,14 +987,14 @@ export function barfMountain() {
 
   // Now fight the semirare KGE, if you aren't in CS aftercore
   if (!inCSAftercore) {
-    if (getPropertyBoolean("_freePillKeeperUsed")) {
+    if (!getPropertyBoolean("_freePillKeeperUsed")) {
       cliExecute("pillkeeper semirare");
       adventureHere($location`Cobb's Knob Treasury`, $familiar`Robortender`);
     }
   }
 
   // Now go fight in barf until you're out of adventures!
-  while (myAdventures() > 5) {
+  while (myAdventures() > 1) {
     adventureHere($location`Barf Mountain`, $familiar`Robortender`);
     if (getPropertyInt('_pantsgivingFullness') > 2) farmEquipBuilder(250);
   }
@@ -982,5 +1005,27 @@ export function barfMountain() {
 }
 
 export function nightCap() {
-  print("Nightcap is not yet implemented.");
+  // Really simplistic nightcap
+  cliExecute('breakfast');
+  useFamiliar($familiar`Stooper`);
+  ensureEffect($effect`Ode to Booze`);
+  buy($item`splendid martini`,1);
+  drink($item`splendid martini`,1);
+  
+  ensureEffect($effect`Ode to Booze`);
+  buy($item`Frosty's Frosty Mug`, 1);
+  buy($item`jar of fermented pickle juice`, 1);
+  drink($item`Frosty's Frosty Mug`,1);
+  drink($item`jar of fermented pickle juice`, 1);
+  
+  fillSpleen();
+
+  useFamiliar($familiar`Left-Hand Man`);
+  maximize('advs', false);
+
+  buy($item`resolution: be more adventurous`,5);
+  use($item`resolution: be more adventurous`,5);
+
+  buy($item`chocolate seal-clubbing club`,3);
+  use($item`chocolate seal-clubbing club`,3);
 }

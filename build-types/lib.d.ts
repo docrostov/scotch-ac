@@ -1,3 +1,4 @@
+export declare function farmMPA(turns: number): number;
 export declare function setClan(target: string): boolean;
 export declare function ensureEffect(ef: Effect, turns?: number): void;
 export declare function tryEnsureEffect(ef: Effect, turns?: number): boolean;

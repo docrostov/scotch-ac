@@ -38,6 +38,8 @@ export function main(target = '') {
     nightCap();       // Nightcap it
   } else if (['buff'].indexOf(target) >= 0){
     buffUp();
+  } else if (['daily', 'dailies'].indexOf(target) >= 0){
+    dailies();
   } else if (['props'].indexOf(target) >= 0){
     setProps();
   } else if (['freeFights'].indexOf(target) >= 0){
